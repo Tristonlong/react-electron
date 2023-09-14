@@ -1,0 +1,10 @@
+.success {
+  text-align: center;
+  background: rgba(108, 254, 125, 0.5);
+
+}
+
+.waiting{
+  text-align: center;
+  background: rgba(10, 152, 218, 0.5);
+}

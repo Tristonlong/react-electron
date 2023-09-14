@@ -1,0 +1,20 @@
+
+.chart {
+  width: 60%;
+}
+
+div {
+
+}
+
+.navigationBar {
+  padding: 3px;
+  margin-bottom: 10px;
+  background-color: #f3f9f1;
+  border-radius: 8px;
+}
+
+.navigationBarBtn {
+  margin-right: 10px;
+}
+

@@ -1,0 +1,3492 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Common</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "F:Common.BasicCommand.FPGAChannelManager._channelChxInfos" -->
+        <!-- Badly formed XML comment ignored for member "F:Common.BasicCommand.FPGAChannelManager._channelCpxInfos" -->
+        <member name="P:Common.BasicCommand.FPGAChannelManager.FPGAChannelService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannelManager.SelectAndSet(System.String,System.Int32,System.Collections.Generic.List{Modle.BasicClass.FPGACHXInfo},System.Collections.Generic.List{Modle.BasicClass.FPGACPXInfo},System.Collections.Generic.List{Modle.BasicClass.FPGACLKInfo},System.Collections.Generic.List{Modle.FlowModels.ACTimingInfo},Common.FlowContext)">
+            <summary>
+            
+            </summary>
+            <param name="functionName"></param>
+            <param name="tcpNumber"></param>
+            <param name="fPGAChxes"></param>
+            <param name="fPGACpxes"></param>
+            <param name="fPGAClks"></param>
+            <param name="acTimings"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannelManager.CompareLast(System.Collections.Generic.List{Modle.BasicClass.FPGACHXInfo},System.Collections.Generic.List{Modle.BasicClass.FPGACPXInfo},System.Int32)">
+            <summary>
+            和对应channel的上次数据做对比，!=则修改状态Changed，isSend=true
+            </summary>
+            <param name="fPGAChxes"></param>
+            <param name="fPGACpxes"></param>
+            <param name="tcpNumber"></param>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannelManager.CompareInit(System.Collections.Generic.List{Modle.BasicClass.FPGACHXInfo},System.Int32)">
+            <summary>
+            判断未使用的channel中是否是init状态
+            </summary>
+            <param name="fPGAChxes"></param>
+            <param name="tcpNumber"></param>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannelManager.AddSendBuffer(System.Collections.Generic.List{Modle.BasicClass.FPGACLKInfo},System.Int32,Modle.FlowModels.FlowCatalog)">
+            <summary>
+            筛选IsSend=true的寄存器,add完在置为false
+            </summary>
+            <param name="fPGAClks"></param>
+            <param name="tcpNumber"></param>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannelManager.UionWithK7List(System.Int32,System.Int32,System.Collections.Generic.LinkedList{System.Byte[]}[],System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="tcpNumber"></param>
+            <param name="channelIndex"></param>
+            <param name="linkedList"></param>
+            <param name="sendBytes"></param>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannelManager.InitializationFPGAChannel(System.Int32,Modle.Configuration.FlowConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="tcpNumber"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannelManager.FPGAChannelResult(System.String,System.Int32,Common.FlowContext,System.Collections.Generic.List{Modle.FlowModels.ACTimingInfo})">
+            <summary>
+            
+            </summary>
+            <param name="functionName"></param>
+            <param name="tcpNumber"></param>
+            <param name="flowContext"></param>
+            <param name="acTimings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DcLevelHandle.GetVIHVILCmdByChannel(System.Double,System.Double,System.Int32,Modle.Configuration.FlowConfiguration)">
+            <summary>
+            根据通道获取VIHVIL指令
+            </summary>
+            <param name="VIH"></param>
+            <param name="VIL"></param>
+            <param name="channel"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.BasicCommand.DcLevelHandle.GetVIHOrVILCmdByChannel(System.Double,System.Int32[],System.Boolean)">
+            <summary>
+            单独设置VIH或者VIL
+            </summary>
+            <param name="value"></param>
+            <param name="channels"></param>
+            <param name="isVIH"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DcLevelHandle.GetVOHVOLCmdByChannelsAndValues(System.Double[],System.Collections.Generic.List{System.Int32[]},System.Boolean)">
+            <summary>
+            单独设置VOH或者VOL
+            </summary>
+            <param name="values"></param>
+            <param name="channelGrops"></param>
+            <param name="isSetVoh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DcLevelHandle.GetVIHOrVILSettingAllCmd(System.Double,System.Boolean,Modle.Configuration.FlowConfiguration)">
+            <summary>
+            通过预设并且启动地址设置VIH 或者VIL
+            </summary>
+            <param name="value"></param>
+            <param name="isVIH"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DcLevelHandle.GetVOHVOLSettingAllCmd(System.Double,System.Boolean,System.Int32)">
+            <summary>
+             通过预设并且启动地址设置VOH或者VOL
+            </summary>
+            <param name="value"></param>
+            <param name="isSetVOH"></param>
+            <param name="K7Count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DcLevelHandle.SetVOHVOLByChannel(System.Double,System.Double,System.Int32[],Modle.SystemEnum.VOHVOL)">
+            <summary>
+            获取VOHVOL指令
+            </summary>
+            <param name="VOH"></param>
+            <param name="VOL"></param>
+            <param name="channels"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DcLevelHandle.GetDcLevelCompareSourceCmd(System.Boolean)">
+            <summary>
+            获取CompareSource指令
+            </summary>
+            <param name="compareSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DcLevelHandle.GetPreinstallFlowTableVIHVILCmd(System.Collections.Generic.List{System.Double},System.Boolean,Modle.Configuration.FlowConfiguration)">
+            <summary>
+             获取Flow VIH VIL预设指令集
+            </summary>
+            <param name="values"></param>
+            <param name="isVih"></param>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DcLevelHandle.GetPreinstallFlowVOHVOLCmd(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double})">
+            <summary>
+            获取Flow VOH VOL预设指令集
+            </summary>
+            <param name="vohVols"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DcLevelHandle.GetStartDCLevelCmd(Common.FindTableCommand.DCLevelParaType,Common.FlowContext,System.Double,System.Int32)">
+            <summary>
+            获取启动DCLevel指令
+            </summary>
+            <param name="dcLevelParaType"></param>
+            <param name="dcLevelManager"></param>
+            <param name="value"></param>
+            <param name="slotNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.IVT.GetVTMolexTMUXCmd(Modle.SystemEnum.VTChannelMode,Modle.SystemEnum.VTTMUXRelayMode,System.Int32[],Modle.FlowModels.FlowCatalog,System.Int32)">
+            <summary>
+            设置VT Molex TMUX
+            </summary>
+            <param name="VTTMUXMode"></param>
+            <param name="VTTMUXRelayMode"></param>
+            <param name="channels"></param>
+            <param name="flowCatalog"></param>
+            <param name="slotNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.IVT.GetVTVoltageCmdAll(System.Double,Common.FlowContext,System.Int32)">
+            <summary>
+            设置全通道VT电压
+            </summary>
+            <param name="voltage"></param>
+            <param name="flowContext"></param>
+            <param name="slotNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.IVT.GetVTVoltageCmdByChannel(System.Double,System.Int32[],Common.AppConfig.AppSettings)">
+            <summary>
+            根据通道设置VT电压
+            </summary>
+            <param name="voltage"></param>
+            <param name="channels"></param>
+            <param name="appSettings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.IVT.GetVTResistanceCmdAll(Modle.SystemEnum.VTResistanceMode,System.Double,Common.FlowContext,System.Int32)">
+            <summary>
+            设置全通道VT电阻
+            </summary>
+            <param name="VTResistanceMode"></param>
+            <param name="resistance"></param>
+            <param name="flowContext"></param>
+            <param name="slotNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.IVT.GetVTResistanceCmdByChannel(Modle.SystemEnum.VTResistanceMode,System.Int32[],System.Double)">
+            <summary>
+            设置部分通道VT电阻
+            </summary>
+            <param name="VTResistanceMode"></param>
+            <param name="channels"></param>
+            <param name="resistances"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.IVT.GetAllIOChannel">
+            <summary>
+            获取所有通道
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BasicCommand.VTBase">
+            <summary>
+            VT基类
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.VTBase.GetAllIOChannel">
+            <summary>
+            获取所有通道
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.VTBase.GetVTResistanceCmdAll(Modle.SystemEnum.VTResistanceMode,System.Double,Common.FlowContext,System.Int32)">
+            <summary>
+            设置VTResistance所有通道指令
+            </summary>
+            <param name="VTResistanceMode"></param>
+            <param name="resistance"></param>
+            <param name="flowContext"></param>
+            <param name="slotNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.VTBase.GetVTResistanceCmdByChannel(Modle.SystemEnum.VTResistanceMode,System.Int32[],System.Double)">
+            <summary>
+            获取VTResistance 设置通道寄存器指令
+            </summary>
+            <param name="VTResistanceMode"></param>
+            <param name="channels"></param>
+            <param name="resistances"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.VTBase.GetVTVoltageCmdAll(System.Double,Common.FlowContext,System.Int32)">
+            <summary>
+            设置VT电压所有通道指令
+            </summary>
+            <param name="voltage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.VTBase.GetVTVoltageCmdByChannel(System.Double,System.Int32[],Common.AppConfig.AppSettings)">
+            <summary>
+            设置部分通道VT电压
+            </summary>
+            <param name="voltage"></param>
+            <param name="channels"></param>
+            <param name="appSettings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.VTBase.GetVTMolexTMUXCmd(Modle.SystemEnum.VTChannelMode,Modle.SystemEnum.VTTMUXRelayMode,System.Int32[],Modle.FlowModels.FlowCatalog,System.Int32)">
+            <summary>
+            设置VT TMUX
+            </summary>
+            <param name="VTTMUXMode"></param>
+            <param name="VTTMUXRelayMode"></param>
+            <param name="channels"></param>
+            <param name="flowCatalog"></param>
+            <param name="slotNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.VTBase.ConvertPPMUChannels(System.Int32[])">
+            <summary>
+            转换PPMU通道
+            </summary>
+            <param name="channels"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BasicCommand.VTFactoty">
+            <summary>
+            VT工厂
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.VTFactoty.CreateInstance(System.String)">
+            <summary>
+            创建VT实例
+            </summary>
+            <param name="molexVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BasicCommand.VT_88c_a">
+            <summary>
+            88c_a实现
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.VT_88c_a.GetVTMolexTMUXCmd(Modle.SystemEnum.VTChannelMode,Modle.SystemEnum.VTTMUXRelayMode,System.Int32[],Modle.FlowModels.FlowCatalog,System.Int32)">
+            <summary>
+            获取VT TMUX指令
+            </summary>
+            <param name="VTTMUXMode"></param>
+            <param name="VTTMUXRelayMode"></param>
+            <param name="channels"></param>
+            <param name="flowCatalog"></param>
+            <param name="slotNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.VT_88c_a.GetVTVoltageCmdByChannel(System.Double,System.Int32[],Common.AppConfig.AppSettings)">
+            <summary>
+            获取设值VT通道的指令
+            </summary>
+            <param name="voltage"></param>
+            <param name="channels"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BasicCommand.VT_88d_a">
+            <summary>
+            88d_a实现
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.VT_88d_a.GetVTToDRCmd">
+            <summary>
+            VT切到DR端
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.VT_88d_a.GetVTVoltageToVTCmd(System.Int32[])">
+            <summary>
+            控制对应通道vt电压与vt连接（sw_vt_volt_to_vt ）
+            </summary>
+            <param name="channels">通道</param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BasicCommand.VTVoltageInfo">
+            <summary>
+            VT电压信息类
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.DefaultCmd.GetDCLevelDefaultCmds(System.Boolean)">
+            <summary>
+            配置DCLevel组合指令
+            </summary>
+            <param name="isAdd"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BasicCommand.DPSFactory">
+            <summary>
+            DPS策略工厂
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.DPSFactory.CreateDPSStrategy(System.Boolean,System.Int32)">
+            <summary>
+            创建DPS策略实例
+            </summary>
+            <param name="setHighVoltageMode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BasicCommand.DPSHighVoltageStrategy">
+            <summary>
+            DPS高压策略
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.DPSHighVoltageStrategy.CalcDacCodeValue(System.Double)">
+            <summary>
+            计算DAC Code值
+            </summary>
+            <param name="vout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DPSHighVoltageStrategy.AddDPSCmdHead(Modle.SystemEnum.DpsMode,System.Collections.Generic.List{System.Byte},System.Boolean)">
+            <summary>
+            添加指令头
+            </summary>
+            <param name="mode"></param>
+            <param name="cmd"></param>
+            <param name="offset"></param>
+        </member>
+        <member name="M:Common.BasicCommand.DPSHighVoltageStrategy.GetDPSCmd(System.Int32[],Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,System.Int32,Common.AppConfig.AppSettings,System.Boolean)">
+            <summary>
+             获取Dps指令
+            </summary>
+            <param name="channel"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="slotNo"></param>
+            <param name="appSettings"></param>
+            <param name="dpsOffset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DPSHighVoltageStrategy.GetDPSCmd(System.Int32[],Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,Modle.SystemEnum.VoltageRange,System.Int32,Common.AppConfig.AppSettings,System.Boolean)">
+            <summary>
+             获取Dps指令,高精度模式
+            </summary>
+            <param name="channel"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="voltageRange"></param>
+            <param name="slottNo"></param>
+            <param name="appSettings"></param>
+            <param name="dpsOffset"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:Common.BasicCommand.DPSLowVoltageStrategy">
+            <summary>
+            DPS低压策略
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.DPSLowVoltageStrategy.CalcDacCodeValue(System.Double)">
+            <summary>
+            计算DAC Code值
+            </summary>
+            <param name="vout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DPSLowVoltageStrategy.AddDPSCmdHead(Modle.SystemEnum.DpsMode,System.Collections.Generic.List{System.Byte},System.Boolean)">
+            <summary>
+            添加指令头
+            </summary>
+            <param name="mode"></param>
+            <param name="cmd"></param>
+            <param name="offset"></param>
+        </member>
+        <member name="M:Common.BasicCommand.DPSLowVoltageStrategy.GetDPSCmd(System.Int32[],Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,System.Int32,Common.AppConfig.AppSettings,System.Boolean)">
+            <summary>
+             获取Dps指令
+            </summary>
+            <param name="channel"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="slotNo"></param>
+            <param name="appSettings"></param>
+            <param name="dpsOffset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DPSLowVoltageStrategy.GetDPSCmd(System.Int32[],Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,Modle.SystemEnum.VoltageRange,System.Int32,Common.AppConfig.AppSettings,System.Boolean)">
+            <summary>
+             获取Dps指令,高精度模式
+            </summary>
+            <param name="channel"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="voltageRange"></param>
+            <param name="slotNo"></param>
+            <param name="appSettings"></param>
+            <param name="dpsOffset"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:Common.BasicCommand.DPSStrategyBase">
+            <summary>
+            DPS策略基类
+            </summary>
+        </member>
+        <member name="T:Common.BasicCommand.IDPSStrategy">
+            <summary>
+            DPS策略接口
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.IDPSStrategy.CalcDacCodeValue(System.Double)">
+            <summary>
+            计算DAC CODE
+            </summary>
+            <param name="vout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.IDPSStrategy.GetDPSCmd(System.Int32[],Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,System.Int32,Common.AppConfig.AppSettings,System.Boolean)">
+            <summary>
+            获取DPS指令
+            </summary>
+            <param name="channel"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="tcpNumber"></param>
+            <param name="appSettings"></param>
+            <param name="dpsOffset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.IDPSStrategy.GetDPSCmd(System.Int32[],Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,Modle.SystemEnum.VoltageRange,System.Int32,Common.AppConfig.AppSettings,System.Boolean)">
+            <summary>
+            获取DPS高精度指令
+            </summary>
+            <param name="channel"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="voltageRange"></param>
+            <param name="tcpNumber"></param>
+            <param name="appSettings"></param>
+            <param name="dpsOffset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.ClearFpgaChannelStatus">
+            <summary>
+            清理fpga通道状态
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.FPGAChannelMapStatus(Modle.FlowModels.ACTimingInfo,System.Int32,Modle.FlowModels.IFlowCatalog)">
+            <summary>
+            处理Actiming
+            </summary>
+            <param name="acTiming">ACTimingInfo 类</param>
+            <param name="tcpNumber">连接板子序列号</param>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.ResultDicListByte(Modle.Configuration.FlowConfiguration,Common.AppConfig.AppSettings)">
+            <summary>
+            返回各个连接板子的通道数据指令
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.ResultOneListByte(Common.BasicCommand.FPGAChannel.FPGAChannelStatusHandle,Modle.Configuration.FlowConfiguration,Common.AppConfig.AppSettings)">
+            <summary>
+            处理一个板子的数据
+            </summary>
+            <param name="fpgacsh">FPGAChannelStatusHandle 类型</param>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.ResultDriverOn(Common.BasicCommand.FPGAChannel.FPGAChannelStatus,System.Int32)">
+            <summary>
+            返回Driver On的指令
+            </summary>
+            <param name="fpga">FPGAChannelStatus 类</param>
+            <param name="channel">通道</param>
+            <returns>返回byte[]</returns>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.ResultOpenClose(Common.BasicCommand.FPGAChannel.FPGAChannelStatus,System.Int32)">
+            <summary>
+            返回Open 和 Close的指令
+            </summary>
+            <param name="fpga">FPGAChannelStatus 类</param>
+            <param name="channel">通道</param>
+            <returns>返回byte[]</returns>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.ResultDriverDataReturn(Common.BasicCommand.FPGAChannel.FPGAChannelStatus,Modle.Configuration.FlowConfiguration,Common.AppConfig.AppSettings)">
+            <summary>
+            返回Driver Data 和 Return的指令
+            </summary>
+            <param name="fpga">FPGAChannelStatus 类</param>
+            <returns>返回byte[]</returns>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.ResultUshort(System.Double,Modle.FPGAEnums.NumberType)">
+            <summary>
+            返回分频系数和界面参数结果
+            </summary>
+            <param name="coefficient">分频系数</param>
+            <param name="driver">界面参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.ResultDriverOnAteSoc64Chx(Modle.SystemEnum.FmtMode)">
+            <summary>
+            
+            </summary>
+            <param name="fmt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.ResultDriverDataReturnClkFreeRhRz(Modle.SystemEnum.FmtMode)">
+            <summary>
+            
+            </summary>
+            <param name="fmt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.FrequencyDivision(System.Double,Common.AppConfig.AppSettings)">
+            <summary>
+            LX提供分频系数计算方法
+            </summary>
+            <param name="Period">UI Period</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.ResultRegCommondK7Types(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="channel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelService.PrintTraceLog(System.String,System.Collections.Generic.List{System.Byte[]})">
+            <summary>
+            
+            </summary>
+            <param name="Name"></param>
+            <param name="liByte"></param>
+        </member>
+        <member name="T:Common.BasicCommand.FPGAChannel.FPGAChannelStatus">
+            <summary>
+            FPGAChannelMap基础类
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.#ctor(Modle.FlowModels.ACTimingInfo)">
+            <summary>
+            数据在类与类之间转换，除ConText状态之外
+            </summary>
+            <param name="ac">ACTimingInfo 类</param>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.Period">
+            <summary>
+            UI Period
+            </summary>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.Site0">
+            <summary>
+            UI Channel 下的Site
+            </summary>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.Fmt">
+            <summary>
+            UI Fmt
+            </summary>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.Driver_On">
+            <summary>
+            UI Driver On
+            </summary>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.Driver_Data">
+            <summary>
+            UI Driver Data
+            </summary>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.Driver_Return">
+            <summary>
+            UI Driver Return
+            </summary>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.Driver_Off">
+            <summary>
+            UI Driver Off
+            </summary>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.Compare_Mode">
+            <summary>
+            UI Compare Mode
+            </summary>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.Open">
+            <summary>
+            UI Open
+            </summary>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.Close">
+            <summary>
+            UI Close
+            </summary>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatus.ConText">
+            <summary>
+            数据进来的改变状态
+            </summary>
+        </member>
+        <member name="T:Common.BasicCommand.FPGAChannel.ConTextStatus">
+            <summary>
+            数据改变的状态 
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelStatusHandle.MakeStatus(System.Int32[],Modle.FlowModels.ACTimingInfo)">
+            <summary>
+            数据交换处理
+            </summary>
+            <param name="da">传入的 Site</param>
+            <param name="acTiming">ACTimingInfo 类</param>
+            <returns></returns>
+        </member>
+        <member name="P:Common.BasicCommand.FPGAChannel.FPGAChannelStatusHandle.ChannelCount">
+            <summary>
+            默认128个通道 FPGAChannelMap进入前会定义多少个通道
+            </summary>
+        </member>
+        <member name="F:Common.BasicCommand.FPGAChannel.FPGAChannelStatusHandle.LastResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.FPGAChannel.FPGAChannelStatusHandle.Result(Modle.FlowModels.ACTimingInfo,System.Int32,IChannelMapProvider)">
+            <summary>
+            返回全部通道数据
+            </summary>
+            <param name="acTiming">ACTimingInfo 类</param>
+            <param name="tcpNumber">连接板子序列号</param>
+            <returns>返回全部通道数据</returns>
+        </member>
+        <member name="M:Common.BasicCommand.MeasureHandle.GetMeasureCmd(Modle.SystemEnum.MeasureMode)">
+            <summary>
+            获取测量指令
+            </summary>
+            <param name="measureMode"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.BasicCommand.MeasureHandle.GetPpmuSettingCmd(Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,Modle.SystemEnum.PpmuSettingMeasureMode,System.Int32,Common.BasicCommand.PpmuRegStatusMannager,Common.AppConfig.AppSettings,System.Double)">
+            <summary>
+            获取PpmuSetting指令
+            </summary>
+            <param name="ppmuMode"></param>
+            <param name="value"></param>
+            <param name="ppmuRange"></param>
+            <param name="ppmuSettingMeasureMode"></param>
+            <param name="tcpNumber"></param>
+            <param name="ppmuRegStatusMannager"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.MeasureHandle.GetReadCmdByTimesAndintervalTime(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            获取多次回读DPS或者PPMU指令
+            </summary>
+            <param name="readTimes">回读次数</param>
+            <param name="intervalTime">每次回读的时间间隔</param>
+            <param name="isDpsRead">是否是DPS回读</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.MeasureHandle.GetReadCmdByTimesAndIntervalTime(System.Int32,System.Int32)">
+            <summary>
+            获取多次回读PPMU指令
+            </summary>
+            <param name="readTimes">回读次数</param>
+            <param name="intervalTime">每次回读的时间间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.MeasureHandle.GetReadFreqenceCmd(System.Int32[])">
+            <summary>
+            获取读频率指令
+            </summary>
+            <param name="channels"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BasicCommand.IPPMUStrategy">
+            <summary>
+            PPMU策略接口
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.IPPMUStrategy.CalcDacCodeValue(System.Double)">
+            <summary>
+            计算DAC CODE
+            </summary>
+            <param name="vout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.IPPMUStrategy.GetPPMUCmd(System.Int32[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,System.Double,System.Double,System.Double,System.Int32,Common.BasicCommand.PpmuRegStatusMannager,Common.AppConfig.AppSettings,System.Boolean,System.Boolean)">
+            <summary>
+            获取PPMU指令
+            </summary>
+            <param name="channels"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="clampMin"></param>
+            <param name="clameMax"></param>
+            <param name="Limit"></param>
+            <param name="tcpNumber"></param>
+            <param name="ppmuRegStatusMannager"></param>
+            <param name="appSettings"></param>
+            <param name="isHighPrecision"></param>
+            <param name="ppmuOffset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.IPPMUStrategy.GetPPMUCmd(System.Int32[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,Modle.SystemEnum.VoltageRange,System.Double,System.Double,System.Double,System.Int32,Common.BasicCommand.PpmuRegStatusMannager,Common.AppConfig.AppSettings,System.Boolean)">
+            <summary>
+            获取PPMU高精度指令接口
+            </summary>
+            <param name="channel"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="voltageRange"></param>
+            <param name="clampMin"></param>
+            <param name="clameMax"></param>
+            <param name="Limit"></param>
+            <param name="tcpNumber"></param>
+            <param name="ppmuRegStatusMannager"></param>
+            <param name="appSettings"></param>
+            <param name="ppmuOffset"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BasicCommand.PPMUFactory">
+            <summary>
+            PPMU工厂类
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.PPMUFactory.CreatePPMUStrategy(System.Boolean)">
+            <summary>
+            创建PPMU策略实例
+            </summary>
+            <param name="setHighVoltageMode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BasicCommand.PPMULowVoltageStrategy">
+            <summary>
+            PPMU低压策略类
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.PPMULowVoltageStrategy.CalcDacCodeValue(System.Double)">
+            <summary>
+            计算DAC Code值
+            </summary>
+            <param name="vout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.PPMULowVoltageStrategy.GetPPMUCmd(System.Int32[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,System.Double,System.Double,System.Double,System.Int32,Common.BasicCommand.PpmuRegStatusMannager,Common.AppConfig.AppSettings,System.Boolean,System.Boolean)">
+            <summary>
+            获取Ppmu指令
+            </summary>
+            <param name="channels"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="clampMin"></param>
+            <param name="clameMax"></param>
+            <param name="Limit"></param>
+            <param name="tcpNumber"></param>
+            <param name="ppmuRegStatusMannager"></param>
+            <param name="isHighPrecision"></param>
+            <param name="ppmuOffset"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.BasicCommand.PPMULowVoltageStrategy.GetPPMUCmd(System.Int32[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,Modle.SystemEnum.VoltageRange,System.Double,System.Double,System.Double,System.Int32,Common.BasicCommand.PpmuRegStatusMannager,Common.AppConfig.AppSettings,System.Boolean)">
+            <summary>
+            获取PPMU高精度指令
+            </summary>
+            <param name="channel"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="voltageRange"></param>
+            <param name="clampMin"></param>
+            <param name="clameMax"></param>
+            <param name="Limit"></param>
+            <param name="tcpNumber"></param>
+            <param name="ppmuRegStatusMannager"></param>
+            <param name="ppmuOffset"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.BasicCommand.PpmuRegStatusMannager.Initialize(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Ppmu状态初始化
+            </summary>
+            <param name="selectSlots"></param>
+        </member>
+        <member name="M:Common.BasicCommand.PpmuRegStatusMannager.ResetChannelStatus(System.Int32)">
+            <summary>
+            复位当前Slot通道状态
+            </summary>
+            <param name="slotNumber"></param>
+        </member>
+        <member name="M:Common.BasicCommand.PpmuRegStatusMannager.GetPpmuRegFlag(System.Int32[],System.String,System.Double,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            获取ppmu寄存器flag
+            </summary>
+            <param name="channels"></param>
+            <param name="systemReg"></param>
+            <param name="modeRange"></param>
+            <param name="dacValue"></param>
+            <param name="slotNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Common.BasicCommand.PPMUStrategyBase">
+            <summary>
+            PPMU基类
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.ReadErrorMemory.ReadPatternHandle.StopOnFailEnableResult(Modle.BasicClass.ReadPatternResult,Common.FlowDAQ)">
+            <summary>
+            stop on fail 开启，且上个测试项含fail site
+            memory 中含上个测试项fail site 的pass site置fail
+            </summary>
+        </member>
+        <member name="M:Common.BasicCommand.ReadErrorMemory.ReadPatternHandle.GetChannelBySignalArray(System.String,System.String[],System.Int32,IChannelMapProvider)">
+            <summary>
+            获取signalNames的所有channel
+            </summary>
+            <param name="patName"></param>
+            <param name="signalNames"></param>
+            <param name="tcpNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.ReadErrorMemory.ReadPatternHandle.ReadErrorLog(System.String,System.Collections.Generic.List{Modle.FlowModels.ChannelInfo},Modle.SystemEnum.ReadMemoryFlag,System.Int32,Testrong.Core.Communicate.ICommunicate,Modle.FlowModels.FlowCatalog,System.Byte[],System.Int32,System.Boolean)">
+            <summary>
+            recvLength=3+grabErrorCount*12
+            </summary>
+            <param name="patName"></param>
+            <param name="listChannel"></param>
+            <param name="readMemoryFlag"></param>
+            <param name="grabErrorCount"></param>
+            <param name="tcpNumber"></param>
+            <param name="recvBytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.ReadErrorMemory.ReadPatternHandle.GetErrorLine(System.Collections.Generic.List{Modle.BasicClass.ReadErrorMsg},System.String)">
+            <summary>
+            根据errorCycle从pattern文件中找到对应行
+            </summary>
+            <param name="listReadErrorMsg"></param>
+            <param name="patPath"></param>
+        </member>
+        <member name="M:Common.BasicCommand.ReadErrorMemory.ReadPatternHandle.GetPatternPath(System.String,System.Collections.Generic.List{Modle.FlowModels.Pattern.PatternInfo})">
+            <summary>
+            获取pattern的路径
+            </summary>
+            <param name="patName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.ReadErrorMemory.ReadPatternHandle.GetErrorCycle(System.Collections.Generic.List{Modle.BasicClass.ReadErrorMsg},System.Collections.Generic.List{System.Byte},System.Collections.Generic.List{Modle.FlowModels.ChannelInfo},Modle.SystemEnum.ReadMemoryFlag,System.Int32,Modle.FlowModels.FlowCatalog)">
+            <summary>
+            根据回读值（byteArray）获取errorCycle
+            </summary>
+            <param name="listReadErrorMsg"></param>
+            <param name="listByte"></param>
+            <param name="listChannel"></param>
+            <param name="readMemoryFlag"></param>
+            <param name="tcpNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.ReadErrorMemory.ReadPatternHandle.BisectionList(System.Collections.Generic.List{System.Byte},System.Int32)">
+            <summary>
+            一个list等分多个list
+            </summary>
+            <param name="listByte">要拆分的list</param>
+            <param name="length">等分后每份list的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.DpsRelayHandle.GetDpsRelayCmds(Common.RelayStateRecorder,Modle.SystemEnum.DpsRelayState)">
+            <summary>
+            获取DpsRelay指令
+            </summary>
+            <param name="relayStateRecorder"></param>
+            <param name="dpsRelayState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.Relay.PPMUSettingMarkRelayHandle.GetPPMUSettingMarkCmd(System.Int32[],System.Boolean)">
+            <summary>
+            PPMUSetting mark 通道
+            </summary>
+            <param name="mardedChannels"></param>
+            <param name="isMark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.BasicCommand.Relay.RelayHandle.GetRelayCmd(System.Int32[],Modle.SystemEnum.RelayState,System.Boolean,Common.RelayStateRecorder,System.Boolean)">
+            <summary>
+            获取Relay指令
+            </summary>
+            <param name="channels">通道</param>
+            <param name="relayState">relay 状态</param>
+            <param name="enable">relay是否enable</param>
+            <param name="relayStateRecorder">relay状态对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.CmdUnionHandler.GetLindk7Cmd(System.Collections.Generic.IEnumerable{System.Byte[]})">
+            <summary>
+            单条命令处理
+            </summary>
+            <param name="linkedListStartPattern"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Common.ComFunction.AssemblyInformation.AssemblyTitle">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Common.ComFunction.AssemblyInformation.AssemblyVersion">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:Common.ComFunction.AssemblyInformation.AssemblyInformationalVersion">
+            <summary>
+            Build版本
+            </summary>
+        </member>
+        <member name="P:Common.ComFunction.AssemblyInformation.AssemblyDescription">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Common.ComFunction.AssemblyInformation.AssemblyProduct">
+            <summary>
+            产品
+            </summary>
+        </member>
+        <member name="P:Common.ComFunction.AssemblyInformation.AssemblyCopyright">
+            <summary>
+            版权
+            </summary>
+        </member>
+        <member name="P:Common.ComFunction.AssemblyInformation.AssemblyCompany">
+            <summary>
+            公司
+            </summary>
+        </member>
+        <member name="P:Common.ComFunction.AssemblyInformation.AssemblyConfiguration">
+            <summary>
+            配置
+            </summary>
+        </member>
+        <member name="P:Common.ComFunction.AssemblyInformation.AssemblyTrademark">
+            <summary>
+            商标
+            </summary>
+        </member>
+        <member name="P:Common.ComFunction.AssemblyInformation.AssemblyCulture">
+            <summary>
+            文化
+            </summary>
+        </member>
+        <member name="M:Common.ComFunction.CalcReadBackData.CalcPpmuVoltage(System.Collections.Generic.List{System.Byte},System.Int32,Common.DCOffset.DcOffsetMannager,Common.AllPinInitDataManager,System.Boolean)">
+            <summary>
+            计算ppmu电压值
+            </summary>
+            <param name="data"></param>
+            <param name="tcpNumber"></param>
+            <param name="isHighPrecision"></param>
+            <param name="dcOffsetMannager">DcOffsetMannager 实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.CalcReadBackData.CalcPpmuVoltage(System.Byte[],System.Int32,Common.DCOffset.DcOffsetMannager,Common.AllPinInitDataManager,System.Boolean)">
+            <summary>
+            计算ppmu电压值
+            </summary>
+            <param name="data"></param>
+            <param name="tcpNumber"></param>
+            <param name="dcOffsetMannager">DcOffsetMannager 实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.CalcReadBackData.CalcDpsVoltage(System.Byte[],System.Int32,Common.DCOffset.DcOffsetMannager,Common.AllPinInitDataManager,System.Boolean)">
+            <summary>
+            计算dps电压值
+            </summary>
+            <param name="data"></param>
+            <param name="tcpNumber"></param>
+            <param name="dcOffsetMannager">DcOffsetMannager 实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.CalcReadBackData.CalcPpmuCurrent(System.Collections.Generic.List{System.Byte},System.Double,System.Int32,Modle.SystemEnum.DCOffsetMIRange,Common.DCOffset.DcOffsetMannager,Common.AllPinInitDataManager)">
+            <summary>
+            计算ppmu电流值
+            </summary>
+            <param name="data"></param>
+            <param name="resistance"></param>
+            <param name="tcpNumber"></param>
+            <param name="dcOffsetMannager">DcOffsetMannager 实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.CalcReadBackData.CalcPpmuCurrent(System.Byte[],System.Double,System.Int32,Modle.SystemEnum.DCOffsetMIRange,Common.DCOffset.DcOffsetMannager,Common.AllPinInitDataManager)">
+            <summary>
+            计算ppmu电流值
+            </summary>
+            <param name="data"></param>
+            <param name="resistance"></param>
+            <param name="tcpNumber"></param>
+            <param name="dcOffsetMannager">DcOffsetMannager 实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.CalcReadBackData.CalcDpsCurrent(System.Collections.Generic.List{System.Byte},System.Double,System.Int32,Modle.SystemEnum.DCOffsetMIRange,Common.DCOffset.DcOffsetMannager,Common.AllPinInitDataManager)">
+            <summary>
+            计算dps电流值
+            </summary>
+            <param name="data"></param>
+            <param name="resistance"></param>
+            <param name="tcpNumber"></param>
+            <param name="dcOffsetMannager">DcOffsetMannager 实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.CalcReadBackData.CalcDpsCurrent(System.Byte[],System.Double,System.Int32,Modle.SystemEnum.DCOffsetMIRange,Common.DCOffset.DcOffsetMannager,Common.AllPinInitDataManager)">
+            <summary>
+            计算dps电流值
+            </summary>
+            <param name="data"></param>
+            <param name="resistance"></param>
+            <param name="tcpNumber"></param>
+            <param name="dcOffsetMannager">DcOffsetMannager 实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.CalcReadBackData.CalcReadBackFreqValue(System.Collections.Generic.List{System.Byte},System.Int32[],System.Double,System.Double)">
+            <summary>
+            计算回读频率
+            </summary>      
+            <param name="data"></param>
+            <param name="channelArry"></param>
+            <param name="frequenceOffset"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.ConvertPPMUMethod.ConvertPPMUChannels(System.Int32[])">
+            <summary>
+            转换PPMU通道
+            </summary>
+            <param name="channels"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.ConvertPPMUMethod.ConvertPPMUValues(System.Double[])">
+            <summary>
+            转换PPMU对应通道的值
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.ConvertPPMUMethod.ConvertOffsetData(System.Collections.Generic.List{Common.DCOffset.DcOffsetData},System.Int32)">
+            <summary>
+            交换 Offset
+            </summary>
+            <param name="offsetDatas"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.ConvertPPMUMethod.ConvertPPMUChannel(System.Int32)">
+            <summary>
+            转换PPMU对应通道的值
+            </summary>
+            <param name="sourceChannel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.TempMethod.CalcTemp(System.Byte,System.Byte)">
+            <summary>
+            计算温度公式方法
+            </summary>
+            <param name="high"></param>
+            <param name="low"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.TempMethod.GetTemperature(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            获取计算温度
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.TempMethod.GetTemperature(System.Byte[])">
+            <summary>
+            获取计算温度
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.TempMethod.GetDpsTemperatureString(System.Double[])">
+            <summary>
+            获取DPS温度字符串
+            </summary>
+            <param name="temps"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.TempMethod.GetPPMUTemperatureString(System.Double[])">
+            <summary>
+            获取PPMU温度字符串
+            </summary>
+            <param name="temps"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.GetParameter(System.String)">
+            <summary>
+            function字符串转换为数组
+            </summary>
+            <param name="function"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.GetInterruptParameter(System.String,System.Boolean)">
+            <summary>
+            获取中断字符串参数
+            </summary>
+            <param name="function"></param>
+            <param name="isDefaultType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.GetFirstParameter(System.String)">
+            <summary>
+            获取function第一个参数
+            </summary>
+            <param name="function"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.GetDCOffsetMIRangeEnum(Modle.SystemEnum.MeasureMode)">
+            <summary>
+            获取DCOffsetRange枚举类型
+            </summary>
+            <param name="measureMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.GetDCOffsetMIRangeEnum(Modle.SystemEnum.PpmuRange)">
+            <summary>
+            获取DCOffsetRange枚举类型
+            </summary>
+            <param name="ppmuRange"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.GetPackCmdBagsByMaxCmdCount(System.Collections.Generic.List{System.Collections.Generic.List{System.Byte}},System.Int32,System.Byte[])">
+            <summary>
+            打包指令包方法
+            </summary>
+            <param name="allCommands">总flow指令</param>
+            <param name="maxFlowCmdCount">每个包最大指令条数</param>     
+            <param name="cmdHead">指令头</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.HandleRptReg(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            处理Rpt寄存器
+            </summary>
+            <param name="repeatCount"></param>
+            <param name="delayTime"></param>
+            <param name="repeatOffset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.GetBytesByIndex(System.Double,System.Int32)">
+            <summary>
+            获取指令根据byte个数
+            </summary>
+            <param name="value"></param>
+            <param name="byteCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.GetChannelBitDataByChannel(System.Int32,System.Int32@,System.Boolean)">
+            <summary>
+            根据通道获取byte
+            </summary>
+            <param name="channel">通道</param>
+            <param name="index">编号</param>
+            <param name="isConvertHigh">是否转化为高bit</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.AddOffsetToReadBackValues(System.Double[],System.Double)">
+            <summary>
+            添加补偿值
+            </summary>
+            <param name="values"></param>
+            <param name="offset"></param>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.ToEnum``1(System.String)">
+            <summary>
+            枚举值转化
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.PPMUReadBackDataGrouping(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            PPMU 回读取平均值数据分组
+            </summary>
+            <param name="receiveData"></param>      
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.CalcDacCodeValue(System.Double,System.Double)">
+            <summary>
+            计算DAC Code值
+            </summary>
+            <param name="vout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.FunctionHandler.GetLoadBoardChannelsBySlotNo(System.Int32[],System.Int32)">
+            <summary>
+            获取LoadBoadRelay通道根据slotNo
+            </summary>
+            <param name="channels"></param>
+            <param name="slotNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.PackCmdHandler.GetPackagedCmds(System.Collections.Generic.List{System.Collections.Generic.List{System.Byte}},Common.FlowDAQ)">
+            <summary>
+            打包指令
+            </summary>
+            <param name="functionCmds"></param>
+            <param name="tcpNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComFunction.PackCmdHandler.StartTrimFlow(Testrong.Core.Communicate.ICommunicate,System.Boolean)">
+            <summary>
+            启动打包指令
+            </summary>
+            <param name="tcpNumber"></param>
+            <param name="tcpEnable"></param>
+        </member>
+        <member name="F:Common.ComFunction.SummaryHandler.WaferMessage">
+            <summary>
+            获取Wafer信息
+            </summary>
+        </member>
+        <member name="M:Common.ComFunction.SummaryHandler.GetSummaryTxt">
+            <summary>
+            获取Summary文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.AppConfig.AppSettings.Reload">
+            <summary>
+            程序启动,加载AppSettings配置，如果文件不存在，则更新内存配置到配置文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.AppConfig.AppSettings.Save(Common.AppConfig.AppSettings,System.String)">
+            <summary>
+            保存AppSettings配置
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="M:Common.AppConfig.AppSettings.Load(System.String)">
+            <summary>
+            Load AppSettings配置
+            </summary>     
+            <returns></returns>
+        </member>
+        <member name="P:Common.SiteBinInfo.Site">
+            <summary>
+            [0~max]
+            </summary>
+        </member>
+        <member name="P:Common.BinMapManager.SiteBinningInfoByNoDictionary">
+            <summary>
+            Update By Datalog FTR/PTR
+            </summary>
+        </member>
+        <member name="P:Common.BinMapManager.SiteBinInfoDictByBinHandle">
+            <summary>
+            Update BinHandler
+            </summary>
+        </member>
+        <member name="T:Common.ComResource.PatternService.DebugLoadingPattern">
+            <summary>
+            debug是否存在ram/onor pattern，并且是否下载ram/onor pattern
+            </summary>
+        </member>
+        <member name="M:Common.ComResource.PatternService.DebugLoadingPattern.DebugLoadingRam">
+            <summary>
+            是否下载 Ram Pattern
+            </summary>
+            <returns>
+            true:已下载
+            false:未下载需要提示
+            </returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.DebugLoadingPattern.DebugLoadingOnor">
+            <summary>
+            是否下载 Onor Pattern
+            </summary>
+            <returns>
+            true:已下载
+            false:未下载需要提示
+            </returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.DebugLoadingPattern.IsExistPattern(System.Int32,System.Collections.Generic.Dictionary{System.String,Modle.BasicClass.Pattern.PatternOrderInfoClasss}[])">
+            <summary>
+            检查是否存在 ram/onor pattern
+            </summary>
+            <param name="tcpNumber"></param>
+        </member>
+        <member name="P:Common.ComResource.PatternService.IBackFillingService.DicPatternInstructionList">
+            <summary>
+            k7方向表,公共变量待提取
+            </summary>
+            <summary>
+            PatternOrderInfo
+            </summary>
+        </member>
+        <member name="P:Common.ComResource.PatternService.IBackFillingService.DicCaptureInfo">
+            <summary>
+            CaptureInfo
+            </summary>
+        </member>
+        <member name="P:Common.ComResource.PatternService.IBackFillingService.TrimInfos">
+            <summary>
+            TrimInfo
+            </summary>
+        </member>
+        <member name="M:Common.ComResource.PatternService.IBackFillingService.CheckPatternFileExist">
+            <summary>
+            判断pattern文件存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.IBackFillingService.BackFilling">
+            <summary>
+            返填patterninfo内存数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.IBackFillingService.GetPatternsNeedComplie">
+            <summary>
+            获取需要编译的pattern
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Common.ComResource.PatternService.BackFillingService.DicPatternInstructionList">
+            <summary>
+            k7方向表,公共变量待提取
+            </summary>
+            <summary>
+            PatternOrderInfo
+            </summary>
+        </member>
+        <member name="P:Common.ComResource.PatternService.BackFillingService.DicCaptureInfo">
+            <summary>
+            CaptureInfo
+            </summary>
+        </member>
+        <member name="P:Common.ComResource.PatternService.BackFillingService.TrimInfos">
+            <summary>
+            TrimInfo
+            </summary>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternContextManager.GetFlowPatternPath(System.String)">
+            <summary>
+            提取ui函数，属于service逻辑
+            </summary>
+            <param name="pathName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternContextManager.GetCompilePatternData">
+            <summary>
+            提取ui函数，属于application逻辑,包含数据传输对象转换逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternContextManager.GetPatternNames">
+            <summary>
+            提取ui函数，属于application逻辑,包含数据传输对象转换逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternContextManager.GetLoadPatternData">
+            <summary>
+            提取ui函数，属于application逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternContextManager.GetCompilePatternData(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            提取ui函数，属于application逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternContextManager.GetLoadPatternData(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            提取ui函数，属于application逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternContextManager.IsCompiled">
+            <summary>
+            提取ui函数，属于application逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.IPatternDirectionService.CreateDefaultK7DirectionTable">
+            <summary>
+            初始方向表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.IPatternDirectionService.InitK7DirectionTable(System.Int32,System.Int32)">
+            <summary>
+            slotNo-tcpNumber
+            </summary>
+            <param name="slotNo"></param>
+        </member>
+        <member name="M:Common.ComResource.PatternService.IPatternDirectionService.InitK7IfNotNull(System.Int32,System.Int32)">
+            <summary>
+            若不存在初始方向表
+            </summary>
+            <param name="tcpNumber"></param>
+        </member>
+        <member name="M:Common.ComResource.PatternService.IPatternDirectionService.GetPatternDirectionSum(System.Int32,Modle.PatMemDefEnums.K7Type)">
+            <summary>
+            获取方向表指令数量数组(校验位)
+            </summary>
+            <param name="directionCount">方向表指令数</param>
+            <param name="k7Type">k7Type(u1u2u3u4)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.IPatternDirectionService.HexStrToByteArray(System.String)">
+            <summary>
+            十六进制字符串转换为byte[]
+            </summary>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternDirectionService.CreateDefaultK7DirectionTable">
+            <summary>
+            初始方向表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternDirectionService.GetPatternDirectionSum(System.Int32,Modle.PatMemDefEnums.K7Type)">
+            <summary>
+            获取方向表指令数量数组(校验位)
+            </summary>
+            <param name="directionCount">方向表指令数</param>
+            <param name="k7Type">k7Type(u1u2u3u4)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternDirectionService.GetPatternDirection(System.Collections.Generic.Dictionary{System.String,System.Int32},Modle.PatMemDefEnums.K7Type)">
+            <summary>
+            获取实际地址数组
+            </summary>
+            <param name="dicDir">方向表字典</param>
+            <param name="k7Type">k7Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternDirectionService.HexStrToByteArray(System.String)">
+            <summary>
+            十六进制字符串转换为byte[]
+            </summary>
+            <param name="arr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternDirectionService.InitK7DirectionTable(System.Int32,System.Int32)">
+            <summary>
+            slotNo-tcpNumber
+            </summary>
+            <param name="slotNo"></param>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternDirectionService.InitK7IfNotNull(System.Int32,System.Int32)">
+            <summary>
+            若不存在初始方向表
+            </summary>
+            <param name="tcpNumber"></param>
+        </member>
+        <member name="M:Common.ComResource.PatternService.PatternDirectionService.GetAllK7DireactionInstructionLinkedList(System.Int32,System.Int32,System.Collections.Generic.List{Modle.FlowModels.Pattern.PatternInfo})">
+            <summary>
+            获取方向表字节数组
+            </summary>
+            <param name="tcpNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.ComResource.InitInfoManager.Reload(Common.FlowContext,Testrong.Core.Communicate.ICommunicate)">
+            <summary>
+            加载初始值
+            </summary>
+            <param name="flowContext"></param>    
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="F:Common.ComResource.StdfRecordHelper.SiteNoRange">
+            <summary>
+                 head:byte     site:byte  
+               +------------+------------+
+               + [1, 255]   | [0, 255]   |
+               +------------+------------+
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Common.BaseDebugToolManager.DebugDriverDataReturn(System.String,Modle.SystemEnum.YType,System.Double,System.Double)" -->
+        <member name="M:Common.ConfigProvider.GetValue(System.String)">
+            <summary>
+            根据Key取Value值
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:Common.IDebugTool.BindingDebugToolStatusChanged(System.Action{System.Boolean})">
+            <summary>
+            DebugTool 状态
+            </summary>
+            <param name="changed"></param>
+        </member>
+        <member name="M:Common.IDebugTool.DebugToolEnd">
+            <summary>
+            DebugTool结束
+            </summary>
+        </member>
+        <member name="M:Common.IShmooDebugTool.FindFunctionName(Modle.SystemEnum.MyFunctionType)">
+            <summary>
+            查找对应类型的方法名
+            </summary>
+            <param name="myFunctionType">Function 类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.IShmooDebugTool.CheckShmooParaValus(Modle.SystemEnum.ShmooMode,System.Collections.Generic.List{System.Double},System.String)">
+            <summary>
+            检查参数是否超出有效范围
+            </summary>
+            <param name="shmooMode">shmoo模式</param>
+            <param name="listValues">检查的参数值</param>
+            /// <param name="DPSName">DPS Function 名字</param>
+            <returns>返回链表值，true 表示有效，false 表示无效</returns>
+        </member>
+        <member name="M:Common.IShmooDebugTool.GetSite">
+            <summary>
+            获取当前已经连接的Tcp的对应的site
+            </summary>
+            <param name="tcpNumber">TCP编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.IShmooDebugTool.GetDebugToolParaLimit(Modle.SystemEnum.ShmooMode,System.Double@,System.Double@)">
+            <summary>
+            获取DebugTool参数Limit
+            </summary>
+            <param name="shmooMode">shmoo模式</param>
+            <param name="min">Limit最小值</param>
+            <param name="max">Limit最大值</param>
+        </member>
+        <member name="M:Common.IShmooDebugTool.BindingShmooErrorTip(System.Action{System.String})">
+            <summary>
+            错误提示
+            </summary>
+            <param name="errorMsg">错误消息</param>
+        </member>
+        <member name="M:Common.IShmooDebugTool.GetDebugToolConfigValue(System.String)">
+            <summary>
+            获取配置文件中的key对应的值
+            </summary>
+            <param name="key">配置文件Key值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.IShmooDebugTool.DebugDriverDataReturn(System.String,Modle.SystemEnum.YType,System.Double,System.Double)">
+            <summary>
+            检查driverData是否小于driverReturn
+            </summary>
+            <param name="actimingName">actiming 名字</param>
+            <param name="yType">Y轴类型</param>
+            <param name="beginValue">起始值</param>
+            <param name="endValue">结束值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.IShmooDebugTool.ShmooReset(System.Int32)">
+            <summary>
+            shmoo执行结束后reset
+            </summary>
+        </member>
+        <member name="M:Common.FirmWareVersionManerger.CheckFirmWareVersion(System.String)">
+            <summary>
+            检查固件版本号是否兼容
+            </summary>
+            <param name="firmWareVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FirmWareVersionManerger.GetFirmWareVersion(Testrong.Core.Communicate.ICommunicate,Common.AppConfig.AppSettings)">
+            <summary>
+            获取固件版本号
+            </summary>
+            <param name="tcpClient"></param>
+        </member>
+        <member name="M:Common.FirmWareVersionManerger.GetLowestFirmWareVersion">
+            <summary>
+            获取配置文件中配置的最低固件兼容版本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FirmWareVersionManerger.GetFirmWareVersion">
+            <summary>
+            获取固件版本信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0EA0">
+            <summary>
+            ReadArmVersion
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E62">
+            <summary>
+            ReadPPMUVertion
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E63">
+            <summary>
+            ReadDPSVersion
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E64">
+            <summary>
+            ReadMolexVersion 
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E1A">
+            <summary>
+            K7ResetCheck
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0EB0">
+            <summary>
+            ReadK7UsingStatus
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E0D">
+            <summary>
+            DPS Read
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E0B">
+            <summary>
+            PPMU Read
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E90">
+            <summary>
+            Start Flow
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0F01">
+            <summary>
+            Read K71
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0F02">
+            <summary>
+            Read K72
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0F03">
+            <summary>
+            Read K73
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0F04">
+            <summary>
+            Read K74
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0F05">
+            <summary>
+            Read Frequency
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E03">
+            <summary>
+            Read Io Leakage
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0EB2">
+            <summary>
+            CheckBusy 
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E30">
+            <summary>
+            PPMU Share
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0EE8">
+            <summary>
+            Trigger回读
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E45">
+            <summary>
+            PPMU多次取平均值回读
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E0F">
+            <summary>
+            DigtialCard
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E12">
+            <summary>
+            DigtialCard
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E51">
+            <summary>
+            DigtialCard
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E53">
+            <summary>
+            DigtialCard
+            </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0EEB">
+             <summary>
+            OS
+             </summary>
+        </member>
+        <member name="F:Common.PreRun.PreRunHelper.SendCmdHead._0E39">
+            <summary>
+            Read DNA
+            </summary>
+        </member>
+        <member name="M:Common.PreRun.PreRunHelper.CreateRcvData(System.Byte[],System.Int32)">
+            <summary>
+            创建下位机回复的模拟数据
+            </summary>
+            <param name="sendData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.PreRun.PreRunHelper.UpdateFlowInterruptStatus(System.Int32,System.Boolean)">
+            <summary>
+            更新Flow中断状态
+            </summary>
+            <param name="slotNo"></param>
+            <param name="interrptIsEnd"></param>
+        </member>
+        <member name="M:Common.RelayStateManager.Initialize(System.Collections.Generic.IEnumerable{System.Int32},Common.FlowContext)">
+            <summary>
+            初始化Relay状态
+            </summary>
+            <param name="slotNos"></param>
+            <param name="maxDPSChannel"></param>
+        </member>
+        <member name="M:Common.RelayStateManager.Initialize(System.Int32,System.Int32)">
+            <summary>
+            初始化Relay状态
+            </summary>
+            <param name="slotNo"></param>
+            <param name="maxDPSChannel"></param>
+        </member>
+        <member name="P:Common.RelayStateManager.Item(System.Int32)">
+            <summary>
+            获取Relay 状态
+            </summary>
+            <param name="tcpNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Common.RelayStateRecorder.DpsRelayStateArray">
+            <summary>
+            DpsRelay状态数组
+            </summary>
+        </member>
+        <member name="P:Common.RelayStateRecorder.InstrumentRelayArray">
+            <summary>
+            Relay状态数组
+            </summary>
+        </member>
+        <member name="M:Common.RelayStateRecorder.UpdateInstrumentRelayStateArray(System.Int32[],Modle.SystemEnum.RelayState,System.Boolean)">
+            <summary>
+            更新Relay状态
+            </summary>
+            <param name="channels"></param>
+            <param name="statusFlag"></param>
+            <param name="tcpNumber"></param>
+        </member>
+        <member name="M:Common.RelayStateRecorder.UpdateDpsStateArray(System.Int32[],Modle.SystemEnum.DpsRelayState,System.Boolean)">
+            <summary>
+            更新DpsRelay状态
+            </summary>
+            <param name="channels"></param>
+            <param name="dpsRelayState"></param>
+        </member>
+        <member name="M:Common.RelayStateRecorder.CheckDpsStateChange(System.Int32[],Modle.SystemEnum.DpsRelayState)">
+            <summary>
+            检查Dps Relay状态是否改变
+            </summary>
+            <param name="channels"></param>
+            <param name="statusFlag"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Common.RelayStatus.Channel">
+            <summary>
+            通道
+            </summary>
+        </member>
+        <member name="P:Common.RelayStatus.RelayState">
+            <summary>
+            relay状态
+            </summary>
+        </member>
+        <member name="F:Common.DpsRelayStatus.DpsChannel">
+            <summary>
+            Dps通道
+            </summary>
+        </member>
+        <member name="F:Common.DpsRelayStatus.DpsRelayState">
+            <summary>
+            DpsRelay状态
+            </summary>
+        </member>
+        <member name="T:Common.StopOnFailHandler">
+             <summary>
+            StopOnFailHandler类用途：提供StopOnFail功能（测试site fail后，mark对应管脚的开关）
+             </summary>
+        </member>
+        <member name="M:Common.StopOnFailHandler.MarkFailSite(Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Mark Fail Site
+            </summary>
+            <param name="flowDAQ"></param>
+            <param name="tcpEnable"></param>
+        </member>
+        <member name="M:Common.WaitHandler.Init(System.Int32)">
+            <summary>
+            初始化需要同步的线程
+            </summary>
+            <param name="tcpConnectCount"></param>
+        </member>
+        <member name="M:Common.WaitHandler.WaitAllSlotSynchronization(System.Action)">
+            <summary>
+            等待多块slot同步
+            </summary>
+            <param name="action">需要在同步中执行的方法</param>
+        </member>
+        <member name="M:Common.WaitHandler.BarrierDispose">
+            <summary>
+            释放Barrier资源
+            </summary>
+        </member>
+        <member name="M:Common.WaitHandler.RemoveParticipant">
+            <summary>
+            减少一个线程的同步
+            </summary>
+        </member>
+        <member name="M:Common.WaitHandler.Dispose">
+            <summary>
+            释放Barrier资源
+            </summary>
+        </member>
+        <member name="T:Common.Constants">
+            <summary>
+            存放程序中定义的常量
+            </summary>
+        </member>
+        <member name="F:Common.Constants.REPEAT_BIT_WIDTH">
+            <summary>
+            Repeat 28个bit（位宽）
+            </summary>
+        </member>
+        <member name="F:Common.Constants.REPEAT_MAX_COUNT">
+            <summary>
+            repeat max '268435455'
+            </summary>
+        </member>
+        <member name="F:Common.Constants.CPLD_BIT_WIDTH">
+            <summary>
+            CPLD 8个bit（位宽）
+            </summary>
+        </member>
+        <member name="F:Common.Constants.CPLD_MAX_COUNT">
+            <summary>
+            CPLD max '255'
+            </summary>
+        </member>
+        <member name="F:Common.Constants.REPEAT_NUMBER_WIDTH">
+            <summary>
+            CPLD+REPEAT 'F FFFF FFFF'
+            </summary>
+        </member>
+        <member name="F:Common.Constants.MAX_K7_CHANNEL">
+            <summary>
+            一片K7最大通道为64
+            </summary>
+        </member>
+        <member name="F:Common.Constants.MAX_SLOT_COUNT">
+            <summary>
+            slot最大数量为16
+            </summary>
+        </member>
+        <member name="F:Common.Constants.MAX_IO_CHANNEL">
+            <summary>
+            最大IO管脚通道
+            </summary>
+        </member>
+        <member name="F:Common.Constants.MAX_SUPPLY_CHANNEL">
+            <summary>
+            最大电源管脚通道
+            </summary>
+        </member>
+        <member name="F:Common.Constants.MAX_PATTERN_COUNT">
+            <summary>
+            Pat文件最大数量（0xFFFF）
+            </summary>
+        </member>
+        <member name="M:Common.CrcHandle.Crc.GetCRC8Value(System.Byte[])">
+            <summary>
+            crc8校验
+            </summary>
+            <param name="cmd">指令数组</param>
+            <returns>一个byte crc8校验值</returns>
+        </member>
+        <member name="M:Common.CrcHandle.Crc.GetCRC16Value(System.Byte[])">
+            <summary>
+             crc16校验
+            </summary>
+            <param name="cmd">指令数组</param>
+            <returns>二个byte crc16校验值</returns>
+        </member>
+        <member name="M:Common.CrcHandle.Crc.GetCRC32Value(System.Byte[])">
+            <summary>
+             crc32校验
+            </summary>
+            <param name="cmd">指令数组</param>
+            <returns>四个byte crc32校验值</returns>
+        </member>
+        <member name="M:Common.CrcHandle.Crc.GetCmdAddCrc(System.Byte[])">
+            <summary>
+            给指令添加crc校验
+            </summary>
+            <param name="cmd">原始指令</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Common.CrcHandle.Crc.GetCmdAddCrc16(System.Byte[])" -->
+        <member name="M:Common.DCOffset.DcOffsetMannager.ReadDCOffsetData(System.String,System.Int32)">
+            <summary>
+            读取DC配置数据
+            </summary>
+            <param name="path"></param>
+            <param name="slotNo"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.DCOffset.DcOffsetMannager.ClearDCOffsetData">
+            <summary>
+            清除DCOffset数据
+            </summary>
+        </member>
+        <member name="M:Common.DCOffset.DcOffsetMannager.GetDcOffsetDatas">
+            <summary>
+            获取配置数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FindTableCommand.DCLevelDefaultCmd.GetVoltageParaItemSetting(System.Int32,System.Byte[])">
+            <summary>
+            VOH设置启动地址
+            </summary>
+            <param name="k7Count"></param>
+            <param name="addressCmd"></param>
+            <returns></returns>
+            <exception cref="T:System.FormatException"></exception>
+        </member>
+        <member name="M:Common.FindTableCommand.DCLevelDefaultCmd.GetVOLTageParaOpItemSetting(System.Int32,System.Byte[])">
+            <summary>
+            VOL设置启动地址
+            </summary>
+            <param name="k7Count"></param>
+            <param name="addressCmd"></param>
+            <returns></returns>
+            <exception cref="T:System.FormatException"></exception>
+        </member>
+        <member name="M:Common.FindTableCommand.DCLevelDefaultCmd.GetACTIMING_FG(System.Int32)">
+            <summary>
+            设置Timing
+            </summary>
+            <param name="k7Count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FindTableCommand.DCLevelDefaultCmd.GetStartItem(System.Int32)">
+            <summary>
+            启动Item
+            </summary>
+            <param name="k7Count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FindTableCommand.DCLevelDefaultCmd.GetStartBegin(System.Int32)">
+            <summary>
+            启动DCLevel
+            </summary>
+            <param name="k7Count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FindTableCommand.DCLevelManager.GetLevelShiftCmd(System.String,Common.FlowContext)">
+            <summary>
+            根据levelshift调整指令
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FindTableCommand.DpsTableCommand.GetDpsCmdByName(System.String,System.Int32,System.Boolean,Common.FlowContext)">
+            <summary>
+            获取Dps指令根据function名字
+            </summary>
+            <param name="functionName"></param>
+            <param name="slotNo"></param>
+            <param name="dpsOffset"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.FlowContext.Initialize(System.Boolean)">
+            <summary>
+            Initialize flow context, Should initialize before tcp connect
+            </summary>
+        </member>
+        <member name="T:Common.FlowDAQ">
+            <summary>
+            Flow 数据采集类
+            </summary>
+        </member>
+        <member name="M:Common.FlowDAQ.SlotShowLoopCount(System.Int32)">
+            <summary>
+            显示Loop次数
+            </summary>
+            <param name="loopCount"></param>
+        </member>
+        <member name="M:Common.FlowDAQ.BinHandle(System.Int32[],Modle.FlowModels.SoftBinMapInfo)">
+            <summary>
+            分Bin
+            </summary>
+            <param name="failSite">Fail site 数组</param>
+            <param name="softBinMapClass">软件Bin值</param>       
+        </member>
+        <member name="M:Common.FlowDAQ.BinHandle(System.Int32[])">
+            <summary>
+            分bin
+            </summary>
+            <param name="failSite"></param>
+        </member>
+        <member name="M:Common.FlowDAQ.BinHandle(System.Int32[],System.String)">
+            <summary>
+            Code 分bin
+            </summary>
+            <param name="failSite">fail site</param>
+            <param name="binningName">bining 名字</param>
+        </member>
+        <member name="M:Common.FlowDAQ.JudgeValueAndUpdateResult(System.Double[],System.Collections.Generic.List{Modle.FlowModels.ChannelInfo},System.Double,System.Double,System.Boolean,System.Int32,System.String,Modle.SystemEnum.BackValueType)">
+            <summary>
+             把测试值结果更新到Result
+            </summary>
+            <param name="values">测量值</param>
+            <param name="channelArrays">通道</param>
+            <param name="min">最小值</param>
+            <param name="max">最大值</param>
+            <param name="isSupply">是否是电源管脚</param>
+            <param name="slotNumber">tcp编号</param>
+            <param name="binningName">binning名字</param>
+            <param name="backValueType">BackValueType.BackChannelValue模式要求数组值及通道通道下标一一对应</param>
+        </member>
+        <member name="M:Common.FlowDAQ.JudgeValueAndUpdateResult(System.Double[],System.Collections.Generic.List{Modle.FlowModels.ChannelInfo},System.Double,System.Double,System.Boolean,System.Int32,Modle.FlowModels.BinningInfo,Modle.SystemEnum.BackValueType)">
+            <summary>
+             把测试值结果更新到Result
+            </summary>
+            <param name="values">测量值</param>
+            <param name="channelArrays">通道</param>
+            <param name="min">最小值</param>
+            <param name="max">最大值</param>
+            <param name="isSupply">是否是电源管脚</param>
+            <param name="slotNumber">tcp编号</param>
+            <param name="binningInfo">binningInfo对象实例</param>
+            <param name="backValueType">BackValueType.BackChannelValue模式要求数组值及通道通道下标一一对应</param>
+        </member>
+        <member name="M:Common.FlowDAQ.PostTXTData(System.Collections.Generic.List{Testrong.Core.Datalog.Interfaces.DataInfo})">
+            <summary>
+            Post TXT Data
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Common.FlowDAQ.PostTXTData(Testrong.Core.Datalog.Interfaces.DataInfo)">
+            <summary>
+            Post TXT Data
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Common.FlowDAQ.InitMeasurePin">
+            <summary>
+            初始化测量的所有通道
+            </summary>
+        </member>
+        <member name="M:Common.FlowDAQ.CheckAllSiteFail">
+            <summary>
+            判断site是否全fail
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FlowDAQ.ResetSiteAndChannelState">
+            <summary>
+             flow开始前复位上位机通道和site状态
+            </summary>
+        </member>
+        <member name="M:Common.FlowDAQ.UpdateSiteAndChannelState(System.Int32[],System.Int32[],Modle.FlowModels.BinningInfo)">
+            <summary>
+            更新site 和通道状态
+            </summary>
+            <param name="failSites"></param>
+            <param name="passSites"></param>
+            <param name="binningInfo"></param>
+        </member>
+        <member name="M:Common.FlowDAQ.GetFailNGSiteChannel(System.Boolean)">
+            <summary>
+            查找Fail 的通道
+            </summary>
+            <param name="isSupplay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FlowDAQ.FindFailSite">
+            <summary>
+            查找fail site
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.FlowDAQ.PrintResult(System.Boolean)">
+            <summary>
+            将测试数据添加到测试Log
+            </summary>
+            <param name="printValue">true打印测试值和site状态值，false只显示site状态值</param>
+        </member>
+        <member name="M:Common.FlowDAQ.GetBinningByName(System.String)">
+            <summary>
+            根据 binning name获取BingingInfo
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException"></exception>
+        </member>
+        <member name="M:Common.FlowDAQ.GetBinningByNameAndSignal(System.String,System.String)">
+            <summary>
+            根据 binning and signal name获取BingingInfo
+            </summary>
+            <param name="name"></param>
+            <param name="signal"></param>
+            <returns></returns>
+            <exception cref="T:System.Collections.Generic.KeyNotFoundException"></exception>
+        </member>
+        <member name="M:Common.FlowDAQ.GetChannelInfoBySiteAndSignal(System.Int32,System.String)">
+            <summary>
+            Get <see cref="T:Modle.FlowModels.ChannelInfo"/> by Site and Signal
+            </summary>
+            <param name="site"></param>
+            <param name="signal"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.FlowDAQ.SetPrecision(System.Int32)">
+            <summary>
+            设置测试值打印的精度
+            </summary>
+            <param name="precision">精确到几位小数</param>
+        </member>
+        <member name="M:Common.FlowDAQ.PostPtr(System.Int32,System.String,Modle.FlowModels.BinningInfo,System.Double,System.Boolean)">
+            <summary>
+            post STDF PTR record
+            </summary>
+            <param name="site">site 编号</param>
+            <param name="signal">pin name</param>
+            <param name="binningInfo">binningInfo 实例</param>
+            <param name="resultValue">结果值</param>
+            <param name="logOnly">true:只记录数据不分bin,false:记录数据并且分bin</param>
+        </member>
+        <member name="M:Common.FlowDAQ.PostPtr(Modle.FlowModels.ChannelInfo,Modle.FlowModels.BinningInfo,System.Double,System.Boolean)">
+            <summary>
+            post STDF PTR record
+            </summary>
+            <param name="channelInfo">通道实例</param>
+            <param name="binningInfo">binningInfo 实例</param>
+            <param name="resultValue">结果值</param>
+            <param name="logOnly">true:只记录数据不分bin,false:记录数据并且分bin</param>
+        </member>
+        <member name="M:Common.FlowDAQ.PostFtr(Modle.FlowModels.ChannelInfo,Modle.FlowModels.BinningInfo,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            post STDF FTR record
+            </summary>
+            <param name="channelInfo">通道实例</param>
+            <param name="binningInfo">binningInfo 实例</param>
+            <param name="result">true为pass,false为fail</param>
+            <param name="resultInfo">结果信息</param>
+            <param name="logOnly">true:只记录数据不分bin,false:记录数据并且分bin</param>
+        </member>
+        <member name="M:Common.FlowDAQ.PostFtr(System.Collections.Generic.IEnumerable{Modle.FlowModels.SiteInfo},Modle.FlowModels.BinningInfo,System.Boolean)">
+            <summary>
+            post STDF FTR record
+            </summary>
+            <param name="siteInfos">site实例</param>
+            <param name="binningInfo">binningInfo 实例</param>
+            <param name="logOnly">true:只记录数据不分bin,false:记录数据并且分bin</param>
+        </member>
+        <member name="M:Common.FlowDAQ.WriteTXTFtrlog(System.Collections.Generic.IEnumerable{Modle.FlowModels.SiteInfo},System.String,System.UInt32,System.Int32)">
+            <summary>
+            Write TXT Ftr log
+            </summary>
+            <param name="siteInfos"></param>
+            <param name="itemName"></param>
+            <param name="itemindex"></param>
+            <param name="functionIndex"></param>
+        </member>
+        <member name="M:Common.FlowDAQ.PostTextLog(System.String,System.Int32)">
+            <summary>
+            post flow text log 
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:Common.FlowDAQ.PostTextLog(System.Text.StringBuilder,System.Int32)">
+            <summary>
+            Post StringBuilder text
+            </summary>
+            <param name="sb"></param>
+        </member>
+        <member name="T:Common.StopOnFailPostHelper">
+            <summary>
+            记录Fail Site是否打印的状态
+            </summary>
+        </member>
+        <member name="M:Common.StopOnFailPostHelper.Add(System.Int32,Modle.FlowModels.FlowItemNodeInfo,System.Int32,Modle.FlowModels.BinningInfo)">
+            <summary>
+             添加Fail site信息
+            </summary>
+            <param name="site"></param>
+            <param name="flowItemNodeInfo"></param>
+            <param name="functionIndex"></param>
+            <param name="binningInfo"></param>
+        </member>
+        <member name="M:Common.StopOnFailPostHelper.IsPrintSTDF(System.Int32,Modle.FlowModels.FlowItemNodeInfo,System.Int32,Modle.FlowModels.BinningInfo)">
+            <summary>
+            判断是否打印STDF
+            </summary>
+            <param name="site"></param>
+            <param name="flowItemNodeInfo"></param>
+            <param name="functionIndex"></param>
+            <param name="binningInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TcpManager.StageChanging(Testrong.Core.Communicate.CommunicateStage)">
+            <summary>
+            TBR
+            </summary>
+            <param name="stage"></param>
+        </member>
+        <member name="M:Common.TcpManager.GetConnectedTcpCliens">
+            <summary>
+            获取已经连接的Tcp编号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Common.TestrongIO.IWaferProberAbstractionLayer.OnWafer">
+            <summary>
+            检查设备有效wafer
+            </summary>
+        </member>
+        <member name="P:Common.TestrongIO.IWaferProberAbstractionLayer.XAixs">
+            <summary>
+            X坐标
+            </summary>
+        </member>
+        <member name="P:Common.TestrongIO.IWaferProberAbstractionLayer.YAixs">
+            <summary>
+            Y坐标
+            </summary>
+        </member>
+        <member name="F:Common.TestrongIO.WaferProberSQR.WaferReady">
+            <summary>
+            Initial Die, Reference Die
+            </summary>
+        </member>
+        <member name="F:Common.TestrongIO.WaferProberSQR.IndexTransferComplete">
+            <summary>
+             Index Transfer Complete
+            </summary>
+        </member>
+        <member name="F:Common.TestrongIO.WaferProberSQR.WaferInitial">
+            <summary>
+             Initial Wafer
+            </summary>
+        </member>
+        <member name="F:Common.TestrongIO.WaferProberSQR.WaferEnd">
+            <summary>
+            Wafer End
+            </summary>
+        </member>
+        <member name="F:Common.TestrongIO.WaferProberSQR.ProcessComplete">
+            <summary>
+             Process Complete
+            </summary>
+        </member>
+        <member name="M:Common.TestrongSystem.AcTimming.GetAcTimmingCmd(System.Double,System.Boolean,Common.FlowDAQ)">
+            <summary>
+             Testrong ATE_Tester ACTimming 模块设置周期频率操作
+            </summary>
+            <param name="period">设置的周期值范围2us-10000us(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.AcTimming.InitializationFPGAChannel(Common.FlowDAQ)">
+            <summary>
+            初始化所有channel的状态（default）
+            </summary>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.AcTimming.SetFPGAChanneStates(System.String,System.Collections.Generic.List{Modle.FlowModels.ACTimingInfo},Common.FlowDAQ)">
+            <summary>
+            设置channel状态
+            </summary>
+            <param name="actimingName">actiming名称(不可以是空白或者仅空格组成)(必填)</param>
+            <param name="acTimings">
+            actiming对象数组（至少初始化一个对象）(必填)
+            例:
+            ACBaseClass[] acArrays = new ACBaseClass[] {
+            new ACBaseClass {Name="actimingName",Period=1000,SignalName="A01,A02",Fmt="NR/RL/RH/SBL/SBH",Ons="NA/[0-7/8]",Data="NA/[0-7/8]",Return="NA/[0-7/8]",Off="NA/[0-7/8]",Mode="Edge/WindowCompare",Open="NA/[0-7/8]",Close="NA/[0-7/8]" },
+            new ACBaseClass {Name="actimingName",Period=1000,SignalName="A01,A02",Fmt="NR/RL/RH/SBL/SBH",Ons="NA/[0-7/8]",Data="NA/[0-7/8]",Return="NA/[0-7/8]",Off="NA/[0-7/8]",Mode="Edge/WindowCompare",Open="NA/[0-7/8]",Close="NA/[0-7/8]" }
+             };
+            </param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.Breakpoint.AddBreakPoint(System.String)">
+            <summary>
+            添加断点
+            </summary>
+            <param name="breakpointName">断点名称(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.CaptureMethodClass.CatchNumberMethod(System.String,System.String,System.String,Common.FlowDAQ,System.Byte[])">
+            <summary>
+            capture抓一个数
+            </summary>
+            <param name="patternName">pattern名称(不加后缀)(必填)</param>
+            <param name="signalName">脚名(必填)</param>
+            <param name="capType">标识符，Cap(必填)</param>
+            <param name="result">结果类(必填)</param>
+            <returns>根据site从小到大排序后的value(十进制)(不填)</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.CaptureMethodClass.CatchBitValue(System.String,System.String,System.String,Common.FlowDAQ,System.Byte[])">
+            <summary>
+            获取capture每个cycle的值
+            </summary>
+            <param name="patternName">pattern名称(不加后缀)(必填)</param>
+            <param name="signalName">脚名(必填)</param>
+            <param name="capType">标识符，Cap(必填)</param>
+            <param name="result">结果类(必填)</param>
+            <returns>根据site从小到大排序后每个cycle的值（'0' / '1'）</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.ClearAllError.ClearErrorMemory(Common.FlowDAQ)">
+            <summary>
+             Testrong ATE_Tester ClaarErrorMemory 模块清除错误信息操作
+            </summary>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.ClearError.ClearErrorMemory(Common.FlowDAQ)">
+            <summary>
+             Testrong ATE_Tester ClaarErrorMemory 模块清除错误信息操作
+            </summary>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.CodeChannelHandle.GetPpmuSlotChannel(System.Int32[],System.Int32)">
+            <summary>
+            Testrong ATE_Tester Channel 模块获取ppmu通道信息操作
+            </summary>
+            <param name="channelArry">map需要查找的ppmu通道数组(必填)</param>
+            <param name="tcpNumber">tcpNumber对应的slotnumber(必填)</param>
+            <returns>在对应slot中ppmu通道的物理通道编号数组</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.CodeChannelHandle.GetPpmuSlotChannelK7Use(System.Int32[],System.Int32)">
+            <summary>
+            Testrong ATE_Tester Channel 模块获取ppmu通道信息操作
+            </summary>
+            <param name="channelArry"> map需要查找的ppmu通道数组(必填)</param>
+            <param name="tcpNumber">tcpNumber对应的slotnumber(必填)</param>
+            <returns>在对应slot中ppmu通道的物理通道编号数组</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.CodeChannelHandle.GetDpsSlotChannel(System.Int32[],System.Int32,System.Int32)">
+            <summary>
+            Testrong ATE_Tester Channel 模块获取dps通道信息操作
+            </summary>
+            <param name="channelArry">map需要查找的dps通道数组(必填)</param>
+            <param name="tcpNumber">cpNumber为t对应的slotnumber(必填)</param>
+            <returns>在对应slot中dps通道的物理通道编号数组</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.CodeChannelHandle.GetMeasureThreadChannel(Modle.SystemEnum.MeasureMode,System.Int32[],System.Int32,System.Int32)">
+            <summary>
+            Testrong ATE_Tester Channel 模块获取Measure通道信息操作 
+            </summary>
+            <param name="measureMode"> Measure模式(必填)</param>
+            <param name="channelArry">map需要查找的通道数组(必填)</param>
+            <param name="tcpNumber">tcpNumber对应的slotnumber(必填)</param>
+            <returns> 在对应slot中Measure通道的物理通道编号数组</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.DcLevel.SetVIHVILAllChannel(System.Double,System.Double,System.Boolean,Common.FlowDAQ,Common.TestrongSystem.VIHVILMode)">
+            <summary>
+            设置所有通道的VIH VIL
+            </summary>
+            <param name="VIH">VIH值(必填)</param>
+            <param name="VIL">VIL值(必填)</param>      
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="flowDaq"> flowDaq 为数据采集类实例(必填)</param>
+            <param name="VIHVILMode">模式:1.VIH:单独设置VIH,2.VIL:单独设置VIL,3.VIHVIL:同时设置VIH和VIL</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.DcLevel.GetVIHVILByPinName(System.String[],System.Double,System.Double,System.Boolean,Common.FlowDAQ,Common.TestrongSystem.VIHVILMode)">
+            <summary>
+            根据脚名设置VIH和VIL
+            </summary>
+            <param name="signals">脚名数组(必填)</param>
+            <param name="VIH">VIH值(必填)</param>
+            <param name="VIL">VIL值(必填)</param>      
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="flowDaq"> flowDaq 为数据采集类实例(必填)</param>
+            <param name="VIHVILMode">模式:1.VIH:单独设置VIH,2.VIL:单独设置VIL,3.VIHVIL:同时设置VIH和VIL</param>
+        </member>
+        <member name="M:Common.TestrongSystem.DcLevel.SetVOHVOLAllChannel(System.Double,System.Double,System.Boolean,Common.FlowDAQ,Modle.SystemEnum.VOHVOL)">
+            <summary>
+            Testrong ATE_Tester DCLevel模块设置VOH,VOL操作
+            </summary>
+            <param name="VOH"> 设置pattern compare H 电压值(必填)</param>
+            <param name="VOL">设置pattern compare L 电压值(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="flowDaq"> flowDaq 为数据采集类实例(必填)</param>
+            <param name="VOHVOL">默认为VOHVOL.ALL，同时设值VOH和VOL</param>
+            <returns>DCLevel模块VOH，VOL指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.DcLevel.SetVOHVOLByPinName(System.String[],System.Double,System.Double,Modle.SystemEnum.VOHVOL,Common.FlowDAQ)">
+            <summary>
+            设置VOHVOL根据脚名
+            </summary>
+            <param name="signals"></param>
+            <param name="VOH"></param>
+            <param name="VOL"></param>
+            <param name="VOHVOL"></param>
+            <param name="flowDaq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.DcLevel.GetTMUXCmd(System.Boolean,System.Boolean,Testrong.Core.Communicate.ICommunicate)">
+            <summary>
+             获取TMUX指令
+            </summary>
+            <param name="leveShift">true走level shift，false走比较器(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="tcpClient">tcp实例(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Dps.DpsChannelForce(System.Int32[],Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+             Testrong ATE_Tester DPS模块根据通道force操作
+            </summary>
+            <param name="channelArray">DPS通道数组,该值长度不能超过32，最大dps 数组通道值不能超过32(必填)</param>
+            <param name="mode">DPS模块支持的mode:FVMI_All,FVMV_All,FIMV_All,FVMI,FVMV,FIMV,FZMI,FZMV(必填)</param>
+            <param name="force">DPS模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"(必填)</param>
+            <param name="range">DPS模块支持的range:_5uA,_20uA,_200uA,_2mA,_60mA,_1A(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送指令， tcpEnable为false不发送指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="offset">true为补偿电压,false不补偿电压(必填)</param>
+            <returns>DPS指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Dps.GetDpsAllForceCmd(Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Testrong ATE_Tester DPS模块全部DPS通道force操作
+            </summary>
+            <param name="mode">DPS模块支持的mode:只能选择FVMI_All,FVMV_All,FIMV_All三种模式(必填)</param>
+            <param name="force">DPS模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过10V(必填)</param>    
+            <param name="range">DPS模块支持的range:_5uA,_20uA,_200uA,_2mA,_60mA,_1A(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送指令， tcpEnable为false不发送指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息</param>
+            <param name="offset">true为补偿电压,false不补偿电压</param>
+            <returns>DPS指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Dps.GetDpsChannelForceCmd(System.Int32[],Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Testrong ATE_Tester DPS模块根据通道force操作
+            </summary>
+            <param name="channelArray">DPS通道数组,该值长度不能超过32，最大DPS数组中通道值不能超过32(必填)</param>
+            <param name="mode">DPS模块支持的mode:只能选择FVMI,FVMV,FIMV,FZMI,FZMV(必填)</param>
+            <param name="force">DPS模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过10V(必填)</param>    
+            <param name="range">DPS模块支持的range:_5uA,_20uA,_200uA,_2mA,_60mA,_1A(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送指令， tcpEnable为false不发送指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息</param>
+            <param name="offset">true为补偿电压,false不补偿电压</param>
+            <returns>DPS指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Dps.GetDpsSiteForceCmd(System.Int32[],Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Testrong ATE_Tester DPS模块根据site force操作
+            </summary>
+            <param name="siteArry">site数组</param>
+            <param name="mode">DPS模块支持的mode:只能选择FVMI,FVMV,FIMV,FZMI,FZMV(必填)</param>
+            <param name="force">DPS模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过10V(必填)</param>    
+            <param name="range">DPS模块支持的range:_5uA,_20uA,_200uA,_2mA,_60mA,_1A(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送指令， tcpEnable为false不发送指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="offset">true为补偿电压,false不补偿电压</param>
+            <returns>DPS指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Dps.GetDpsPinNameForceCmd(System.String[],Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Testrong ATE_Tester DPS模块根据脚名force操作
+            </summary>
+            <param name="pinNameArray">脚名数组</param>
+            <param name="mode">DPS模块支持的mode:只能选择FVMI,FVMV,FIMV,FZMI,FZMV(必填)</param>
+            <param name="force">DPS模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过10V(必填)</param>    
+            <param name="range">DPS模块支持的range:_5uA,_20uA,_200uA,_2mA,_60mA,_1A(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送指令， tcpEnable为false不发送指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="offset">true为补偿电压,false不补偿电压</param>
+            <returns>DPS指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Dps.ReadDpsTemp(System.Boolean,Common.FlowDAQ)">
+            <summary>
+            读取Dps温度
+            </summary>
+            <param name="tcpEnable"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Dps.SettingDpsClampValue(Modle.SystemEnum.DpsClampMode,System.Double,System.Boolean,Common.FlowDAQ)">
+            <summary>
+            Testrong ATE_Tester DPS模块设置DPS钳位
+            </summary>
+            <param name="dpsClampMode">DPS模块钳位电压或电流模式：ClampHighVoltage，ClampHighCurrent，ClampLowVoltage，ClampLowCurrent(必填)</param>
+            <param name="clampValue">DPS模块钳位电压或电流的值(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <returns>PPMU钳位指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Dps.SetDPSClamp_1A(Modle.SystemEnum.DpsClampMode,System.Double,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            设置DPS 1A Clamp
+            </summary>
+            <param name="dpsClampMode">DPS模块钳位电压或电流模式：ClampHighVoltage，ClampHighCurrent，ClampLowVoltage，ClampLowCurrent(必填)</param>
+            <param name="clampValue">DPS模块钳位电压或电流的值(必填)</param>
+            <param name="result"> result为结果类实例(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <returns>PPMU钳位指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Dps.GetDpsAllForceHighPrecisionCmd(Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,Modle.SystemEnum.VoltageRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            0-5V高精度电压全通道force
+            </summary>
+            <param name="mode">DPS模块支持的mode:只能选择FVMV_All,FIMV_All两种模式(必填)</param>
+            <param name="force">DPS模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过10V(必填)</param>    
+            <param name="range">DPS模块支持的range:_5uA,_20uA,_200uA,_2mA,_60mA,_1A(必填)</param>
+            <param name="voltageRange">电压挡位(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送指令， tcpEnable为false不发送指令(必填)</param>      
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="offset">true为补偿电压,false不补偿电压(必填)</param>
+            <returns>DPS指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Dps.GetDpsPinNameForceHighPrecisionCmd(System.String[],Modle.SystemEnum.DpsMode,System.Double,Modle.SystemEnum.DpsRange,Modle.SystemEnum.VoltageRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            0-5V高精度电压根据脚名force
+            </summary>
+            <param name="pinNameArry">脚名数组(必填)</param>
+            <param name="mode">DPS模块支持的mode:只能选择FVMV,FIMV，FZMV模式(必填)</param>
+            <param name="force">DPS模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过10V(必填)</param>    
+            <param name="range">DPS模块支持的range:_5uA,_20uA,_200uA,_2mA,_60mA,_1(必填)A</param>
+            <param name="voltageRange">电压挡位(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送指令， tcpEnable为false不发送指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="offset">true为补偿电压,false不补偿电压</param>
+            <returns>DPS指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.DpsRangeRelay.SetDpsRangeRelayByChannels(System.Int32[],Modle.SystemEnum.DpsRelayState,Common.FlowDAQ)">
+            <summary>
+            Testrong ATE_Tester dpsRangeRelay 模块 通过dps通道操作dps档位切换
+            </summary>
+            <param name="channels"> dps 通道数组(必填)</param>
+            <param name="mode">DPSStatusFlag模式。（OPEN EXT INT ISMARK _60MA）(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.DpsRangeRelay.SetDpsRangeRelayBySignals(System.String[],Modle.SystemEnum.DpsRelayState,Common.FlowDAQ)">
+            <summary>
+            Testrong ATE_Tester dpsRangeRelay 模块 通过dps名称操作dps档位切换
+            </summary>
+            <param name="signals"> dps名称数组(必填)</param>
+            <param name="mode"> DPSStatusFlag模式。（OPEN EXT INT ISMARK _60MA）(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+        </member>
+        <member name="F:Common.TestrongSystem.NodeType.IsolatedPoint">
+            <summary>
+            孤点
+            </summary>
+        </member>
+        <member name="F:Common.TestrongSystem.NodeType.ForkPoint">
+            <summary>
+            分叉结点
+            </summary>
+        </member>
+        <member name="F:Common.TestrongSystem.NodeType.UnForkPoint">
+            <summary>
+            不分叉结点
+            </summary>
+        </member>
+        <member name="P:Common.TestrongSystem.ItemNode.NodeNo">
+            <summary>
+            结点编号
+            </summary>
+        </member>
+        <member name="P:Common.TestrongSystem.ItemNode.PassSiteNo">
+            <summary>
+            PassSite编号
+            </summary>
+        </member>
+        <member name="P:Common.TestrongSystem.ItemNode.FailSiteNo">
+            <summary>
+            FailSite编号
+            </summary>
+        </member>
+        <member name="P:Common.TestrongSystem.ItemNode.NodeName">
+            <summary>
+            结点名字
+            </summary>
+        </member>
+        <member name="P:Common.TestrongSystem.ItemNode.NodeType">
+            <summary>
+            结点类型
+            </summary>
+        </member>
+        <member name="P:Common.TestrongSystem.ItemNode.TestCase">
+            <summary>
+            结点执行的方法
+            </summary>
+        </member>
+        <member name="P:Common.TestrongSystem.ItemNode.IsPass">
+            <summary>
+            true:把结点回调方法的pass site结果设置为pass,false:把结点回调方法的pass site结果设置为fail
+            </summary>
+        </member>
+        <member name="M:Common.TestrongSystem.ItemNode.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.Action{Common.FlowDAQ,System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32}},Common.TestrongSystem.NodeType)">
+            <summary>
+            分叉结点构造函数
+            </summary>
+            <param name="nowNodeNo">当前结点编号</param>
+            <param name="passSiteNo">跑过该结点后pass site的编号</param>
+            <param name="failSiteNo">跑过该结点后fail site的编号</param>
+            <param name="nodeType">节点类型</param>
+            <param name="nodeName">节点名称</param>
+            <param name="testCase"></param>
+        </member>
+        <member name="M:Common.TestrongSystem.ItemNode.#ctor(System.Int32,System.Boolean,System.Action{Common.FlowDAQ,System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32}},Common.TestrongSystem.NodeType)">
+            <summary>
+            孤点构造函数
+            </summary>
+            <param name="nowNodeNo">结点编号</param>
+            <param name="isPass">该结点编号的site是作为Pass结果还是Fail结果</param>
+            <param name="nodeType"> NodeType nodeType = NodeType.IsolatedPoint表示断点是一个孤点，z这种类型断点下（testCase=null时，把该结点的site设置为pass or fail</param>
+        </member>
+        <member name="M:Common.TestrongSystem.ItemNode.#ctor(System.Int32,System.Boolean,System.Int32,System.Int32,System.Action{Common.FlowDAQ,System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32}},Common.TestrongSystem.NodeType)">
+            <summary>
+            不分叉结点构造函数(把上一次结点编号改为当前结点编号)
+            </summary>
+            <param name="nowNodeNo"></param>
+            <param name="isPass"></param>
+            <param name="passSiteNo"></param>
+            <param name="failSiteNo"></param>
+            <param name="testCase"></param>
+            <param name="nodeType"></param>
+        </member>
+        <member name="M:Common.TestrongSystem.FlowNode.Start">
+            <summary>
+            启动Flow跳转逻辑
+            </summary>
+        </member>
+        <member name="M:Common.TestrongSystem.FlowNode.GetFailSites">
+            <summary>
+            获取fail site
+            </summary>      
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.FlowNode.GetSiteNodeSiteNoMsg">
+            <summary>
+            获取Site结点编号信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.LoadBoardRelay.GetLoadBoardCmd(Modle.SystemEnum.LoadBoardRelayMode,System.Int32[],System.Boolean,Common.FlowDAQ)">
+            <summary>
+            切LoadBoard Relay
+            </summary>
+            <param name="loadBoardRelayMode">模式(必填)</param>
+            <param name="channels">通道数组(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.ChooseInitValue(Modle.SystemEnum.MeasureMode,Common.FlowDAQ,Modle.SystemEnum.PpmuRange)">
+            <summary>
+            Testrong ATE_Tester Measure 模块根据Force模式更新初始值
+            </summary>
+            <param name="measureMode"> 测量模式需要和Force保持一致,不然测量值有偏差(必填)</param>
+            <param name="result">对应的slotNumber(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.GetResistanceValue(Modle.SystemEnum.MeasureMode)">
+            <summary>
+            Testrong ATE_Tester Measure 模块 根据Force模式获取电阻值
+            </summary>
+            <param name="measureMode">测量模式(必填)</param>
+            <returns> 对应档位下的电阻值</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.GetMeasureBackChannelValue(Modle.SystemEnum.MeasureMode,Common.FlowDAQ,System.String)">
+            <summary>
+             Testrong ATE_Tester Measure 模块 根据Force模式计算电压或电流值
+            </summary>
+            <param name="measureMode">测量模式(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binning 名字</param>
+            <returns>对应档位下所用通道的电压或者电流值</returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.GetMeasureValue(Modle.SystemEnum.MeasureMode,System.Int32,System.Int32,Common.FlowDAQ,System.String)">
+            <summary>
+            获取多次采样回读DPS或者PPMU的值
+            </summary>
+            <param name="measureMode">测量模式</param>
+            <param name="times">采样次数</param>
+            <param name="intervalTime">每次采样的时间间隔，单位：us</param>
+            <param name="flowDaq"> flowDaq 为数据采集类实例(必填)</param>
+            <param name="binningName">binning 名字</param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.GetMeasureValue(Modle.SystemEnum.PpmuMode,Modle.SystemEnum.PpmuRange,Modle.SystemEnum.VoltageRange,System.Int32,System.Int32,Common.FlowDAQ,System.String)">
+            <summary>
+             获取多次采样回读PPMU的值
+            </summary>
+            <param name="ppmuMode">模式</param>
+            <param name="ppmuRange">电流挡位</param>
+            <param name="voltageRange">电压挡位</param>
+            <param name="times">回读次数</param>
+            <param name="intervalNanosecond">每次采样时间间隔(*10ns)</param>
+            <param name="flowDaq">数据采集类实例</param>
+            <param name="binningName">binning名字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.GetMeasureValueByChannel(System.Int32[],Modle.SystemEnum.MeasureMode,System.Double,System.Double,System.Boolean,Common.FlowDAQ,System.String)">
+            <summary>
+            Testrong ATE_Tester Measure 模块 根据Force模式 Limit限制 判断并打印对应通道的电压或电流值
+            </summary>
+            <param name="channel">需要获取电压或者电流的通道数组(必填)</param>
+            <param name="measureMode"> 测量模式(必填)</param>
+            <param name="min">测试电压或者电流的下限(必填)</param>
+            <param name="max">测试电压或者电流的上限(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binningName 名字(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.GetMeasureValueByPinName(System.String[],Modle.SystemEnum.MeasureMode,System.Double,System.Double,System.Boolean,Common.FlowDAQ,System.String)">
+            <summary>
+            Testrong ATE_Tester Measure 模块  根据pin name得到对应通道，并判断，判断结果并添加到打印字符串,并Mark fail的通道 
+            </summary>
+            <param name="pinName">需要获取电压或者电流的通道名称数组(必填)</param>
+            <param name="measureMode">测量模式(必填)</param>
+            <param name="min"> 测试电压或者电流的下限(必填)</param>
+            <param name="max">测试电压或者电流的上限(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binningName 名字(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.GetMeasureValueByPinNameShare(System.String[],Modle.SystemEnum.MeasureMode,System.Double,System.Double,System.Boolean,Common.FlowDAQ,System.String)">
+            <summary>
+            Testrong ATE_Tester Measure 模块 处理ppmu回读shell的问题，选脚对应的通道数不能超过32
+            </summary>
+            <param name="pinName">需要获取电压或者电流的通道名称数组(必填)</param>
+            <param name="measureMode">测量模式(必填)</param>
+            <param name="min">测试电压或者电流的下限(必填)</param>
+            <param name="max">测试电压或者电流的上限(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binningName 名字(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.ReadValueShare(System.Int32[],Modle.SystemEnum.MeasureMode,Common.FlowDAQ)">
+            <summary>
+            Testrong ATE_Tester Measure 模块 处理ppmu回读share的问题，选脚对应的通道数不能超过32
+            </summary>
+            <param name="channel">需要获取电压或者电流的通道数组(必填)</param>
+            <param name="range">测量模式(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.RepairReadValueShareMode(System.String[],Modle.SystemEnum.MeasureMode,Common.FlowDAQ,System.Double,System.Double,System.Boolean,System.Int32[],System.Double[],System.String,Common.TestrongSystem.Measure.ChangeHandle)">
+            <summary>
+            Testrong ATE_Tester Measure 模块 修改回读值 share模式
+            </summary>
+            <param name="signals">需要修改电压或者电流的通道名称数组(必填)</param>
+            <param name="mode">测量模式(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="min">测试电压或者电流的下限(必填)</param>
+            <param name="max">测试电压或者电流的上限(必填)</param>
+            <param name="enable"> Enable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="channels">需要修改的通道数组(必填)</param>
+            <param name="changeValues"> 需要修改通道的目标值数组(必填)</param>
+            <param name="binningName">binningName 名字(必填)</param>
+            <param name="changeHandle">为修改值的函数 默认为null</param>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.RepairReadValue(System.String[],Modle.SystemEnum.MeasureMode,Common.FlowDAQ,System.Double,System.Double,System.Boolean,System.Int32[],System.Double[],System.String,Common.TestrongSystem.Measure.ChangeHandle)">
+            <summary>
+            Testrong ATE_Tester Measure 模块 修改回读值 share模式
+            </summary>
+            <param name="signals">需要修改电压或者电流的通道名称数组(必填)</param>
+            <param name="mode">测量模式(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="min">测试电压或者电流的下限(必填)</param>
+            <param name="max">测试电压或者电流的上限(必填)</param>
+            <param name="enable"> Enable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="channels">需要修改的通道数组(必填)</param>
+            <param name="changeValues"> 需要修改通道的目标值数组(必填)</param>
+            <param name="binningName">binningName 名字(必填)</param>
+            <param name="changeHandle">为修改值的函数 默认为null</param>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.RepairValue(System.Double[],System.String[],Modle.SystemEnum.MeasureMode,Common.FlowDAQ,System.Double,System.Double,System.Boolean,System.Int32[],System.Double[],Common.TestrongSystem.Measure.ChangeHandle)">
+            <summary>
+             Testrong ATE_Tester Measure 模块 修改输入数组
+            </summary>
+            <param name="input">需要修改的数组(必填)</param>
+            <param name="signals">需要修改的通道名称(必填)</param>
+            <param name="mode">测量模式(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="min">测试电压或者电流的下限(必填)</param>
+            <param name="max">测试电压或者电流的上限(必填)</param>
+            <param name="enable"> Enable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="channels">需要修改的通道数组(必填)</param>
+            <param name="changeValues"> 需要修改通道的目标值数组(必填)</param>
+            <param name="changeHandle">为修改值的函数 默认为null</param>
+            <returns>需改后的数组</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.GetHighPrecisionMeasureBackChannelValue(Modle.SystemEnum.MeasureMode,Modle.SystemEnum.VoltageRange,Common.FlowDAQ,System.String)">
+            <summary>
+            Testrong ATE_Tester Measure 模块 根据Force模式计算电压值
+            </summary>
+            <param name="measureMode">测量模式(必填)</param>
+            <param name="voltageRange">电压挡位(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binning名字</param>
+            <returns> 对应档位下所用通道的电压或者电流值</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.GetHighPrecisionMeasureValueByChannel(System.Int32[],Modle.SystemEnum.MeasureMode,Modle.SystemEnum.VoltageRange,System.Double,System.Double,System.Boolean,Common.FlowDAQ,System.String)">
+            <summary>
+            Testrong ATE_Tester Measure 模块 根据Force模式 Limit限制 判断并打印对应通道的电压值
+            </summary>
+            <param name="channels">需要获取电压的通道数组(必填)</param>
+            <param name="measureMode"> 测量模式(必填)</param>
+            <param name="voltageRange">电压挡位(必填)</param>
+            <param name="min">测试电压下限(必填)</param>
+            <param name="max">测试电压上限(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binningName 名字(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.Measure.GetHighPrecisionMeasureValueByPinName(System.String[],Modle.SystemEnum.MeasureMode,Modle.SystemEnum.VoltageRange,System.Double,System.Double,System.Boolean,Common.FlowDAQ,System.String)">
+            <summary>
+            Testrong ATE_Tester Measure 模块  根据pin name得到对应通道，并判断，判断结果并添加到打印字符串,并Mark fail的通道 
+            </summary>
+            <param name="pinName">需要获取电压的通道名称数组(必填)</param>
+            <param name="measureMode">测量模式(必填)</param>
+            <param name="voltageRange">电压挡位(必填)</param>
+            <param name="min"> 测试电压下限(必填)</param>
+            <param name="max">测试电压上限(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binningName 名字(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.PatternStatus.CheckPatternStatus(Common.FlowDAQ)">
+            <summary>
+             Testrong ATE_Tester PatternStatus 模块 CheckBusy操作 检查pattern状态是否为结束状态
+            </summary>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.Ppmu.GetPpmuAllForceCmd(Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Testrong ATE_Tester PPMU 模块全部PPMU通道force操作
+            </summary>
+            <param name="mode"> PPMU模块支持的mode:只能选择FIMV_all,FVMI_all,FVMV_all(必填)</param>
+            <param name="force">PPMU模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过12V(必填)</param>    
+            <param name="range">PPMU模块支持的range（电流驱动强度挡位）:_5uA,_20uA,_200uA,_2mA,_60mA(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <param name="offset">true为补偿电压,false不补偿电压</param>
+            <returns>PPMU指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Ppmu.GetPpmuChannelForceCmd(System.Int32[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Testrong ATE_Tester PPMU 模块根据通道force操作
+            </summary>
+            <param name="channelArry">PPMU通道数组(必填)</param>
+            <param name="mode"> PPMU模块支持的mode:只能选择FIMV,FVMI,FVMV,FZMV,FZMI(必填)</param>
+            <param name="force">PPMU模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过12V(必填)</param>    
+            <param name="range">PPMU模块支持的range（电流驱动强度挡位）:_5uA,_20uA,_200uA,_2mA,_60mA(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <param name="offset">true为补偿电压,false不补偿电压</param>
+            <returns>PPMU指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Ppmu.GetPpmuSiteForceCmd(System.Int32[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Testrong ATE_Tester PPMU 模块根据site force操作
+            </summary>
+            <param name="siteArry">PPMU site数组(必填)</param>
+            <param name="mode"> PPMU模块支持的mode:只能选择FIMV,FVMI,FVMV,FZMV,FZMI(必填)</param>
+            <param name="force">PPMU模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过12V(必填)</param>    
+            <param name="range">PPMU模块支持的range（电流驱动强度挡位）:_5uA,_20uA,_200uA,_2mA,_60mA(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <param name="offset">true为补偿电压,false不补偿电压</param>
+            <returns>PPMU指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Ppmu.GetPpmuPinNameForceCmd(System.String[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Testrong ATE_Tester PPMU 模块根据脚名 force操作
+            </summary>
+            <param name="pinName">PPMU 脚名数组(必填)</param>
+            <param name="mode"> PPMU模块支持的mode:只能选择FIMV,FVMI,FVMV,FZMV,FZMI(必填)</param>
+            <param name="force">PPMU模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过12V(必填)</param>    
+            <param name="range">PPMU模块支持的range（电流驱动强度挡位）:_5uA,_20uA,_200uA,_2mA,_60mA(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <param name="offset">true为补偿电压,false不补偿电压</param>
+            <returns>PPMU指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Ppmu.ReadPpmuTemp(System.Boolean,Common.FlowDAQ)">
+            <summary>
+            读取PPMU温度
+            </summary>
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Ppmu.SettingPpmuClampValue(Modle.SystemEnum.PpmuClampMode,System.Double,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Testrong ATE_Tester PPMU模块设置PPMU钳位
+            </summary>
+            <param name="ppmuClampMode">PPMU模块钳位电压或电流模式：ClampHighVoltage，ClampHighCurrent，ClampLowVoltage，ClampLowCurrent(必填)</param>
+            <param name="clampValue">PPMU模块钳位电压或电流的值(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>    
+            <returns>PPMU钳位指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Ppmu.GetPpmuAllForceHighPrecisionCmd(Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,Modle.SystemEnum.VoltageRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Testrong ATE_Tester PPMU 模块全部PPMU通道force操作(0-5V高精度电压force)
+            </summary>
+            <param name="mode"> PPMU模块支持的mode:只能选择FIMV_all,FVMV_all(必填)</param>
+            <param name="force">PPMU模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过12V(必填)</param>    
+            <param name="range">PPMU模块支持的range（电流驱动强度挡位）:_5uA,_20uA,_200uA,_2mA,_60mA(必填)</param>
+            <param name="voltageRange">电压挡位(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <param name="offset">true为补偿电压,false不补偿电压</param>
+            <returns>PPMU指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Ppmu.GetPpmuPinNameForceHighPrecisionCmd(System.String[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,Modle.SystemEnum.VoltageRange,System.Boolean,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            Testrong ATE_Tester PPMU 模块根据脚名 force操作(0-5V高精度电压force)
+            </summary>
+            <param name="pinName">PPMU 脚名数组(必填)</param>
+            <param name="mode"> PPMU模块支持的mode:只能选择FIMV,FVMV,FZMV(必填)</param>
+            <param name="force">PPMU模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过12V(必填)</param>    
+            <param name="range">PPMU模块支持的range（电流驱动强度挡位）:_5uA,_20uA,_200uA,_2mA,_60mA(必填)</param>
+            <param name="voltageRange">电压挡位(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <param name="offset">true为补偿电压,false不补偿电压</param>
+            <returns>PPMU指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.PpmuSetting.GetPpmuSettingMeasureValue(Modle.SystemEnum.PpmuSettingMeasureMode,Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,System.Boolean,Common.FlowDAQ,System.Double)">
+            <summary>
+            Testrong ATE_Tester PpmuSetting模块根据“PpmuSettingMeasureMode”模式回读对应的测量值
+            </summary>
+            <param name="ppmuSettingMeasureMode">支持的测量模式：IO_Leakage_5uA，IO_Leakage_20uA，IO_Leakage_200uA，IO_Leakage_2mA， IO_Leakage_60mA，OS(必填)</param>
+            <param name="ppmuMode"> PPMU模块支持的ppmuMode:FIMV_all, FVMI_all,FVMV_all,FIMV,FVMI,FVMV,FZMV,FZMI(必填)</param>
+            <param name="value">PPMU模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过12V(必填)</param>    
+            <param name="ppmuRange">PPMU模块支持的range（电流驱动强度挡位）:_5uA,_20uA,_200uA,_2mA,_60mA(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="sleepMicrosecond ">回读delay时间</param>
+            <returns>回读的通道值</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.PpmuSetting.GetPpmuSettingValueByPinName(Modle.SystemEnum.PpmuSettingMeasureMode,System.String[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,System.Double,System.Double,System.Boolean,Common.FlowDAQ,System.String,System.Double)">
+            <summary>
+            Testrong ATE_Tester PpmuSetting模块，根据脚名回读对应的测量值，判断并打印
+            </summary>
+            <param name="ppmuSettingMeasureMode">支持的测量模式：IO_Leakage_5uA，IO_Leakage_20uA，IO_Leakage_200uA，IO_Leakage_2mA， IO_Leakage_60mA，OS(必填)</param>
+            <param name="pinNames">需要测量的脚名(必填)</param>
+            <param name="ppmuMode"> PPMU模块支持的ppmuMode:FIMV_all, FVMI_all,FVMV_all,FIMV,FVMI,FVMV,FZMV,FZMI(必填)</param>
+            <param name="value">PPMU模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过12V(必填)</param>    
+            <param name="ppmuRange">PPMU模块支持的range（电流驱动强度挡位）:_5uA,_20uA,_200uA,_2mA,_60mA(必填)</param>
+            <param name="min">判断测试电压或者电流的下限(必填)</param>
+            <param name="max"> 判断测试电压或者电流的上限(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binningName 名字(必填)</param>
+            <param name="sleepMicrosecond ">回读delay时间</param>
+        </member>
+        <member name="M:Common.TestrongSystem.PpmuSetting.GetPpmuSettingValueByChannel(Modle.SystemEnum.PpmuSettingMeasureMode,System.Int32[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,System.Double,System.Double,System.Boolean,Common.FlowDAQ,System.String,System.Double)">
+            <summary>
+            Testrong ATE_Tester PpmuSetting模块，根据通道回读对应的测量值，判断并打印
+            </summary>
+            <param name="ppmuSettingMeasureMode">支持的测量模式：IO_Leakage_5uA，IO_Leakage_20uA，IO_Leakage_200uA，IO_Leakage_2mA， IO_Leakage_60mA，OS(必填)</param>
+            <param name="channelArray">需要回读的通道(必填)</param>
+            <param name="ppmuMode"> PPMU模块支持的ppmuMode:FIMV_all, FVMI_all,FVMV_all,FIMV,FVMI,FVMV,FZMV,FZMI(必填)</param>
+            <param name="value">PPMU模块电压电流值，单位默认为"A"或"V",其他单位需要转换为"A"或"V"，force值最大电压值不能超过12V(必填)</param>    
+            <param name="ppmuRange">PPMU模块支持的range（电流驱动强度挡位）:_5uA,_20uA,_200uA,_2mA,_60mA(必填)</param>
+            <param name="min"> 判断测试电压或者电流的下限(必填)</param>
+            <param name="max"> 判断测试电压或者电流的上限(必填)</param>
+            <param name="tcpEnable"> tcpEnable为true，发送控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binningName 名字(必填)</param>
+            <param name="sleepMicrosecond ">回读delay时间</param>
+        </member>
+        <member name="M:Common.TestrongSystem.ReadFrequency.ReadFrequencyValueByChannel(System.Int32[],System.Double,System.Double,Common.FlowDAQ,System.String)">
+            <summary>
+            根据通道读取pattern频率
+            </summary>      
+            <param name="channelArry">读取频率的通道数组(必填)</param>
+            <param name="frequenceOffset">k7采取次数(必填)</param>
+            <param name="t">k7采取次数系数(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binningName 名字</param>
+            <returns>返回通道由小到大的频率值</returns>       
+        </member>
+        <member name="M:Common.TestrongSystem.ReadFrequency.ReadFrequencyValueByPinName(System.String[],System.Double,System.Double,Common.FlowDAQ,System.String)">
+            <summary>
+            根据脚名读取pattern频率
+            </summary>
+            <param name="pinNameArry">读取频率的脚名(必填)</param>
+            <param name="frequenceOffset">k7采取次数(必填)</param>
+            <param name="t">k7采取次数系数(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binningName 名字</param>
+            <returns>返回通道由小到大的频率值</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.ReadFrequency.GetFreqMeasureValueCmdByChannel(System.Int32[],System.Double,System.Double,System.Double,System.Double,Common.FlowDAQ,System.String)">
+            <summary>
+            根据通道读取频率，判断并打印结果
+            </summary>
+            <param name="channelArry">通道数组(必填)</param>
+            <param name="frequenceOffset">k7采取次数(必填)</param>
+            <param name="t">k7采取次数系数(必填)</param>
+            <param name="min">比较值下限(必填)</param>
+            <param name="max">比较值上限(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binningName 名字(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.ReadFrequency.GetFreqMeasureValueByPinName(System.String[],System.Double,System.Double,System.Double,System.Double,Common.FlowDAQ,System.String)">
+            <summary>
+            根据脚名读取频率，判断并打印结果
+            </summary>
+            <param name="pinNameArry">读取频率的脚名(必填)</param>
+            <param name="frequenceOffset">k7采取次数(必填)</param>
+            <param name="t">k7采取次数系数(必填)</param>
+            <param name="min">比较值下限(必填)</param>
+            <param name="max">比较值上限(必填)</param>     
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <param name="binningName">binningName 名字(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.ReadHardwareVersion.ReadArmVersion(Testrong.Core.Communicate.ICommunicate,System.Boolean,System.Action{System.String})">
+            <summary>
+            读取Arm固件版本号
+            </summary>
+            <param name="ressult">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.TestrongSystem.ReadHardwareVersion.ReadCPLDVersion(Testrong.Core.Communicate.ICommunicate,System.Boolean,System.Action{System.String})">
+            <summary>
+            读取CPLD固件版本号
+            </summary>
+            <param name="ressult">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.ReadPatternMethodClass.ReadErrorMemory(System.String,System.String[],Common.FlowDAQ,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            判断pattern的结果
+            </summary>
+            <param name="patternName">pattern名称（不加后缀）(必填)</param>
+            <param name="signalNames">脚名数组(必填)</param>
+            <param name="result">结果对象(必填)</param>
+            <param name="grabErrorCount">抓取深度，当为1时，只读pattern pass/fail,大于1时，根据值获取error log</param>
+            <param name="isUpdateSiteResult">是否更新site结果</param>
+            <param name="readLinesFlag">是否从原pattern文件查找错误行号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.ReadPatternMethodClass.ReadErrorMemory(System.String,System.Int32[],Common.FlowDAQ,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            判断pattern的结果
+            </summary>
+            <param name="patternName">pattern名称（不加后缀）(必填)</param>
+            <param name="siteArray">site数组(必填)</param>
+            <param name="result">结果对象(必填)</param>
+            <param name="grabErrorCount">抓取深度，当为1时，只读pattern pass/fail,大于1时，根据值获取error log</param>
+            <param name="isUpdateSiteResult">是否更新site结果</param>
+            <param name="readLinesFlag">是否从原pattern文件查找错误行号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Relay.GetRelayCmdAllChannel(Modle.SystemEnum.RelayStatusMode,System.Boolean,Common.FlowDAQ)">
+            <summary>
+            Testrong ATE_Tester Relay 模块  设置所有Relay切换
+            </summary>
+            <param name="relayStatusMode"> Relay模块需要切换的状态，支持的模式：All_CH_To_Open,All_CH_To_Ppmu,All_CH_To_DigitalCard(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <returns> 所有relay 统一切换到指定状态指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Relay.GetRelayCmdByChannel(System.Int32[],System.Int32[],System.Boolean,Common.FlowDAQ)">
+            <summary>
+             Testrong ATE_Tester Relay模块根据通道设置对应relay切换到不同状态
+            </summary>
+            <param name="ppmuChannelArray">需要切换到ppmu端的IO通道数组(必填)</param>
+            <param name="fpgaChannelArray">需要切换到fpga端的IO通道数组(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map通道信息，第几块板卡信息(必填)</param>
+            <returns>指定Relay切换到指定状态指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Relay.GetRelayCmdByPinName(System.String[],System.String[],System.Boolean,Common.FlowDAQ)">
+            <summary>
+            Testrong ATE_Tester Relay模块根据通道设置对应Relay切换到不同状态
+            </summary>
+            <param name="ppmuPinNameArray">需要切换到ppmu端的IO通道名称数组(必填)</param>
+            <param name="fpgaPinNameArray">需要切换到fpga端的IO通道名称数组(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <returns>指定Relay切换到指定状态指令</returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Relay.GetRelayCmdByPinName(System.String[],Modle.SystemEnum.RelayState,System.Boolean,Common.FlowDAQ)">
+            <summary>
+            将不同的通道切到不同的状态
+            </summary>
+            <param name="pinNameArray">脚名(必填)</param>
+            <param name="relayState">relay的状态(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Relay.GetRelayCmdByChannel(System.Int32[],Modle.SystemEnum.RelayState,System.Boolean,Common.FlowDAQ)">
+            <summary>
+            将不同的通道切到不同的状态
+            </summary>
+            <param name="channelArray">切到ppmu的通道(必填)</param>
+            <param name="relayStatus">切到fpga的通道(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result"> result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Reset.SystemReset(Common.FlowDAQ)">
+            <summary>
+             Testrong ATE_Tester Reset 模块  系统复位
+            </summary>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.Reset.DigitalCardReset(Common.FlowDAQ)">
+            <summary>
+            Testrong ATE_Tester Reset 模块  数字板卡复位
+            </summary>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.TriggerHandler.GetTriggerSettingCmd(System.Int32[],System.Int32,System.Int32)">
+            <summary>
+            获取Trigger指令
+            </summary>
+            <param name="channels"></param>
+            <param name="times"></param>
+            <param name="delay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.TriggerHandler.CalcTriggerData(System.Collections.Generic.List{Modle.FlowModels.IOChannelInfo},System.Byte[],System.Int32,System.Double[],System.Boolean)">
+            <summary>
+            计算
+            </summary>
+            <param name="channelInfos"></param>
+            <param name="data"></param>
+            <param name="resistance"></param>
+            <param name="initValues"></param>
+            <param name="isMeasureVoltage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.TriggerHandler.UpdatePPMUInitValues(Common.TestrongSystem.TriggerModeRange,Common.FlowDAQ)">
+            <summary>
+            更新初始值
+            </summary>
+            <param name="triggerModeRange"></param>
+            <param name="result"></param>
+        </member>
+        <member name="M:Common.TestrongSystem.TriggerHandler.DataGroupingByChannelCount(System.Byte[],System.Int32)">
+            <summary>
+             分组
+            </summary>
+            <param name="receiveData"></param>
+            <param name="channelCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.TriggerHandler.GetAllStatusChannelInfoByPinNames(System.String[],Common.FlowContext,System.Int32)">
+            <summary>
+            根据脚名获取所有状态的通道
+            </summary>
+            <param name="pinNames"></param>
+            <param name="flowContext"></param>
+            <param name="slotNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Trigger.MeasureByPinNames(System.String[],System.Collections.Generic.List{Common.TestrongSystem.TriggerModeRange},Common.FlowDAQ)">
+            <summary>
+            测量
+            </summary>
+            <param name="pinNames">脚名</param>
+            <param name="triggerModeRanges">模式和挡位</param>
+            <param name="result">结果类</param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.TestrongSystem.Trigger.MeasureByPinNames(System.String[],Modle.SystemEnum.PpmuMode,Modle.SystemEnum.PpmuRange,Common.FlowDAQ)">
+            <summary>
+            测量
+            </summary>
+            <param name="pinNames"></param>
+            <param name="ppmuMode"></param>
+            <param name="ppmuRange"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Trigger.Setting(System.String[],System.Int32,System.Int32,Common.FlowDAQ)">
+            <summary>
+            设置采样次数和delay
+            </summary>
+            <param name="pinNames">脚名</param>
+            <param name="averageCount">采样次数</param>
+            <param name="delay">delay时间</param>
+        </member>
+        <member name="M:Common.TestrongSystem.Trigger.Measure(System.String[],System.Collections.Generic.List{Common.TestrongSystem.TriggerModeRange},Common.FlowDAQ)">
+            <summary>
+            测量
+            </summary>
+            <param name="pinNames">脚名</param>
+            <param name="triggerModeRanges">模式和挡位</param>
+            <param name="result">结果类</param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Common.TestrongSystem.Trigger.Measure(System.String[],Modle.SystemEnum.PpmuMode,Modle.SystemEnum.PpmuRange,Common.FlowDAQ)">
+            <summary>
+            测量
+            </summary>
+            <param name="pinNames"></param>
+            <param name="ppmuMode"></param>
+            <param name="ppmuRange"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.Trigger.Measure(System.String[],Modle.SystemEnum.PpmuMode,Modle.SystemEnum.PpmuRange,System.String,Common.FlowDAQ)">
+            <summary>
+            测量
+            </summary>
+            <param name="pinNames">脚名</param>
+            <param name="binningName">binning名字</param>
+            <param name="result">结果类</param>
+        </member>
+        <member name="M:Common.TestrongSystem.TrimPatternCode.TrimChangeSingleColumn(System.String,System.String,System.Int32,System.Int32[],System.Int64,Common.FlowDAQ)">
+            <summary>
+            trim修改（某个channel）driver单列
+            </summary>
+            <param name="patternName">pattern文件名称（无后缀）(必填)</param>
+            <param name="signalName">脚名(必填)</param>
+            <param name="site">map中对应的site(必填)</param>
+            <param name="numberLine">pattern文件中提示的行号(注:修改pattern文件后一定要check)(必填)</param>
+            <param name="trimValue">numberLine(clk/reg)对应要修改的十进制值(必填)</param>
+            <param name="result">结果对象(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.TrimPatternCode.TrimChangeSingleColumnHL(System.String,System.String,System.Int32,System.Int32[],System.Int64,Common.FlowDAQ)">
+            <summary>
+            trim修改（某个channel）compare单列
+            </summary>
+            <param name="patternName">pattern文件名称（无后缀）(必填)</param>
+            <param name="signalName">脚名(必填)</param>
+            <param name="site">map中对应的site(必填)</param>
+            <param name="numberLine">pattern文件中提示的行号(注:修改pattern文件后一定要check)(必填)</param>
+            <param name="trimValue">numberLine(clk/reg)对应要修改的十进制值(必填)</param>
+            <param name="result">结果对象(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.TrimPatternCode.TrimChangeSingleColumnX(System.String,System.String,System.Int32,System.Int32[],Common.FlowDAQ)">
+            <summary>
+            trim修改（某个channel）X单列
+            </summary>
+            <param name="patternName">pattern文件名称（无后缀）(必填)</param>
+            <param name="signalName">脚名(必填)</param>
+            <param name="site">map中对应的site(必填)</param>
+            <param name="numberLine">pattern文件中提示的行号(注:修改pattern文件后一定要check)(必填)</param>
+            <param name="result">结果对象(必填)</param>
+        </member>
+        <member name="M:Common.TestrongSystem.TrimPatternCode.SendTrimInfo(System.String,System.Int32[],Common.FlowDAQ,System.Boolean)">
+            <summary>
+            send trim后修改行的内容
+            </summary>
+            <param name="patternName">pattern文件名称（无后缀）(必填)</param>
+            <param name="numberLine">pattern文件中提示的行号(注:修改pattern文件后一定要check)(必填)</param>
+            <param name="result">结果对象(必填)</param>
+            <param name="tcpEnable">isSend(不填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.TrimPatternCode.StartPattern(System.String,Common.FlowDAQ,System.Boolean)">
+            <summary>
+            启动(onor/ram)pattern
+            </summary>
+            <param name="patternName">pattern文件名称（无文件后缀）</param>
+            <param name="result">结果对象</param>
+            <param name="tcpEnable">isSend(不填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.VT.GetVTVoltageCmdByAll(System.Double,System.Boolean,Common.FlowDAQ)">
+            <summary>
+            设置所有通道的VT电压值
+            </summary>
+            <param name="voltage">电压值 Limit:0-5V(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="flowDaq"> flowDaq 为数据采集类实例(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.VT.GetVTVoltageCmdByChannel(System.Int32[],System.Double,System.Boolean,Common.FlowDAQ)">
+            <summary>
+            根据通道设置对应通道的VT电压值
+            </summary>
+            <param name="channels">通道(必填)</param>
+            <param name="voltage">电压值 Limit:0-5V(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="flowDaq"> flowDaq 为数据采集类实例(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.VT.GetVTVoltageByPinName(System.String[],System.Double,System.Boolean,Common.FlowDAQ)">
+            <summary>
+            根据脚名设置VT电压
+            </summary>
+            <param name="pinName">脚名(必填)</param>
+            <param name="voltage">电压值 Limit:0-5V(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="flowDaq"> flowDaq 为数据采集类实例(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.VT.GetVTResistanceCmdByAll(System.Double,System.Boolean,Common.FlowDAQ)">
+            <summary>
+            设置所有通道的VT电阻值
+            </summary>
+            <param name="resistance">电阻值(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="flowDaq"> flowDaq 为数据采集类实例(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.VT.GetVTResistanceCmdByChannel(System.Int32[],System.Double,System.Boolean,Common.FlowDAQ)">
+            <summary>
+            根据通道设置VT电阻值
+            </summary>
+            <param name="channels">通道(必填)</param>
+            <param name="resistance">电阻值(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="flowDaq"> flowDaq 为数据采集类实例(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.VT.GetVTResistanceCmdByPinName(System.String[],System.Double,System.Boolean,Common.FlowDAQ)">
+            <summary>
+            根据脚名设置VT电阻值
+            </summary>
+            <param name="pinName">脚名(必填)</param>
+            <param name="resistance">电阻值(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="flowDaq"> flowDaq 为数据采集类实例(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.VT.GetVTTMUXCmd(Modle.SystemEnum.VTChannelMode,Modle.SystemEnum.VTTMUXRelayMode,System.Int32[],System.Boolean,Common.FlowDAQ)">
+            <summary>
+            获取VT TMUX指令
+            </summary>
+            <param name="VTTMUXMode">通道模式(必填)</param>
+            <param name="VTTMUXRelayMode">Relay模式(必填)</param>
+            <param name="channels">通道(必填)</param>
+            <param name="tcpEnable">tcpEnable为true，发送dps控制指令， tcpEnable为false则不发送控制指令(必填)</param>
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.TestrongSystem.VT.GetVTTMUXCmdByPinName(System.String[],Modle.SystemEnum.VTTMUXRelayMode,Common.FlowDAQ)">
+            <summary>
+            获取VT TMUX指令
+            </summary>
+            <param name="pinNames">脚名</param>
+            <param name="VTTMUXRelayMode">Relay模式(必填)</param>  
+            <param name="result">result 为结果类实例，根据结果类可以取到对应的map 通道信息，第几块板卡信息(必填)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.XmlHandel.XmlHelperClass.ReadXmlToList``1(System.String,System.String)">
+            <summary>
+            将xml文档添加到List对象中
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="xmlPath">xml路径</param>
+            <param name="rootName">节点名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:PPMUHighVoltageStrategy">
+            <summary>
+            PPMU高压策略类
+            </summary>
+        </member>
+        <member name="M:PPMUHighVoltageStrategy.CalcDacCodeValue(System.Double)">
+            <summary>
+            计算DAC Code值
+            </summary>
+            <param name="vout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPMUHighVoltageStrategy.GetPPMUCmd(System.Int32[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,System.Double,System.Double,System.Double,System.Int32,Common.BasicCommand.PpmuRegStatusMannager,Common.AppConfig.AppSettings,System.Boolean,System.Boolean)">
+            <summary>
+            获取Ppmu指令
+            </summary>
+            <param name="channels"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="clampMin"></param>
+            <param name="clameMax"></param>
+            <param name="Limit"></param>
+            <param name="tcpNumber"></param>
+            <param name="ppmuRegStatusMannager"></param>
+            <param name="isHighPrecision"></param>
+            <param name="ppmuOffset"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:PPMUHighVoltageStrategy.GetPPMUCmd(System.Int32[],Modle.SystemEnum.PpmuMode,System.Double,Modle.SystemEnum.PpmuRange,Modle.SystemEnum.VoltageRange,System.Double,System.Double,System.Double,System.Int32,Common.BasicCommand.PpmuRegStatusMannager,Common.AppConfig.AppSettings,System.Boolean)">
+            <summary>
+            获取PPMU高精度指令
+            </summary>
+            <param name="channel"></param>
+            <param name="mode"></param>
+            <param name="force"></param>
+            <param name="range"></param>
+            <param name="voltageRange"></param>
+            <param name="clampMin"></param>
+            <param name="clameMax"></param>
+            <param name="Limit"></param>
+            <param name="tcpNumber"></param>
+            <param name="ppmuRegStatusMannager"></param>
+            <param name="ppmuOffset"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+    </members>
+</doc>

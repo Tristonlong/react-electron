@@ -1,0 +1,906 @@
+HardBin Result:
+Site:0  Pass:0   Fail:1  SiteYield:0.00000%
+Site:1  Pass:0   Fail:1  SiteYield:0.00000%
+Site:2  Pass:0   Fail:1  SiteYield:0.00000%
+Site:3  Pass:0   Fail:1  SiteYield:0.00000%
+Site:4  Pass:0   Fail:0  SiteYield:0.00000%
+Site:5  Pass:0   Fail:0  SiteYield:0.00000%
+Site:6  Pass:0   Fail:0  SiteYield:0.00000%
+Site:7  Pass:0   Fail:0  SiteYield:0.00000%
+Site:8  Pass:0   Fail:0  SiteYield:0.00000%
+Site:9  Pass:0   Fail:0  SiteYield:0.00000%
+Site:10  Pass:0   Fail:0  SiteYield:0.00000%
+Site:11  Pass:0   Fail:0  SiteYield:0.00000%
+Site:12  Pass:0   Fail:0  SiteYield:0.00000%
+Site:13  Pass:0   Fail:0  SiteYield:0.00000%
+Site:14  Pass:0   Fail:0  SiteYield:0.00000%
+Site:15  Pass:0   Fail:0  SiteYield:0.00000%
+allPass:0
+allFail:4
+allCount:4
+allYield:0.00000%
+Site:0  Bin0:0
+
+Site:0  Bin1:0
+
+Site:0  Bin2:1
+
+
+Site:1  Bin0:0
+
+Site:1  Bin1:0
+
+Site:1  Bin2:1
+
+
+Site:2  Bin0:0
+
+Site:2  Bin1:0
+
+Site:2  Bin2:1
+
+
+Site:3  Bin0:0
+
+Site:3  Bin1:0
+
+Site:3  Bin2:1
+
+
+Site:4  Bin0:1
+
+Site:4  Bin1:0
+
+Site:4  Bin2:0
+
+
+Site:5  Bin0:1
+
+Site:5  Bin1:0
+
+Site:5  Bin2:0
+
+
+Site:6  Bin0:1
+
+Site:6  Bin1:0
+
+Site:6  Bin2:0
+
+
+Site:7  Bin0:1
+
+Site:7  Bin1:0
+
+Site:7  Bin2:0
+
+
+Site:8  Bin0:1
+
+Site:8  Bin1:0
+
+Site:8  Bin2:0
+
+
+Site:9  Bin0:1
+
+Site:9  Bin1:0
+
+Site:9  Bin2:0
+
+
+Site:10  Bin0:1
+
+Site:10  Bin1:0
+
+Site:10  Bin2:0
+
+
+Site:11  Bin0:1
+
+Site:11  Bin1:0
+
+Site:11  Bin2:0
+
+
+Site:12  Bin0:1
+
+Site:12  Bin1:0
+
+Site:12  Bin2:0
+
+
+Site:13  Bin0:1
+
+Site:13  Bin1:0
+
+Site:13  Bin2:0
+
+
+Site:14  Bin0:1
+
+Site:14  Bin1:0
+
+Site:14  Bin2:0
+
+
+Site:15  Bin0:1
+
+Site:15  Bin1:0
+
+Site:15  Bin2:0
+
+
+SoftBin Result:
+Site:0  Pass:0   Fail:1  SiteYield:0.00000%
+Site:1  Pass:0   Fail:1  SiteYield:0.00000%
+Site:2  Pass:0   Fail:1  SiteYield:0.00000%
+Site:3  Pass:0   Fail:1  SiteYield:0.00000%
+Site:4  Pass:0   Fail:0  SiteYield:0.00000%
+Site:5  Pass:0   Fail:0  SiteYield:0.00000%
+Site:6  Pass:0   Fail:0  SiteYield:0.00000%
+Site:7  Pass:0   Fail:0  SiteYield:0.00000%
+Site:8  Pass:0   Fail:0  SiteYield:0.00000%
+Site:9  Pass:0   Fail:0  SiteYield:0.00000%
+Site:10  Pass:0   Fail:0  SiteYield:0.00000%
+Site:11  Pass:0   Fail:0  SiteYield:0.00000%
+Site:12  Pass:0   Fail:0  SiteYield:0.00000%
+Site:13  Pass:0   Fail:0  SiteYield:0.00000%
+Site:14  Pass:0   Fail:0  SiteYield:0.00000%
+Site:15  Pass:0   Fail:0  SiteYield:0.00000%
+allPass:0
+allFail:4
+allCount:4
+allYield:0.00000%
+Site:0  Bin0:0
+
+Site:0  Bin1:0
+
+Site:0  Bin2:0
+
+Site:0  Bin3:0
+
+Site:0  Bin4:0
+
+Site:0  Bin5:0
+
+Site:0  Bin6:0
+
+Site:0  Bin7:0
+
+Site:0  Bin8:0
+
+Site:0  Bin9:0
+
+Site:0  Bin10:0
+
+Site:0  Bin11:0
+
+Site:0  Bin12:0
+
+Site:0  Bin13:0
+
+Site:0  Bin14:0
+
+Site:0  Bin15:0
+
+Site:0  Bin16:0
+
+Site:0  Bin17:0
+
+Site:0  Bin18:0
+
+Site:0  Bin19:0
+
+Site:0  Bin20:0
+
+Site:0  Bin21:0
+
+Site:0  Bin22:1
+
+
+Site:1  Bin0:0
+
+Site:1  Bin1:0
+
+Site:1  Bin2:0
+
+Site:1  Bin3:0
+
+Site:1  Bin4:0
+
+Site:1  Bin5:0
+
+Site:1  Bin6:0
+
+Site:1  Bin7:0
+
+Site:1  Bin8:0
+
+Site:1  Bin9:0
+
+Site:1  Bin10:0
+
+Site:1  Bin11:0
+
+Site:1  Bin12:0
+
+Site:1  Bin13:0
+
+Site:1  Bin14:0
+
+Site:1  Bin15:0
+
+Site:1  Bin16:0
+
+Site:1  Bin17:0
+
+Site:1  Bin18:0
+
+Site:1  Bin19:0
+
+Site:1  Bin20:0
+
+Site:1  Bin21:0
+
+Site:1  Bin22:1
+
+
+Site:2  Bin0:0
+
+Site:2  Bin1:0
+
+Site:2  Bin2:0
+
+Site:2  Bin3:0
+
+Site:2  Bin4:0
+
+Site:2  Bin5:0
+
+Site:2  Bin6:0
+
+Site:2  Bin7:0
+
+Site:2  Bin8:0
+
+Site:2  Bin9:0
+
+Site:2  Bin10:0
+
+Site:2  Bin11:0
+
+Site:2  Bin12:0
+
+Site:2  Bin13:0
+
+Site:2  Bin14:0
+
+Site:2  Bin15:0
+
+Site:2  Bin16:0
+
+Site:2  Bin17:0
+
+Site:2  Bin18:0
+
+Site:2  Bin19:0
+
+Site:2  Bin20:0
+
+Site:2  Bin21:0
+
+Site:2  Bin22:1
+
+
+Site:3  Bin0:0
+
+Site:3  Bin1:0
+
+Site:3  Bin2:0
+
+Site:3  Bin3:0
+
+Site:3  Bin4:0
+
+Site:3  Bin5:0
+
+Site:3  Bin6:0
+
+Site:3  Bin7:0
+
+Site:3  Bin8:0
+
+Site:3  Bin9:0
+
+Site:3  Bin10:0
+
+Site:3  Bin11:0
+
+Site:3  Bin12:0
+
+Site:3  Bin13:0
+
+Site:3  Bin14:0
+
+Site:3  Bin15:0
+
+Site:3  Bin16:0
+
+Site:3  Bin17:0
+
+Site:3  Bin18:0
+
+Site:3  Bin19:0
+
+Site:3  Bin20:0
+
+Site:3  Bin21:0
+
+Site:3  Bin22:1
+
+
+Site:4  Bin0:1
+
+Site:4  Bin1:0
+
+Site:4  Bin2:0
+
+Site:4  Bin3:0
+
+Site:4  Bin4:0
+
+Site:4  Bin5:0
+
+Site:4  Bin6:0
+
+Site:4  Bin7:0
+
+Site:4  Bin8:0
+
+Site:4  Bin9:0
+
+Site:4  Bin10:0
+
+Site:4  Bin11:0
+
+Site:4  Bin12:0
+
+Site:4  Bin13:0
+
+Site:4  Bin14:0
+
+Site:4  Bin15:0
+
+Site:4  Bin16:0
+
+Site:4  Bin17:0
+
+Site:4  Bin18:0
+
+Site:4  Bin19:0
+
+Site:4  Bin20:0
+
+Site:4  Bin21:0
+
+Site:4  Bin22:0
+
+
+Site:5  Bin0:1
+
+Site:5  Bin1:0
+
+Site:5  Bin2:0
+
+Site:5  Bin3:0
+
+Site:5  Bin4:0
+
+Site:5  Bin5:0
+
+Site:5  Bin6:0
+
+Site:5  Bin7:0
+
+Site:5  Bin8:0
+
+Site:5  Bin9:0
+
+Site:5  Bin10:0
+
+Site:5  Bin11:0
+
+Site:5  Bin12:0
+
+Site:5  Bin13:0
+
+Site:5  Bin14:0
+
+Site:5  Bin15:0
+
+Site:5  Bin16:0
+
+Site:5  Bin17:0
+
+Site:5  Bin18:0
+
+Site:5  Bin19:0
+
+Site:5  Bin20:0
+
+Site:5  Bin21:0
+
+Site:5  Bin22:0
+
+
+Site:6  Bin0:1
+
+Site:6  Bin1:0
+
+Site:6  Bin2:0
+
+Site:6  Bin3:0
+
+Site:6  Bin4:0
+
+Site:6  Bin5:0
+
+Site:6  Bin6:0
+
+Site:6  Bin7:0
+
+Site:6  Bin8:0
+
+Site:6  Bin9:0
+
+Site:6  Bin10:0
+
+Site:6  Bin11:0
+
+Site:6  Bin12:0
+
+Site:6  Bin13:0
+
+Site:6  Bin14:0
+
+Site:6  Bin15:0
+
+Site:6  Bin16:0
+
+Site:6  Bin17:0
+
+Site:6  Bin18:0
+
+Site:6  Bin19:0
+
+Site:6  Bin20:0
+
+Site:6  Bin21:0
+
+Site:6  Bin22:0
+
+
+Site:7  Bin0:1
+
+Site:7  Bin1:0
+
+Site:7  Bin2:0
+
+Site:7  Bin3:0
+
+Site:7  Bin4:0
+
+Site:7  Bin5:0
+
+Site:7  Bin6:0
+
+Site:7  Bin7:0
+
+Site:7  Bin8:0
+
+Site:7  Bin9:0
+
+Site:7  Bin10:0
+
+Site:7  Bin11:0
+
+Site:7  Bin12:0
+
+Site:7  Bin13:0
+
+Site:7  Bin14:0
+
+Site:7  Bin15:0
+
+Site:7  Bin16:0
+
+Site:7  Bin17:0
+
+Site:7  Bin18:0
+
+Site:7  Bin19:0
+
+Site:7  Bin20:0
+
+Site:7  Bin21:0
+
+Site:7  Bin22:0
+
+
+Site:8  Bin0:1
+
+Site:8  Bin1:0
+
+Site:8  Bin2:0
+
+Site:8  Bin3:0
+
+Site:8  Bin4:0
+
+Site:8  Bin5:0
+
+Site:8  Bin6:0
+
+Site:8  Bin7:0
+
+Site:8  Bin8:0
+
+Site:8  Bin9:0
+
+Site:8  Bin10:0
+
+Site:8  Bin11:0
+
+Site:8  Bin12:0
+
+Site:8  Bin13:0
+
+Site:8  Bin14:0
+
+Site:8  Bin15:0
+
+Site:8  Bin16:0
+
+Site:8  Bin17:0
+
+Site:8  Bin18:0
+
+Site:8  Bin19:0
+
+Site:8  Bin20:0
+
+Site:8  Bin21:0
+
+Site:8  Bin22:0
+
+
+Site:9  Bin0:1
+
+Site:9  Bin1:0
+
+Site:9  Bin2:0
+
+Site:9  Bin3:0
+
+Site:9  Bin4:0
+
+Site:9  Bin5:0
+
+Site:9  Bin6:0
+
+Site:9  Bin7:0
+
+Site:9  Bin8:0
+
+Site:9  Bin9:0
+
+Site:9  Bin10:0
+
+Site:9  Bin11:0
+
+Site:9  Bin12:0
+
+Site:9  Bin13:0
+
+Site:9  Bin14:0
+
+Site:9  Bin15:0
+
+Site:9  Bin16:0
+
+Site:9  Bin17:0
+
+Site:9  Bin18:0
+
+Site:9  Bin19:0
+
+Site:9  Bin20:0
+
+Site:9  Bin21:0
+
+Site:9  Bin22:0
+
+
+Site:10  Bin0:1
+
+Site:10  Bin1:0
+
+Site:10  Bin2:0
+
+Site:10  Bin3:0
+
+Site:10  Bin4:0
+
+Site:10  Bin5:0
+
+Site:10  Bin6:0
+
+Site:10  Bin7:0
+
+Site:10  Bin8:0
+
+Site:10  Bin9:0
+
+Site:10  Bin10:0
+
+Site:10  Bin11:0
+
+Site:10  Bin12:0
+
+Site:10  Bin13:0
+
+Site:10  Bin14:0
+
+Site:10  Bin15:0
+
+Site:10  Bin16:0
+
+Site:10  Bin17:0
+
+Site:10  Bin18:0
+
+Site:10  Bin19:0
+
+Site:10  Bin20:0
+
+Site:10  Bin21:0
+
+Site:10  Bin22:0
+
+
+Site:11  Bin0:1
+
+Site:11  Bin1:0
+
+Site:11  Bin2:0
+
+Site:11  Bin3:0
+
+Site:11  Bin4:0
+
+Site:11  Bin5:0
+
+Site:11  Bin6:0
+
+Site:11  Bin7:0
+
+Site:11  Bin8:0
+
+Site:11  Bin9:0
+
+Site:11  Bin10:0
+
+Site:11  Bin11:0
+
+Site:11  Bin12:0
+
+Site:11  Bin13:0
+
+Site:11  Bin14:0
+
+Site:11  Bin15:0
+
+Site:11  Bin16:0
+
+Site:11  Bin17:0
+
+Site:11  Bin18:0
+
+Site:11  Bin19:0
+
+Site:11  Bin20:0
+
+Site:11  Bin21:0
+
+Site:11  Bin22:0
+
+
+Site:12  Bin0:1
+
+Site:12  Bin1:0
+
+Site:12  Bin2:0
+
+Site:12  Bin3:0
+
+Site:12  Bin4:0
+
+Site:12  Bin5:0
+
+Site:12  Bin6:0
+
+Site:12  Bin7:0
+
+Site:12  Bin8:0
+
+Site:12  Bin9:0
+
+Site:12  Bin10:0
+
+Site:12  Bin11:0
+
+Site:12  Bin12:0
+
+Site:12  Bin13:0
+
+Site:12  Bin14:0
+
+Site:12  Bin15:0
+
+Site:12  Bin16:0
+
+Site:12  Bin17:0
+
+Site:12  Bin18:0
+
+Site:12  Bin19:0
+
+Site:12  Bin20:0
+
+Site:12  Bin21:0
+
+Site:12  Bin22:0
+
+
+Site:13  Bin0:1
+
+Site:13  Bin1:0
+
+Site:13  Bin2:0
+
+Site:13  Bin3:0
+
+Site:13  Bin4:0
+
+Site:13  Bin5:0
+
+Site:13  Bin6:0
+
+Site:13  Bin7:0
+
+Site:13  Bin8:0
+
+Site:13  Bin9:0
+
+Site:13  Bin10:0
+
+Site:13  Bin11:0
+
+Site:13  Bin12:0
+
+Site:13  Bin13:0
+
+Site:13  Bin14:0
+
+Site:13  Bin15:0
+
+Site:13  Bin16:0
+
+Site:13  Bin17:0
+
+Site:13  Bin18:0
+
+Site:13  Bin19:0
+
+Site:13  Bin20:0
+
+Site:13  Bin21:0
+
+Site:13  Bin22:0
+
+
+Site:14  Bin0:1
+
+Site:14  Bin1:0
+
+Site:14  Bin2:0
+
+Site:14  Bin3:0
+
+Site:14  Bin4:0
+
+Site:14  Bin5:0
+
+Site:14  Bin6:0
+
+Site:14  Bin7:0
+
+Site:14  Bin8:0
+
+Site:14  Bin9:0
+
+Site:14  Bin10:0
+
+Site:14  Bin11:0
+
+Site:14  Bin12:0
+
+Site:14  Bin13:0
+
+Site:14  Bin14:0
+
+Site:14  Bin15:0
+
+Site:14  Bin16:0
+
+Site:14  Bin17:0
+
+Site:14  Bin18:0
+
+Site:14  Bin19:0
+
+Site:14  Bin20:0
+
+Site:14  Bin21:0
+
+Site:14  Bin22:0
+
+
+Site:15  Bin0:1
+
+Site:15  Bin1:0
+
+Site:15  Bin2:0
+
+Site:15  Bin3:0
+
+Site:15  Bin4:0
+
+Site:15  Bin5:0
+
+Site:15  Bin6:0
+
+Site:15  Bin7:0
+
+Site:15  Bin8:0
+
+Site:15  Bin9:0
+
+Site:15  Bin10:0
+
+Site:15  Bin11:0
+
+Site:15  Bin12:0
+
+Site:15  Bin13:0
+
+Site:15  Bin14:0
+
+Site:15  Bin15:0
+
+Site:15  Bin16:0
+
+Site:15  Bin17:0
+
+Site:15  Bin18:0
+
+Site:15  Bin19:0
+
+Site:15  Bin20:0
+
+Site:15  Bin21:0
+
+Site:15  Bin22:0
+
+

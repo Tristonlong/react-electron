@@ -1,0 +1,12 @@
+.odd {
+  background-color: #fff;
+}
+.even {
+  background-color: rgba(250, 250, 250, 1);
+}
+
+.failed{
+  background-color: rgba(217, 7, 40, 1);
+  margin: 0;
+  text-align: center;
+}

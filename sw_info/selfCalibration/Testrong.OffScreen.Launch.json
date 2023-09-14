@@ -1,0 +1,17 @@
+{
+  "Configurations": [
+    {
+      "Name": "Calibration",
+      "Mode": "Engineer",
+      "LoopCount": 1,
+      "STILPath": ".\\sw_info\\selfCalibration\\Calibration_insite_2slot_DC.stil",
+      "ForceCompilePattern": false,
+      "CompilePattern": false,
+      "LoadPattern": false,
+      "DatalogFolder": "C:\\ProgramData\\Testrong\\ATE_Tester\\FlowLogs\\OffScreen",
+      "EnableSTDF": true,
+      "EnableText": true,
+      "PrintToConsole": true
+    }
+  ]
+}

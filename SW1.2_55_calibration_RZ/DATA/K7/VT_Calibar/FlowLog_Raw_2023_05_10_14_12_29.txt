@@ -1,0 +1,832 @@
+2023/5/10 14:12:29  192.168.100.11   Run Flow Count:   1
+VT_TEST Result:
+VT_voltage_0P5V
+
+2023/05/10 14:12:29.593
+LowLimit:0.4    HighLimit:0.6
+Site:000  Channel:001  Value:0.51155871  Channel:005  Value:0.51117723  Channel:009  Value:0.51651789  Channel:013  Value:0.50469215  Channel:017  Value:0.50316625  Channel:021  Value:0.51956970  Channel:025  Value:0.50507362  Channel:029  Value:0.50774395  Channel:033  Value:0.51689937  Channel:037  Value:0.51575494  Channel:041  Value:0.51499199  Channel:045  Value:0.51804379  Channel:049  Value:0.49744411  Channel:053  Value:0.49820706  Channel:057  Value:0.49477379  Channel:061  Value:0.50049592  
+Site:001  Channel:099  Value:0.50202182  Channel:095  Value:0.50888838  Channel:091  Value:0.51689937  Channel:087  Value:0.50850690  Channel:083  Value:0.50812543  Channel:079  Value:0.50850690  Channel:075  Value:0.51384756  Channel:071  Value:0.51537346  Channel:067  Value:0.51270314  Channel:127  Value:0.49706264  Channel:123  Value:0.48523690  Channel:119  Value:0.49515526  Channel:115  Value:0.49553674  Channel:111  Value:0.50774395  Channel:107  Value:0.50583658  Channel:103  Value:0.50011444  
+Site:002  Channel:192  Value:0.51766232  Channel:188  Value:0.51079576  Channel:184  Value:0.51079576  Channel:180  Value:0.50926986  Channel:176  Value:0.50011444  Channel:172  Value:0.50011444  Channel:168  Value:0.50202182  Channel:164  Value:0.50354772  Channel:160  Value:0.49248493  Channel:130  Value:0.51003281  Channel:134  Value:0.50049592  Channel:138  Value:0.50469215  Channel:142  Value:0.49591821  Channel:146  Value:0.49439231  Channel:150  Value:0.49324788  Channel:154  Value:0.49553674  
+Site:003  Channel:240  Value:0.50049592  Channel:244  Value:0.51155871  Channel:248  Value:0.50736248  Channel:252  Value:0.51346609  Channel:256  Value:0.51194018  Channel:236  Value:0.49439231  Channel:232  Value:0.49401083  Channel:228  Value:0.48981460  Channel:224  Value:0.51117723  Channel:220  Value:0.50202182  Channel:216  Value:0.50469215  Channel:212  Value:0.51651789  Channel:208  Value:0.50087739  Channel:204  Value:0.50392920  Channel:200  Value:0.49515526  Channel:196  Value:0.50545510  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:29.636
+LowLimit:0.4    HighLimit:0.6
+Site:000  Channel:002  Value:0.51079576  Channel:006  Value:0.51079576  Channel:010  Value:0.51651789  Channel:014  Value:0.50431067  Channel:018  Value:0.50278477  Channel:022  Value:0.51880674  Channel:026  Value:0.50507362  Channel:030  Value:0.50774395  Channel:034  Value:0.51613642  Channel:038  Value:0.51537346  Channel:042  Value:0.51537346  Channel:046  Value:0.51689937  Channel:050  Value:0.49820706  Channel:054  Value:0.49744411  Channel:058  Value:0.49553674  Channel:062  Value:0.50011444  
+Site:001  Channel:098  Value:0.50087739  Channel:094  Value:0.50736248  Channel:090  Value:0.51575494  Channel:086  Value:0.50774395  Channel:082  Value:0.50850690  Channel:078  Value:0.50736248  Channel:074  Value:0.51232166  Channel:070  Value:0.51461051  Channel:066  Value:0.51346609  Channel:126  Value:0.49668116  Channel:122  Value:0.48409247  Channel:118  Value:0.49515526  Channel:114  Value:0.49553674  Channel:110  Value:0.50659953  Channel:106  Value:0.50621805  Channel:102  Value:0.49973297  
+Site:002  Channel:191  Value:0.51880674  Channel:187  Value:0.51155871  Channel:183  Value:0.51155871  Channel:179  Value:0.50850690  Channel:175  Value:0.50011444  Channel:171  Value:0.50087739  Channel:167  Value:0.50240330  Channel:163  Value:0.50278477  Channel:159  Value:0.49095903  Channel:131  Value:0.50926986  Channel:135  Value:0.50087739  Channel:139  Value:0.50316625  Channel:143  Value:0.49401083  Channel:147  Value:0.49248493  Channel:151  Value:0.49401083  Channel:155  Value:0.49515526  
+Site:003  Channel:241  Value:0.50965133  Channel:245  Value:0.50583658  Channel:249  Value:0.51346609  Channel:253  Value:0.50888838  Channel:239  Value:0.49973297  Channel:235  Value:0.49439231  Channel:231  Value:0.49629969  Channel:227  Value:0.49172198  Channel:223  Value:0.51194018  Channel:219  Value:0.50164034  Channel:215  Value:0.50469215  Channel:211  Value:0.51689937  Channel:207  Value:0.50087739  Channel:203  Value:0.50583658  Channel:199  Value:0.49668116  Channel:195  Value:0.50621805  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:29.678
+LowLimit:0.4    HighLimit:0.6
+Site:000  Channel:003  Value:0.51003281  Channel:007  Value:0.51041428  Channel:011  Value:0.51461051  Channel:015  Value:0.50392920  Channel:019  Value:0.50240330  Channel:023  Value:0.52071412  Channel:027  Value:0.50469215  Channel:031  Value:0.50621805  Channel:035  Value:0.51575494  Channel:039  Value:0.51499199  Channel:043  Value:0.51499199  Channel:047  Value:0.51499199  Channel:051  Value:0.49706264  Channel:055  Value:0.49668116  Channel:059  Value:0.49553674  Channel:063  Value:0.50087739  
+Site:001  Channel:097  Value:0.50202182  Channel:093  Value:0.50736248  Channel:089  Value:0.51651789  Channel:085  Value:0.50888838  Channel:081  Value:0.50812543  Channel:077  Value:0.50736248  Channel:073  Value:0.51422904  Channel:069  Value:0.51384756  Channel:065  Value:0.51346609  Channel:125  Value:0.49553674  Channel:121  Value:0.48599985  Channel:117  Value:0.49477379  Channel:113  Value:0.49629969  Channel:109  Value:0.50774395  Channel:105  Value:0.50659953  Channel:101  Value:0.50125887  
+Site:002  Channel:190  Value:0.51651789  Channel:186  Value:0.51155871  Channel:182  Value:0.51155871  Channel:178  Value:0.50926986  Channel:174  Value:0.49973297  Channel:170  Value:0.49973297  Channel:166  Value:0.50202182  Channel:162  Value:0.50164034  Channel:158  Value:0.49095903  Channel:132  Value:0.51041428  Channel:136  Value:0.50087739  Channel:140  Value:0.50621805  Channel:144  Value:0.49553674  Channel:148  Value:0.49324788  Channel:152  Value:0.49515526  Channel:156  Value:0.49629969  
+Site:003  Channel:242  Value:0.51270314  Channel:246  Value:0.50736248  Channel:250  Value:0.51422904  Channel:254  Value:0.51041428  Channel:238  Value:0.49973297  Channel:234  Value:0.49286641  Channel:230  Value:0.49515526  Channel:226  Value:0.48981460  Channel:222  Value:0.51041428  Channel:218  Value:0.49973297  Channel:214  Value:0.50507362  Channel:210  Value:0.51689937  Channel:206  Value:0.50278477  Channel:202  Value:0.50583658  Channel:198  Value:0.49515526  Channel:194  Value:0.50621805  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:29.720
+LowLimit:0.4    HighLimit:0.6
+Site:000  Channel:004  Value:0.51079576  Channel:008  Value:0.51041428  Channel:012  Value:0.51461051  Channel:016  Value:0.50392920  Channel:020  Value:0.50507362  Channel:024  Value:0.51918822  Channel:028  Value:0.50583658  Channel:032  Value:0.50583658  Channel:036  Value:0.51766232  Channel:040  Value:0.51537346  Channel:044  Value:0.51613642  Channel:048  Value:0.51842527  Channel:052  Value:0.49782559  Channel:056  Value:0.49935149  Channel:060  Value:0.49439231  Channel:064  Value:0.50278477  
+Site:001  Channel:096  Value:0.50812543  Channel:092  Value:0.51537346  Channel:088  Value:0.50850690  Channel:084  Value:0.50698100  Channel:080  Value:0.50812543  Channel:076  Value:0.51384756  Channel:072  Value:0.51384756  Channel:068  Value:0.51461051  Channel:128  Value:0.49668116  Channel:124  Value:0.48561837  Channel:120  Value:0.49553674  Channel:116  Value:0.49553674  Channel:112  Value:0.50812543  Channel:108  Value:0.50545510  Channel:104  Value:0.50011444  Channel:100  Value:0.50049592  
+Site:002  Channel:189  Value:0.51842527  Channel:185  Value:0.51270314  Channel:181  Value:0.51270314  Channel:177  Value:0.50812543  Channel:173  Value:0.50087739  Channel:169  Value:0.50049592  Channel:165  Value:0.50354772  Channel:161  Value:0.50354772  Channel:129  Value:0.51041428  Channel:133  Value:0.50049592  Channel:137  Value:0.50469215  Channel:141  Value:0.49591821  Channel:145  Value:0.49401083  Channel:149  Value:0.49591821  Channel:153  Value:0.49668116  Channel:157  Value:0.49286641  
+Site:003  Channel:243  Value:0.51232166  Channel:247  Value:0.50850690  Channel:251  Value:0.51499199  Channel:255  Value:0.51117723  Channel:237  Value:0.49629969  Channel:233  Value:0.49248493  Channel:229  Value:0.49401083  Channel:225  Value:0.48981460  Channel:221  Value:0.51117723  Channel:217  Value:0.50011444  Channel:213  Value:0.50431067  Channel:209  Value:0.51537346  Channel:205  Value:0.49973297  Channel:201  Value:0.50469215  Channel:197  Value:0.49477379  Channel:193  Value:0.50659953  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+VT_TEST Result:
+VT_voltage_1V
+
+2023/05/10 14:12:29.788
+LowLimit:0.8    HighLimit:1.1
+Site:000  Channel:001  Value:1.00175479  Channel:005  Value:1.00251774  Channel:009  Value:1.00785840  Channel:013  Value:0.99679561  Channel:017  Value:0.99526970  Channel:021  Value:1.01167315  Channel:025  Value:0.99679561  Channel:029  Value:0.99984741  Channel:033  Value:1.00518807  Channel:037  Value:1.00404364  Channel:041  Value:1.00404364  Channel:045  Value:1.00595102  Channel:049  Value:0.98878462  Channel:053  Value:0.99031052  Channel:057  Value:0.98687724  Channel:061  Value:0.99183642  
+Site:001  Channel:099  Value:0.99298085  Channel:095  Value:0.99755856  Channel:091  Value:1.00251774  Channel:087  Value:0.99755856  Channel:083  Value:0.99641413  Channel:079  Value:0.99603265  Channel:075  Value:1.00213626  Channel:071  Value:1.00289921  Channel:067  Value:1.00099184  Channel:127  Value:0.99145495  Channel:123  Value:0.98001068  Channel:119  Value:0.98992905  Channel:115  Value:0.98916609  Channel:111  Value:1.00022889  Channel:107  Value:0.99717708  Channel:103  Value:0.99031052  
+Site:002  Channel:192  Value:1.00556954  Channel:188  Value:0.99984741  Channel:184  Value:0.99870298  Channel:180  Value:0.99755856  Channel:176  Value:0.98954757  Channel:172  Value:0.98954757  Channel:168  Value:0.99221790  Channel:164  Value:0.99374380  Channel:160  Value:0.98382544  Channel:130  Value:1.00251774  Channel:134  Value:0.99221790  Channel:138  Value:0.99603265  Channel:142  Value:0.98802167  Channel:146  Value:0.98687724  Channel:150  Value:0.98611429  Channel:154  Value:0.98878462  
+Site:003  Channel:240  Value:0.99374380  Channel:244  Value:1.00061036  Channel:248  Value:0.99565118  Channel:252  Value:1.00404364  Channel:256  Value:0.99908446  Channel:236  Value:0.98764019  Channel:232  Value:0.98764019  Channel:228  Value:0.98344396  Channel:224  Value:1.00099184  Channel:220  Value:0.99107347  Channel:216  Value:0.99336233  Channel:212  Value:1.00518807  Channel:208  Value:0.99145495  Channel:204  Value:0.99603265  Channel:200  Value:0.98649577  Channel:196  Value:0.99755856  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:29.831
+LowLimit:0.8    HighLimit:1.1
+Site:000  Channel:002  Value:1.00175479  Channel:006  Value:1.00099184  Channel:010  Value:1.00785840  Channel:014  Value:0.99488823  Channel:018  Value:0.99412528  Channel:022  Value:1.01243610  Channel:026  Value:0.99565118  Channel:030  Value:0.99870298  Channel:034  Value:1.00480659  Channel:038  Value:1.00404364  Channel:042  Value:1.00442512  Channel:046  Value:1.00595102  Channel:050  Value:0.98992905  Channel:054  Value:0.98840314  Channel:058  Value:0.98725872  Channel:062  Value:0.99183642  
+Site:001  Channel:098  Value:0.99259937  Channel:094  Value:0.99717708  Channel:090  Value:1.00442512  Channel:086  Value:0.99794003  Channel:082  Value:0.99717708  Channel:078  Value:0.99679561  Channel:074  Value:1.00061036  Channel:070  Value:1.00251774  Channel:066  Value:1.00213626  Channel:126  Value:0.99069200  Channel:122  Value:0.97962921  Channel:118  Value:0.98992905  Channel:114  Value:0.98954757  Channel:110  Value:0.99984741  Channel:106  Value:0.99679561  Channel:102  Value:0.99183642  
+Site:002  Channel:191  Value:1.00671397  Channel:187  Value:0.99984741  Channel:183  Value:1.00022889  Channel:179  Value:0.99794003  Channel:175  Value:0.98916609  Channel:171  Value:0.99107347  Channel:167  Value:0.99259937  Channel:163  Value:0.99221790  Channel:159  Value:0.98496986  Channel:131  Value:1.00175479  Channel:135  Value:0.99298085  Channel:139  Value:0.99755856  Channel:143  Value:0.98573281  Channel:147  Value:0.98611429  Channel:151  Value:0.98764019  Channel:155  Value:0.98840314  
+Site:003  Channel:241  Value:0.99908446  Channel:245  Value:0.99603265  Channel:249  Value:1.00366217  Channel:253  Value:0.99832151  Channel:239  Value:0.99259937  Channel:235  Value:0.99031052  Channel:231  Value:0.98878462  Channel:227  Value:0.98535134  Channel:223  Value:1.00137331  Channel:219  Value:0.99145495  Channel:215  Value:0.99488823  Channel:211  Value:1.00709545  Channel:207  Value:0.99450675  Channel:203  Value:0.99832151  Channel:199  Value:0.98802167  Channel:195  Value:0.99832151  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:29.874
+LowLimit:0.8    HighLimit:1.1
+Site:000  Channel:003  Value:1.00175479  Channel:007  Value:1.00137331  Channel:011  Value:1.00595102  Channel:015  Value:0.99412528  Channel:019  Value:0.99336233  Channel:023  Value:1.01052873  Channel:027  Value:0.99488823  Channel:031  Value:0.99679561  Channel:035  Value:1.00366217  Channel:039  Value:1.00366217  Channel:043  Value:1.00175479  Channel:047  Value:1.00366217  Channel:051  Value:0.98764019  Channel:055  Value:0.98840314  Channel:059  Value:0.98764019  Channel:063  Value:0.99031052  
+Site:001  Channel:097  Value:0.99336233  Channel:093  Value:0.99679561  Channel:089  Value:1.00366217  Channel:085  Value:0.99679561  Channel:081  Value:0.99641413  Channel:077  Value:0.99526970  Channel:073  Value:1.00251774  Channel:069  Value:1.00175479  Channel:065  Value:1.00137331  Channel:125  Value:0.99069200  Channel:121  Value:0.98039216  Channel:117  Value:0.99031052  Channel:113  Value:0.98992905  Channel:109  Value:0.99832151  Channel:105  Value:0.99717708  Channel:101  Value:0.99221790  
+Site:002  Channel:190  Value:1.00633249  Channel:186  Value:1.00099184  Channel:182  Value:0.99984741  Channel:178  Value:0.99870298  Channel:174  Value:0.98954757  Channel:170  Value:0.98992905  Channel:166  Value:0.99221790  Channel:162  Value:0.99221790  Channel:158  Value:0.98382544  Channel:132  Value:1.00213626  Channel:136  Value:0.99183642  Channel:140  Value:0.99755856  Channel:144  Value:0.98725872  Channel:148  Value:0.98496986  Channel:152  Value:0.98687724  Channel:156  Value:0.98954757  
+Site:003  Channel:242  Value:1.00099184  Channel:246  Value:0.99717708  Channel:250  Value:1.00442512  Channel:254  Value:0.99984741  Channel:238  Value:0.99374380  Channel:234  Value:0.98649577  Channel:230  Value:0.98878462  Channel:226  Value:0.98344396  Channel:222  Value:1.00175479  Channel:218  Value:0.98954757  Channel:214  Value:0.99412528  Channel:210  Value:1.00709545  Channel:206  Value:0.99336233  Channel:202  Value:0.99679561  Channel:198  Value:0.98764019  Channel:194  Value:0.99870298  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:29.915
+LowLimit:0.8    HighLimit:1.1
+Site:000  Channel:004  Value:1.00099184  Channel:008  Value:1.00099184  Channel:012  Value:1.00595102  Channel:016  Value:0.99259937  Channel:020  Value:0.99374380  Channel:024  Value:1.01014725  Channel:028  Value:0.99412528  Channel:032  Value:0.99755856  Channel:036  Value:1.00518807  Channel:040  Value:1.00442512  Channel:044  Value:1.00366217  Channel:048  Value:1.00518807  Channel:052  Value:0.98687724  Channel:056  Value:0.98992905  Channel:060  Value:0.98420691  Channel:064  Value:0.99107347  
+Site:001  Channel:096  Value:0.99565118  Channel:092  Value:1.00213626  Channel:088  Value:0.99603265  Channel:084  Value:0.99488823  Channel:080  Value:0.99603265  Channel:076  Value:1.00213626  Channel:072  Value:1.00099184  Channel:068  Value:1.00137331  Channel:128  Value:0.99107347  Channel:124  Value:0.98039216  Channel:120  Value:0.99031052  Channel:116  Value:0.98992905  Channel:112  Value:1.00022889  Channel:108  Value:0.99679561  Channel:104  Value:0.99298085  Channel:100  Value:0.99221790  
+Site:002  Channel:189  Value:1.00633249  Channel:185  Value:1.00175479  Channel:181  Value:1.00022889  Channel:177  Value:0.99679561  Channel:173  Value:0.98916609  Channel:169  Value:0.98954757  Channel:165  Value:0.99145495  Channel:161  Value:0.99259937  Channel:129  Value:1.00099184  Channel:133  Value:0.98992905  Channel:137  Value:0.99603265  Channel:141  Value:0.98573281  Channel:145  Value:0.98573281  Channel:149  Value:0.98764019  Channel:153  Value:0.98840314  Channel:157  Value:0.98458839  
+Site:003  Channel:243  Value:1.00251774  Channel:247  Value:0.99755856  Channel:251  Value:1.00556954  Channel:255  Value:1.00022889  Channel:237  Value:0.98916609  Channel:233  Value:0.98496986  Channel:229  Value:0.98687724  Channel:225  Value:0.98229953  Channel:221  Value:1.00022889  Channel:217  Value:0.98916609  Channel:213  Value:0.99412528  Channel:209  Value:1.00404364  Channel:205  Value:0.99183642  Channel:201  Value:0.99565118  Channel:197  Value:0.98649577  Channel:193  Value:0.99679561  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+VT_TEST Result:
+VT_voltage_1P5V
+
+2023/05/10 14:12:29.983
+LowLimit:1.4    HighLimit:1.6
+Site:000  Channel:001  Value:1.49767300  Channel:005  Value:1.49652857  Channel:009  Value:1.50339513  Channel:013  Value:1.49080644  Channel:017  Value:1.49004349  Channel:021  Value:1.50644694  Channel:025  Value:1.49195087  Channel:029  Value:1.49385824  Channel:033  Value:1.49996185  Channel:037  Value:1.49958038  Channel:041  Value:1.49958038  Channel:045  Value:1.49996185  Channel:049  Value:1.48584726  Channel:053  Value:1.48622873  Channel:057  Value:1.48393988  Channel:061  Value:1.48775463  
+Site:001  Channel:099  Value:1.49156939  Channel:095  Value:1.49462119  Channel:091  Value:1.49881743  Channel:087  Value:1.49233234  Channel:083  Value:1.49156939  Channel:079  Value:1.49156939  Channel:075  Value:1.49919890  Channel:071  Value:1.49881743  Channel:067  Value:1.49729152  Channel:127  Value:1.49080644  Channel:123  Value:1.47898070  Channel:119  Value:1.48851759  Channel:115  Value:1.48966201  Channel:111  Value:1.49843595  Channel:107  Value:1.49462119  Channel:103  Value:1.48889906  
+Site:002  Channel:192  Value:1.50225071  Channel:188  Value:1.49576562  Channel:184  Value:1.49614710  Channel:180  Value:1.49423972  Channel:176  Value:1.48661021  Channel:172  Value:1.48737316  Channel:168  Value:1.48775463  Channel:164  Value:1.48966201  Channel:160  Value:1.48203250  Channel:130  Value:1.49805447  Channel:134  Value:1.48966201  Channel:138  Value:1.49347677  Channel:142  Value:1.48355840  Channel:146  Value:1.48432136  Channel:150  Value:1.48508431  Channel:154  Value:1.48546578  
+Site:003  Channel:240  Value:1.49156939  Channel:244  Value:1.49805447  Channel:248  Value:1.49233234  Channel:252  Value:1.49958038  Channel:256  Value:1.49652857  Channel:236  Value:1.48546578  Channel:232  Value:1.48508431  Channel:228  Value:1.48165103  Channel:224  Value:1.49767300  Channel:220  Value:1.48699168  Channel:216  Value:1.49042496  Channel:212  Value:1.50225071  Channel:208  Value:1.49042496  Channel:204  Value:1.49347677  Channel:200  Value:1.48432136  Channel:196  Value:1.49500267  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.025
+LowLimit:1.4    HighLimit:1.6
+Site:000  Channel:002  Value:1.49691005  Channel:006  Value:1.49614710  Channel:010  Value:1.50339513  Channel:014  Value:1.48889906  Channel:018  Value:1.48889906  Channel:022  Value:1.50644694  Channel:026  Value:1.49080644  Channel:030  Value:1.49385824  Channel:034  Value:1.50034333  Channel:038  Value:1.49958038  Channel:042  Value:1.49881743  Channel:046  Value:1.49958038  Channel:050  Value:1.48584726  Channel:054  Value:1.48470283  Channel:058  Value:1.48393988  Channel:062  Value:1.48622873  
+Site:001  Channel:098  Value:1.49004349  Channel:094  Value:1.49385824  Channel:090  Value:1.49881743  Channel:086  Value:1.49309529  Channel:082  Value:1.49195087  Channel:078  Value:1.49156939  Channel:074  Value:1.49652857  Channel:070  Value:1.49881743  Channel:066  Value:1.49805447  Channel:126  Value:1.48966201  Channel:122  Value:1.47898070  Channel:118  Value:1.48928054  Channel:114  Value:1.48775463  Channel:110  Value:1.49729152  Channel:106  Value:1.49423972  Channel:102  Value:1.48966201  
+Site:002  Channel:191  Value:1.50415808  Channel:187  Value:1.49500267  Channel:183  Value:1.49767300  Channel:179  Value:1.49462119  Channel:175  Value:1.48699168  Channel:171  Value:1.48775463  Channel:167  Value:1.48928054  Channel:163  Value:1.49004349  Channel:159  Value:1.48050660  Channel:131  Value:1.49729152  Channel:135  Value:1.48928054  Channel:139  Value:1.49385824  Channel:143  Value:1.48279545  Channel:147  Value:1.48279545  Channel:151  Value:1.48317693  Channel:155  Value:1.48546578  
+Site:003  Channel:241  Value:1.49538415  Channel:245  Value:1.49195087  Channel:249  Value:1.49881743  Channel:253  Value:1.49462119  Channel:239  Value:1.49233234  Channel:235  Value:1.48775463  Channel:231  Value:1.48699168  Channel:227  Value:1.48355840  Channel:223  Value:1.49958038  Channel:219  Value:1.48813611  Channel:215  Value:1.49195087  Channel:211  Value:1.50339513  Channel:207  Value:1.49233234  Channel:203  Value:1.49538415  Channel:199  Value:1.48661021  Channel:195  Value:1.49691005  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.066
+LowLimit:1.4    HighLimit:1.6
+Site:000  Channel:003  Value:1.49652857  Channel:007  Value:1.49767300  Channel:011  Value:1.50186923  Channel:015  Value:1.49004349  Channel:019  Value:1.48928054  Channel:023  Value:1.50720989  Channel:027  Value:1.49156939  Channel:031  Value:1.49271382  Channel:035  Value:1.49881743  Channel:039  Value:1.49767300  Channel:043  Value:1.49729152  Channel:047  Value:1.49805447  Channel:051  Value:1.48393988  Channel:055  Value:1.48393988  Channel:059  Value:1.48203250  Channel:063  Value:1.48622873  
+Site:001  Channel:097  Value:1.49118791  Channel:093  Value:1.49271382  Channel:089  Value:1.49958038  Channel:085  Value:1.49233234  Channel:081  Value:1.49271382  Channel:077  Value:1.49080644  Channel:073  Value:1.49843595  Channel:069  Value:1.49881743  Channel:065  Value:1.49729152  Channel:125  Value:1.48851759  Channel:121  Value:1.47859922  Channel:117  Value:1.48851759  Channel:113  Value:1.48928054  Channel:109  Value:1.49805447  Channel:105  Value:1.49385824  Channel:101  Value:1.48966201  
+Site:002  Channel:190  Value:1.50263218  Channel:186  Value:1.49576562  Channel:182  Value:1.49538415  Channel:178  Value:1.49347677  Channel:174  Value:1.48546578  Channel:170  Value:1.48661021  Channel:166  Value:1.48775463  Channel:162  Value:1.48851759  Channel:158  Value:1.48088808  Channel:132  Value:1.49919890  Channel:136  Value:1.48775463  Channel:140  Value:1.49347677  Channel:144  Value:1.48241398  Channel:148  Value:1.48203250  Channel:152  Value:1.48393988  Channel:156  Value:1.48508431  
+Site:003  Channel:242  Value:1.49805447  Channel:246  Value:1.49423972  Channel:250  Value:1.50225071  Channel:254  Value:1.49652857  Channel:238  Value:1.49385824  Channel:234  Value:1.48546578  Channel:230  Value:1.48737316  Channel:226  Value:1.48203250  Channel:222  Value:1.49919890  Channel:218  Value:1.48508431  Channel:214  Value:1.49233234  Channel:210  Value:1.50301366  Channel:206  Value:1.49118791  Channel:202  Value:1.49500267  Channel:198  Value:1.48546578  Channel:194  Value:1.49538415  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.109
+LowLimit:1.4    HighLimit:1.6
+Site:000  Channel:004  Value:1.49805447  Channel:008  Value:1.49767300  Channel:012  Value:1.50301366  Channel:016  Value:1.48851759  Channel:020  Value:1.48966201  Channel:024  Value:1.50759136  Channel:028  Value:1.49156939  Channel:032  Value:1.49347677  Channel:036  Value:1.50072480  Channel:040  Value:1.49958038  Channel:044  Value:1.50034333  Channel:048  Value:1.50034333  Channel:052  Value:1.48470283  Channel:056  Value:1.48584726  Channel:060  Value:1.48203250  Channel:064  Value:1.48813611  
+Site:001  Channel:096  Value:1.49309529  Channel:092  Value:1.49805447  Channel:088  Value:1.49309529  Channel:084  Value:1.49118791  Channel:080  Value:1.49271382  Channel:076  Value:1.49881743  Channel:072  Value:1.49805447  Channel:068  Value:1.49767300  Channel:128  Value:1.48851759  Channel:124  Value:1.48012512  Channel:120  Value:1.48889906  Channel:116  Value:1.48851759  Channel:112  Value:1.49652857  Channel:108  Value:1.49347677  Channel:104  Value:1.48851759  Channel:100  Value:1.48928054  
+Site:002  Channel:189  Value:1.50225071  Channel:185  Value:1.49614710  Channel:181  Value:1.49538415  Channel:177  Value:1.49347677  Channel:173  Value:1.48584726  Channel:169  Value:1.48661021  Channel:165  Value:1.48889906  Channel:161  Value:1.48928054  Channel:129  Value:1.49805447  Channel:133  Value:1.48851759  Channel:137  Value:1.49462119  Channel:141  Value:1.48432136  Channel:145  Value:1.48279545  Channel:149  Value:1.48470283  Channel:153  Value:1.48622873  Channel:157  Value:1.48279545  
+Site:003  Channel:243  Value:1.49919890  Channel:247  Value:1.49462119  Channel:251  Value:1.50186923  Channel:255  Value:1.49729152  Channel:237  Value:1.48889906  Channel:233  Value:1.48508431  Channel:229  Value:1.48661021  Channel:225  Value:1.48126955  Channel:221  Value:1.49729152  Channel:217  Value:1.48546578  Channel:213  Value:1.49118791  Channel:209  Value:1.50186923  Channel:205  Value:1.48889906  Channel:201  Value:1.49423972  Channel:197  Value:1.48393988  Channel:193  Value:1.49462119  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+VT_TEST Result:
+VT_voltage_2V
+
+2023/05/10 14:12:30.177
+LowLimit:1.9    HighLimit:2.1
+Site:000  Channel:001  Value:1.99702449  Channel:005  Value:1.99473564  Channel:009  Value:2.00236515  Channel:013  Value:1.99053941  Channel:017  Value:1.98825055  Channel:021  Value:2.00694285  Channel:025  Value:1.99130236  Channel:029  Value:1.99359121  Channel:033  Value:1.99740597  Channel:037  Value:1.99702449  Channel:041  Value:1.99664302  Channel:045  Value:1.99740597  Channel:049  Value:1.98405432  Channel:053  Value:1.98443580  Channel:057  Value:1.98100252  Channel:061  Value:1.98596170  
+Site:001  Channel:099  Value:1.98977646  Channel:095  Value:1.99206531  Channel:091  Value:1.99588006  Channel:087  Value:1.99168383  Channel:083  Value:1.98901350  Channel:079  Value:1.99015793  Channel:075  Value:1.99816892  Channel:071  Value:1.99740597  Channel:067  Value:1.99588006  Channel:127  Value:1.98863203  Channel:123  Value:1.97795071  Channel:119  Value:1.98748760  Channel:115  Value:1.98748760  Channel:111  Value:1.99588006  Channel:107  Value:1.99244678  Channel:103  Value:1.98748760  
+Site:002  Channel:192  Value:2.00045777  Channel:188  Value:1.99397269  Channel:184  Value:1.99320974  Channel:180  Value:1.99206531  Channel:176  Value:1.98596170  Channel:172  Value:1.98596170  Channel:168  Value:1.98710613  Channel:164  Value:1.98825055  Channel:160  Value:1.97947662  Channel:130  Value:1.99855039  Channel:134  Value:1.98825055  Channel:138  Value:1.99282826  Channel:142  Value:1.98329137  Channel:146  Value:1.98329137  Channel:150  Value:1.98367285  Channel:154  Value:1.98367285  
+Site:003  Channel:240  Value:1.99053941  Channel:244  Value:1.99588006  Channel:248  Value:1.99244678  Channel:252  Value:1.99893187  Channel:256  Value:1.99473564  Channel:236  Value:1.98405432  Channel:232  Value:1.98405432  Channel:228  Value:1.97985809  Channel:224  Value:1.99664302  Channel:220  Value:1.98329137  Channel:216  Value:1.98901350  Channel:212  Value:2.00045777  Channel:208  Value:1.98863203  Channel:204  Value:1.99206531  Channel:200  Value:1.98329137  Channel:196  Value:1.99473564  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.218
+LowLimit:1.9    HighLimit:2.1
+Site:000  Channel:002  Value:1.99626154  Channel:006  Value:1.99664302  Channel:010  Value:2.00236515  Channel:014  Value:1.98825055  Channel:018  Value:1.98901350  Channel:022  Value:2.00617990  Channel:026  Value:1.99092088  Channel:030  Value:1.99320974  Channel:034  Value:1.99778744  Channel:038  Value:1.99778744  Channel:042  Value:1.99740597  Channel:046  Value:1.99816892  Channel:050  Value:1.98519875  Channel:054  Value:1.98481727  Channel:058  Value:1.98367285  Channel:062  Value:1.98596170  
+Site:001  Channel:098  Value:1.98939498  Channel:094  Value:1.99130236  Channel:090  Value:1.99588006  Channel:086  Value:1.99130236  Channel:082  Value:1.98939498  Channel:078  Value:1.98977646  Channel:074  Value:1.99588006  Channel:070  Value:1.99664302  Channel:066  Value:1.99588006  Channel:126  Value:1.98710613  Channel:122  Value:1.97680629  Channel:118  Value:1.98710613  Channel:114  Value:1.98596170  Channel:110  Value:1.99511711  Channel:106  Value:1.99320974  Channel:102  Value:1.98710613  
+Site:002  Channel:191  Value:2.00122072  Channel:187  Value:1.99206531  Channel:183  Value:1.99397269  Channel:179  Value:1.99206531  Channel:175  Value:1.98443580  Channel:171  Value:1.98634318  Channel:167  Value:1.98710613  Channel:163  Value:1.98901350  Channel:159  Value:1.98023957  Channel:131  Value:1.99778744  Channel:135  Value:1.98786908  Channel:139  Value:1.99320974  Channel:143  Value:1.98176547  Channel:147  Value:1.98290990  Channel:151  Value:1.98329137  Channel:155  Value:1.98329137  
+Site:003  Channel:241  Value:1.99549859  Channel:245  Value:1.99092088  Channel:249  Value:1.99931334  Channel:253  Value:1.99473564  Channel:239  Value:1.99168383  Channel:235  Value:1.98596170  Channel:231  Value:1.98634318  Channel:227  Value:1.98138399  Channel:223  Value:1.99778744  Channel:219  Value:1.98519875  Channel:215  Value:1.99092088  Channel:211  Value:2.00160220  Channel:207  Value:1.99053941  Channel:203  Value:1.99435416  Channel:199  Value:1.98405432  Channel:195  Value:1.99588006  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.260
+LowLimit:1.9    HighLimit:2.1
+Site:000  Channel:003  Value:1.99702449  Channel:007  Value:1.99702449  Channel:011  Value:2.00160220  Channel:015  Value:1.99015793  Channel:019  Value:1.98977646  Channel:023  Value:2.00732433  Channel:027  Value:1.99092088  Channel:031  Value:1.99282826  Channel:035  Value:1.99931334  Channel:039  Value:1.99816892  Channel:043  Value:1.99702449  Channel:047  Value:1.99816892  Channel:051  Value:1.98481727  Channel:055  Value:1.98405432  Channel:059  Value:1.98290990  Channel:063  Value:1.98672465  
+Site:001  Channel:097  Value:1.99015793  Channel:093  Value:1.99168383  Channel:089  Value:1.99588006  Channel:085  Value:1.99168383  Channel:081  Value:1.98939498  Channel:077  Value:1.98825055  Channel:073  Value:1.99664302  Channel:069  Value:1.99702449  Channel:065  Value:1.99473564  Channel:125  Value:1.98710613  Channel:121  Value:1.97680629  Channel:117  Value:1.98710613  Channel:113  Value:1.98748760  Channel:109  Value:1.99626154  Channel:105  Value:1.99397269  Channel:101  Value:1.98825055  
+Site:002  Channel:190  Value:2.00083925  Channel:186  Value:1.99397269  Channel:182  Value:1.99320974  Channel:178  Value:1.99206531  Channel:174  Value:1.98481727  Channel:170  Value:1.98481727  Channel:166  Value:1.98710613  Channel:162  Value:1.98863203  Channel:158  Value:1.98176547  Channel:132  Value:1.99893187  Channel:136  Value:1.98825055  Channel:140  Value:1.99435416  Channel:144  Value:1.98290990  Channel:148  Value:1.98252842  Channel:152  Value:1.98443580  Channel:156  Value:1.98558022  
+Site:003  Channel:242  Value:1.99626154  Channel:246  Value:1.99282826  Channel:250  Value:2.00045777  Channel:254  Value:1.99473564  Channel:238  Value:1.99244678  Channel:234  Value:1.98367285  Channel:230  Value:1.98596170  Channel:226  Value:1.98062104  Channel:222  Value:1.99740597  Channel:218  Value:1.98367285  Channel:214  Value:1.98977646  Channel:210  Value:2.00122072  Channel:206  Value:1.99092088  Channel:202  Value:1.99282826  Channel:198  Value:1.98405432  Channel:194  Value:1.99626154  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.301
+LowLimit:1.9    HighLimit:2.1
+Site:000  Channel:004  Value:1.99778744  Channel:008  Value:1.99740597  Channel:012  Value:2.00198367  Channel:016  Value:1.98901350  Channel:020  Value:1.99015793  Channel:024  Value:2.00617990  Channel:028  Value:1.99168383  Channel:032  Value:1.99320974  Channel:036  Value:1.99893187  Channel:040  Value:1.99664302  Channel:044  Value:1.99816892  Channel:048  Value:1.99855039  Channel:052  Value:1.98405432  Channel:056  Value:1.98519875  Channel:060  Value:1.98062104  Channel:064  Value:1.98748760  
+Site:001  Channel:096  Value:1.99092088  Channel:092  Value:1.99511711  Channel:088  Value:1.99015793  Channel:084  Value:1.98672465  Channel:080  Value:1.98977646  Channel:076  Value:1.99626154  Channel:072  Value:1.99549859  Channel:068  Value:1.99626154  Channel:128  Value:1.98596170  Channel:124  Value:1.97718776  Channel:120  Value:1.98710613  Channel:116  Value:1.98672465  Channel:112  Value:1.99511711  Channel:108  Value:1.99244678  Channel:104  Value:1.98672465  Channel:100  Value:1.98748760  
+Site:002  Channel:189  Value:1.99969482  Channel:185  Value:1.99359121  Channel:181  Value:1.99435416  Channel:177  Value:1.99206531  Channel:173  Value:1.98519875  Channel:169  Value:1.98481727  Channel:165  Value:1.98558022  Channel:161  Value:1.98939498  Channel:129  Value:1.99740597  Channel:133  Value:1.98863203  Channel:137  Value:1.99320974  Channel:141  Value:1.98481727  Channel:145  Value:1.98367285  Channel:149  Value:1.98443580  Channel:153  Value:1.98596170  Channel:157  Value:1.98290990  
+Site:003  Channel:243  Value:1.99740597  Channel:247  Value:1.99397269  Channel:251  Value:2.00045777  Channel:255  Value:1.99702449  Channel:237  Value:1.98634318  Channel:233  Value:1.98329137  Channel:229  Value:1.98405432  Channel:225  Value:1.97947662  Channel:221  Value:1.99664302  Channel:217  Value:1.98329137  Channel:213  Value:1.98863203  Channel:209  Value:2.00007630  Channel:205  Value:1.98710613  Channel:201  Value:1.99206531  Channel:197  Value:1.98214694  Channel:193  Value:1.99435416  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+VT_TEST Result:
+VT_voltage_2P5V
+
+2023/05/10 14:12:30.368
+LowLimit:2.4    HighLimit:2.6
+Site:000  Channel:001  Value:2.49866484  Channel:005  Value:2.49599451  Channel:009  Value:2.50324254  Channel:013  Value:2.49027237  Channel:017  Value:2.48950942  Channel:021  Value:2.50705730  Channel:025  Value:2.49179828  Channel:029  Value:2.49408713  Channel:033  Value:2.49904631  Channel:037  Value:2.49790188  Channel:041  Value:2.49790188  Channel:045  Value:2.49942779  Channel:049  Value:2.48531319  Channel:053  Value:2.48569467  Channel:057  Value:2.48264286  Channel:061  Value:2.48645762  
+Site:001  Channel:099  Value:2.48989090  Channel:095  Value:2.49141680  Channel:091  Value:2.49675746  Channel:087  Value:2.49103532  Channel:083  Value:2.48950942  Channel:079  Value:2.49103532  Channel:075  Value:2.49752041  Channel:071  Value:2.49790188  Channel:067  Value:2.49523156  Channel:127  Value:2.48836500  Channel:123  Value:2.47653925  Channel:119  Value:2.48722057  Channel:115  Value:2.48722057  Channel:111  Value:2.49637598  Channel:107  Value:2.49332418  Channel:103  Value:2.48874647  
+Site:002  Channel:192  Value:2.50057221  Channel:188  Value:2.49485008  Channel:184  Value:2.49446860  Channel:180  Value:2.49294270  Channel:176  Value:2.48493172  Channel:172  Value:2.48607614  Channel:168  Value:2.48607614  Channel:164  Value:2.48798352  Channel:160  Value:2.48264286  Channel:130  Value:2.49904631  Channel:134  Value:2.48950942  Channel:138  Value:2.49523156  Channel:142  Value:2.48340581  Channel:146  Value:2.48493172  Channel:150  Value:2.48455024  Channel:154  Value:2.48569467  
+Site:003  Channel:240  Value:2.49027237  Channel:244  Value:2.49675746  Channel:248  Value:2.49141680  Channel:252  Value:2.49942779  Channel:256  Value:2.49523156  Channel:236  Value:2.48569467  Channel:232  Value:2.48493172  Channel:228  Value:2.47959106  Channel:224  Value:2.49790188  Channel:220  Value:2.48378729  Channel:216  Value:2.48874647  Channel:212  Value:2.50133516  Channel:208  Value:2.48950942  Channel:204  Value:2.49256123  Channel:200  Value:2.48416876  Channel:196  Value:2.49485008  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.411
+LowLimit:2.4    HighLimit:2.6
+Site:000  Channel:002  Value:2.49599451  Channel:006  Value:2.49637598  Channel:010  Value:2.50286107  Channel:014  Value:2.48836500  Channel:018  Value:2.48912795  Channel:022  Value:2.50591287  Channel:026  Value:2.48950942  Channel:030  Value:2.49332418  Channel:034  Value:2.49828336  Channel:038  Value:2.49866484  Channel:042  Value:2.49828336  Channel:046  Value:2.49828336  Channel:050  Value:2.48683909  Channel:054  Value:2.48416876  Channel:058  Value:2.48378729  Channel:062  Value:2.48607614  
+Site:001  Channel:098  Value:2.48912795  Channel:094  Value:2.49103532  Channel:090  Value:2.49446860  Channel:086  Value:2.48989090  Channel:082  Value:2.48989090  Channel:078  Value:2.48989090  Channel:074  Value:2.49523156  Channel:070  Value:2.49675746  Channel:066  Value:2.49675746  Channel:126  Value:2.48722057  Channel:122  Value:2.47692073  Channel:118  Value:2.48722057  Channel:114  Value:2.48683909  Channel:110  Value:2.49599451  Channel:106  Value:2.49256123  Channel:102  Value:2.48722057  
+Site:002  Channel:191  Value:2.50171664  Channel:187  Value:2.49256123  Channel:183  Value:2.49256123  Channel:179  Value:2.49179828  Channel:175  Value:2.48455024  Channel:171  Value:2.48531319  Channel:167  Value:2.48683909  Channel:163  Value:2.48874647  Channel:159  Value:2.47768368  Channel:131  Value:2.49713893  Channel:135  Value:2.48912795  Channel:139  Value:2.49332418  Channel:143  Value:2.48264286  Channel:147  Value:2.48226139  Channel:151  Value:2.48340581  Channel:155  Value:2.48455024  
+Site:003  Channel:241  Value:2.49637598  Channel:245  Value:2.49217975  Channel:249  Value:2.49980926  Channel:253  Value:2.49561303  Channel:239  Value:2.49065385  Channel:235  Value:2.48493172  Channel:231  Value:2.48531319  Channel:227  Value:2.48149844  Channel:223  Value:2.49675746  Channel:219  Value:2.48569467  Channel:215  Value:2.49065385  Channel:211  Value:2.50133516  Channel:207  Value:2.49065385  Channel:203  Value:2.49446860  Channel:199  Value:2.48531319  Channel:195  Value:2.49485008  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.452
+LowLimit:2.4    HighLimit:2.6
+Site:000  Channel:003  Value:2.49561303  Channel:007  Value:2.49713893  Channel:011  Value:2.50209812  Channel:015  Value:2.48912795  Channel:019  Value:2.48836500  Channel:023  Value:2.50743877  Channel:027  Value:2.49027237  Channel:031  Value:2.49179828  Channel:035  Value:2.49866484  Channel:039  Value:2.49790188  Channel:043  Value:2.49599451  Channel:047  Value:2.49713893  Channel:051  Value:2.48493172  Channel:055  Value:2.48302434  Channel:059  Value:2.48302434  Channel:063  Value:2.48531319  
+Site:001  Channel:097  Value:2.49103532  Channel:093  Value:2.49217975  Channel:089  Value:2.49523156  Channel:085  Value:2.49027237  Channel:081  Value:2.48950942  Channel:077  Value:2.48874647  Channel:073  Value:2.49675746  Channel:069  Value:2.49637598  Channel:065  Value:2.49599451  Channel:125  Value:2.48836500  Channel:121  Value:2.47577630  Channel:117  Value:2.48722057  Channel:113  Value:2.48836500  Channel:109  Value:2.49675746  Channel:105  Value:2.49217975  Channel:101  Value:2.48912795  
+Site:002  Channel:190  Value:2.50209812  Channel:186  Value:2.49408713  Channel:182  Value:2.49446860  Channel:178  Value:2.49294270  Channel:174  Value:2.48531319  Channel:170  Value:2.48531319  Channel:166  Value:2.48798352  Channel:162  Value:2.48912795  Channel:158  Value:2.47959106  Channel:132  Value:2.49942779  Channel:136  Value:2.48989090  Channel:140  Value:2.49408713  Channel:144  Value:2.48302434  Channel:148  Value:2.48226139  Channel:152  Value:2.48531319  Channel:156  Value:2.48683909  
+Site:003  Channel:242  Value:2.49752041  Channel:246  Value:2.49332418  Channel:250  Value:2.50133516  Channel:254  Value:2.49523156  Channel:238  Value:2.49179828  Channel:234  Value:2.48340581  Channel:230  Value:2.48607614  Channel:226  Value:2.48073548  Channel:222  Value:2.49790188  Channel:218  Value:2.48302434  Channel:214  Value:2.49065385  Channel:210  Value:2.50324254  Channel:206  Value:2.49141680  Channel:202  Value:2.49408713  Channel:198  Value:2.48607614  Channel:194  Value:2.49599451  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.494
+LowLimit:2.4    HighLimit:2.6
+Site:000  Channel:004  Value:2.49752041  Channel:008  Value:2.49752041  Channel:012  Value:2.50209812  Channel:016  Value:2.48950942  Channel:020  Value:2.49103532  Channel:024  Value:2.50629435  Channel:028  Value:2.49217975  Channel:032  Value:2.49408713  Channel:036  Value:2.49904631  Channel:040  Value:2.49866484  Channel:044  Value:2.49980926  Channel:048  Value:2.49904631  Channel:052  Value:2.48607614  Channel:056  Value:2.48531319  Channel:060  Value:2.48149844  Channel:064  Value:2.48760204  
+Site:001  Channel:096  Value:2.49294270  Channel:092  Value:2.49485008  Channel:088  Value:2.49217975  Channel:084  Value:2.48874647  Channel:080  Value:2.49103532  Channel:076  Value:2.49866484  Channel:072  Value:2.49752041  Channel:068  Value:2.49675746  Channel:128  Value:2.48798352  Channel:124  Value:2.47806516  Channel:120  Value:2.48874647  Channel:116  Value:2.48683909  Channel:112  Value:2.49713893  Channel:108  Value:2.49294270  Channel:104  Value:2.48874647  Channel:100  Value:2.48950942  
+Site:002  Channel:189  Value:2.50095369  Channel:185  Value:2.49446860  Channel:181  Value:2.49332418  Channel:177  Value:2.49179828  Channel:173  Value:2.48569467  Channel:169  Value:2.48607614  Channel:165  Value:2.48722057  Channel:161  Value:2.48874647  Channel:129  Value:2.49790188  Channel:133  Value:2.48912795  Channel:137  Value:2.49294270  Channel:141  Value:2.48302434  Channel:145  Value:2.48378729  Channel:149  Value:2.48455024  Channel:153  Value:2.48493172  Channel:157  Value:2.48226139  
+Site:003  Channel:243  Value:2.49828336  Channel:247  Value:2.49370565  Channel:251  Value:2.50057221  Channel:255  Value:2.49637598  Channel:237  Value:2.48874647  Channel:233  Value:2.48455024  Channel:229  Value:2.48607614  Channel:225  Value:2.48035401  Channel:221  Value:2.49675746  Channel:217  Value:2.48149844  Channel:213  Value:2.49027237  Channel:209  Value:2.49866484  Channel:205  Value:2.48950942  Channel:201  Value:2.49370565  Channel:197  Value:2.48302434  Channel:193  Value:2.49446860  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+VT_TEST Result:
+VT_voltage_2V
+
+2023/05/10 14:12:30.561
+LowLimit:2.9    HighLimit:3.1
+Site:000  Channel:001  Value:2.99496452  Channel:005  Value:2.99305715  Channel:009  Value:2.99992370  Channel:013  Value:2.98580911  Channel:017  Value:2.98542763  Channel:021  Value:3.00297551  Channel:025  Value:2.98847944  Channel:029  Value:2.99000534  Channel:033  Value:2.99496452  Channel:037  Value:2.99382010  Channel:041  Value:2.99267567  Channel:045  Value:2.99382010  Channel:049  Value:2.98123140  Channel:053  Value:2.98161288  Channel:057  Value:2.97894255  Channel:061  Value:2.98275731  
+Site:001  Channel:099  Value:2.98619059  Channel:095  Value:2.98886091  Channel:091  Value:2.99114977  Channel:087  Value:2.98847944  Channel:083  Value:2.98466468  Channel:079  Value:2.98580911  Channel:075  Value:2.99458305  Channel:071  Value:2.99343862  Channel:067  Value:2.99229419  Channel:127  Value:2.98580911  Channel:123  Value:2.97322042  Channel:119  Value:2.98352026  Channel:115  Value:2.98428321  Channel:111  Value:2.99420157  Channel:107  Value:2.98924239  Channel:103  Value:2.98504616  
+Site:002  Channel:192  Value:2.99649042  Channel:188  Value:2.99000534  Channel:184  Value:2.99000534  Channel:180  Value:2.98962387  Channel:176  Value:2.98275731  Channel:172  Value:2.98237583  Channel:168  Value:2.98390173  Channel:164  Value:2.98619059  Channel:160  Value:2.97627222  Channel:130  Value:2.99496452  Channel:134  Value:2.98504616  Channel:138  Value:2.98847944  Channel:142  Value:2.97894255  Channel:146  Value:2.97932403  Channel:150  Value:2.97894255  Channel:154  Value:2.97970550  
+Site:003  Channel:240  Value:2.98809796  Channel:244  Value:2.99420157  Channel:248  Value:2.98847944  Channel:252  Value:2.99610895  Channel:256  Value:2.99267567  Channel:236  Value:2.98123140  Channel:232  Value:2.98275731  Channel:228  Value:2.97741665  Channel:224  Value:2.99420157  Channel:220  Value:2.98084993  Channel:216  Value:2.98657206  Channel:212  Value:2.99801633  Channel:208  Value:2.98695354  Channel:204  Value:2.98962387  Channel:200  Value:2.98199435  Channel:196  Value:2.99305715  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.603
+LowLimit:2.9    HighLimit:3.1
+Site:000  Channel:002  Value:2.99420157  Channel:006  Value:2.99267567  Channel:010  Value:3.00030518  Channel:014  Value:2.98428321  Channel:018  Value:2.98504616  Channel:022  Value:3.00373846  Channel:026  Value:2.98733501  Channel:030  Value:2.99076829  Channel:034  Value:2.99496452  Channel:038  Value:2.99496452  Channel:042  Value:2.99343862  Channel:046  Value:2.99496452  Channel:050  Value:2.98313878  Channel:054  Value:2.98161288  Channel:058  Value:2.98008698  Channel:062  Value:2.98313878  
+Site:001  Channel:098  Value:2.98695354  Channel:094  Value:2.98847944  Channel:090  Value:2.99153124  Channel:086  Value:2.98809796  Channel:082  Value:2.98428321  Channel:078  Value:2.98619059  Channel:074  Value:2.99191272  Channel:070  Value:2.99458305  Channel:066  Value:2.99382010  Channel:126  Value:2.98466468  Channel:122  Value:2.97322042  Channel:118  Value:2.98390173  Channel:114  Value:2.98275731  Channel:110  Value:2.99382010  Channel:106  Value:2.98924239  Channel:102  Value:2.98504616  
+Site:002  Channel:191  Value:2.99725338  Channel:187  Value:2.98962387  Channel:183  Value:2.99038682  Channel:179  Value:2.98886091  Channel:175  Value:2.98161288  Channel:171  Value:2.98352026  Channel:167  Value:2.98390173  Channel:163  Value:2.98695354  Channel:159  Value:2.97741665  Channel:131  Value:2.99420157  Channel:135  Value:2.98466468  Channel:139  Value:2.98962387  Channel:143  Value:2.97856107  Channel:147  Value:2.97894255  Channel:151  Value:2.97932403  Channel:155  Value:2.98123140  
+Site:003  Channel:241  Value:2.99267567  Channel:245  Value:2.98886091  Channel:249  Value:2.99649042  Channel:253  Value:2.99229419  Channel:239  Value:2.98771649  Channel:235  Value:2.98199435  Channel:231  Value:2.98199435  Channel:227  Value:2.97779812  Channel:223  Value:2.99458305  Channel:219  Value:2.98084993  Channel:215  Value:2.98657206  Channel:211  Value:2.99801633  Channel:207  Value:2.98695354  Channel:203  Value:2.99038682  Channel:199  Value:2.98199435  Channel:195  Value:2.99267567  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.645
+LowLimit:2.9    HighLimit:3.1
+Site:000  Channel:003  Value:2.99267567  Channel:007  Value:2.99229419  Channel:011  Value:2.99801633  Channel:015  Value:2.98428321  Channel:019  Value:2.98504616  Channel:023  Value:3.00144961  Channel:027  Value:2.98619059  Channel:031  Value:2.98809796  Channel:035  Value:2.99458305  Channel:039  Value:2.99382010  Channel:043  Value:2.99305715  Channel:047  Value:2.99153124  Channel:051  Value:2.98084993  Channel:055  Value:2.97970550  Channel:059  Value:2.97779812  Channel:063  Value:2.98161288  
+Site:001  Channel:097  Value:2.98847944  Channel:093  Value:2.98809796  Channel:089  Value:2.99191272  Channel:085  Value:2.98733501  Channel:081  Value:2.98580911  Channel:077  Value:2.98504616  Channel:073  Value:2.99305715  Channel:069  Value:2.99267567  Channel:065  Value:2.99229419  Channel:125  Value:2.98352026  Channel:121  Value:2.97283894  Channel:117  Value:2.98542763  Channel:113  Value:2.98504616  Channel:109  Value:2.99382010  Channel:105  Value:2.98924239  Channel:101  Value:2.98619059  
+Site:002  Channel:190  Value:2.99801633  Channel:186  Value:2.98924239  Channel:182  Value:2.99076829  Channel:178  Value:2.99038682  Channel:174  Value:2.98161288  Channel:170  Value:2.98275731  Channel:166  Value:2.98352026  Channel:162  Value:2.98619059  Channel:158  Value:2.97703517  Channel:132  Value:2.99534600  Channel:136  Value:2.98428321  Channel:140  Value:2.99038682  Channel:144  Value:2.97932403  Channel:148  Value:2.97970550  Channel:152  Value:2.98008698  Channel:156  Value:2.98123140  
+Site:003  Channel:242  Value:2.99305715  Channel:246  Value:2.98847944  Channel:250  Value:2.99610895  Channel:254  Value:2.99191272  Channel:238  Value:2.98847944  Channel:234  Value:2.98046845  Channel:230  Value:2.98313878  Channel:226  Value:2.97627222  Channel:222  Value:2.99458305  Channel:218  Value:2.97856107  Channel:214  Value:2.98580911  Channel:210  Value:2.99725338  Channel:206  Value:2.98657206  Channel:202  Value:2.98809796  Channel:198  Value:2.98046845  Channel:194  Value:2.99191272  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+2023/05/10 14:12:30.687
+LowLimit:2.9    HighLimit:3.1
+Site:000  Channel:004  Value:2.99458305  Channel:008  Value:2.99343862  Channel:012  Value:2.99954223  Channel:016  Value:2.98428321  Channel:020  Value:2.98542763  Channel:024  Value:3.00221256  Channel:028  Value:2.98771649  Channel:032  Value:2.99000534  Channel:036  Value:2.99572747  Channel:040  Value:2.99458305  Channel:044  Value:2.99534600  Channel:048  Value:2.99496452  Channel:052  Value:2.98161288  Channel:056  Value:2.98237583  Channel:060  Value:2.97741665  Channel:064  Value:2.98390173  
+Site:001  Channel:096  Value:2.98924239  Channel:092  Value:2.99038682  Channel:088  Value:2.98771649  Channel:084  Value:2.98542763  Channel:080  Value:2.98695354  Channel:076  Value:2.99420157  Channel:072  Value:2.99343862  Channel:068  Value:2.99305715  Channel:128  Value:2.98352026  Channel:124  Value:2.97436484  Channel:120  Value:2.98428321  Channel:116  Value:2.98275731  Channel:112  Value:2.99382010  Channel:108  Value:2.98847944  Channel:104  Value:2.98542763  Channel:100  Value:2.98619059  
+Site:002  Channel:189  Value:2.99839780  Channel:185  Value:2.99114977  Channel:181  Value:2.99038682  Channel:177  Value:2.98847944  Channel:173  Value:2.98275731  Channel:169  Value:2.98275731  Channel:165  Value:2.98390173  Channel:161  Value:2.98657206  Channel:129  Value:2.99267567  Channel:133  Value:2.98466468  Channel:137  Value:2.99038682  Channel:141  Value:2.97856107  Channel:145  Value:2.97932403  Channel:149  Value:2.98046845  Channel:153  Value:2.98008698  Channel:157  Value:2.97741665  
+Site:003  Channel:243  Value:2.99534600  Channel:247  Value:2.99114977  Channel:251  Value:2.99725338  Channel:255  Value:2.99343862  Channel:237  Value:2.98352026  Channel:233  Value:2.97970550  Channel:229  Value:2.98199435  Channel:225  Value:2.97512779  Channel:221  Value:2.99267567  Channel:217  Value:2.97856107  Channel:213  Value:2.98542763  Channel:209  Value:2.99572747  Channel:205  Value:2.98466468  Channel:201  Value:2.98924239  Channel:197  Value:2.97970550  Channel:193  Value:2.99191272  
+Site:000  Pass
+Site:001  Pass
+Site:002  Pass
+Site:003  Pass
+
+Slot: 0 Channel: 1   4.99962    Pass
+Slot: 0 Channel: 2   5.00153    Pass
+Slot: 0 Channel: 3   5.00229    Pass
+Slot: 0 Channel: 4   5.00343    Pass
+Slot: 0 Channel: 5   4.99886    Pass
+Slot: 0 Channel: 6   4.99809    Pass
+Slot: 0 Channel: 7   4.99771    Pass
+Slot: 0 Channel: 8   5.00076    Pass
+Slot: 0 Channel: 9   5.00343    Pass
+Slot: 0 Channel: 10   5.00572    Pass
+Slot: 0 Channel: 11   5.00801    Pass
+Slot: 0 Channel: 12   5.00839    Pass
+Slot: 0 Channel: 13   4.98550    Pass
+Slot: 0 Channel: 14   4.98741    Pass
+Slot: 0 Channel: 15   4.98817    Pass
+Slot: 0 Channel: 16   4.99046    Pass
+Slot: 0 Channel: 17   4.99313    Pass
+Slot: 0 Channel: 18   4.99313    Pass
+Slot: 0 Channel: 19   4.99199    Pass
+Slot: 0 Channel: 20   4.99237    Pass
+Slot: 0 Channel: 21   5.01144    Pass
+Slot: 0 Channel: 22   5.00877    Pass
+Slot: 0 Channel: 23   5.00839    Pass
+Slot: 0 Channel: 24   5.01030    Pass
+Slot: 0 Channel: 25   4.99161    Pass
+Slot: 0 Channel: 26   4.99161    Pass
+Slot: 0 Channel: 27   4.99161    Pass
+Slot: 0 Channel: 28   4.99313    Pass
+Slot: 0 Channel: 29   4.99428    Pass
+Slot: 0 Channel: 30   4.99313    Pass
+Slot: 0 Channel: 31   4.99161    Pass
+Slot: 0 Channel: 32   4.99542    Pass
+Slot: 0 Channel: 33   4.99886    Pass
+Slot: 0 Channel: 34   4.99886    Pass
+Slot: 0 Channel: 35   4.99924    Pass
+Slot: 0 Channel: 36   4.99962    Pass
+Slot: 0 Channel: 37   4.99695    Pass
+Slot: 0 Channel: 38   4.99580    Pass
+Slot: 0 Channel: 39   4.99733    Pass
+Slot: 0 Channel: 40   4.99886    Pass
+Slot: 0 Channel: 41   4.99466    Pass
+Slot: 0 Channel: 42   4.99657    Pass
+Slot: 0 Channel: 43   4.99542    Pass
+Slot: 0 Channel: 44   4.99542    Pass
+Slot: 0 Channel: 45   4.99313    Pass
+Slot: 0 Channel: 46   4.99237    Pass
+Slot: 0 Channel: 47   4.99084    Pass
+Slot: 0 Channel: 48   4.99046    Pass
+Slot: 0 Channel: 49   4.99046    Pass
+Slot: 0 Channel: 50   4.99275    Pass
+Slot: 0 Channel: 51   4.99046    Pass
+Slot: 0 Channel: 52   4.99237    Pass
+Slot: 0 Channel: 53   4.98970    Pass
+Slot: 0 Channel: 54   4.98817    Pass
+Slot: 0 Channel: 55   4.98817    Pass
+Slot: 0 Channel: 56   4.99008    Pass
+Slot: 0 Channel: 57   4.98360    Pass
+Slot: 0 Channel: 58   4.98665    Pass
+Slot: 0 Channel: 59   4.98474    Pass
+Slot: 0 Channel: 60   4.98665    Pass
+Slot: 0 Channel: 61   4.98550    Pass
+Slot: 0 Channel: 62   4.98589    Pass
+Slot: 0 Channel: 63   4.98779    Pass
+Slot: 0 Channel: 64   4.98665    Pass
+Slot: 0 Channel: 65   5.05608    Pass
+Slot: 0 Channel: 66   5.05646    Pass
+Slot: 0 Channel: 67   5.05798    Pass
+Slot: 0 Channel: 68   5.05760    Pass
+Slot: 0 Channel: 69   5.05531    Pass
+Slot: 0 Channel: 70   5.05646    Pass
+Slot: 0 Channel: 71   5.05608    Pass
+Slot: 0 Channel: 72   5.05684    Pass
+Slot: 0 Channel: 73   5.05684    Pass
+Slot: 0 Channel: 74   5.05684    Pass
+Slot: 0 Channel: 75   5.05531    Pass
+Slot: 0 Channel: 76   5.05608    Pass
+Slot: 0 Channel: 77   5.04540    Pass
+Slot: 0 Channel: 78   5.04425    Pass
+Slot: 0 Channel: 79   5.04730    Pass
+Slot: 0 Channel: 80   5.04463    Pass
+Slot: 0 Channel: 81   5.04540    Pass
+Slot: 0 Channel: 82   5.04730    Pass
+Slot: 0 Channel: 83   5.04692    Pass
+Slot: 0 Channel: 84   5.04578    Pass
+Slot: 0 Channel: 85   5.04921    Pass
+Slot: 0 Channel: 86   5.04730    Pass
+Slot: 0 Channel: 87   5.05035    Pass
+Slot: 0 Channel: 88   5.05150    Pass
+Slot: 0 Channel: 89   5.04807    Pass
+Slot: 0 Channel: 90   5.04768    Pass
+Slot: 0 Channel: 91   5.04959    Pass
+Slot: 0 Channel: 92   5.04616    Pass
+Slot: 0 Channel: 93   5.04692    Pass
+Slot: 0 Channel: 94   5.04730    Pass
+Slot: 0 Channel: 95   5.04883    Pass
+Slot: 0 Channel: 96   5.04692    Pass
+Slot: 0 Channel: 97   5.05264    Pass
+Slot: 0 Channel: 98   5.05303    Pass
+Slot: 0 Channel: 99   5.05455    Pass
+Slot: 0 Channel: 100   5.05493    Pass
+Slot: 0 Channel: 101   5.04768    Pass
+Slot: 0 Channel: 102   5.04692    Pass
+Slot: 0 Channel: 103   5.04730    Pass
+Slot: 0 Channel: 104   5.04807    Pass
+Slot: 0 Channel: 105   5.05035    Pass
+Slot: 0 Channel: 106   5.05264    Pass
+Slot: 0 Channel: 107   5.05150    Pass
+Slot: 0 Channel: 108   5.04997    Pass
+Slot: 0 Channel: 109   5.05531    Pass
+Slot: 0 Channel: 110   5.05531    Pass
+Slot: 0 Channel: 111   5.05493    Pass
+Slot: 0 Channel: 112   5.05493    Pass
+Slot: 0 Channel: 113   5.05074    Pass
+Slot: 0 Channel: 114   5.04959    Pass
+Slot: 0 Channel: 115   5.04997    Pass
+Slot: 0 Channel: 116   5.05112    Pass
+Slot: 0 Channel: 117   5.05150    Pass
+Slot: 0 Channel: 118   5.04883    Pass
+Slot: 0 Channel: 119   5.05035    Pass
+Slot: 0 Channel: 120   5.05074    Pass
+Slot: 0 Channel: 121   5.03967    Pass
+Slot: 0 Channel: 122   5.03624    Pass
+Slot: 0 Channel: 123   5.03738    Pass
+Slot: 0 Channel: 124   5.03929    Pass
+Slot: 0 Channel: 125   5.04501    Pass
+Slot: 0 Channel: 126   5.04730    Pass
+Slot: 0 Channel: 127   5.04654    Pass
+Slot: 0 Channel: 128   5.04730    Pass
+Slot: 0 Channel: 129   5.08087    Pass
+Slot: 0 Channel: 130   5.08125    Pass
+Slot: 0 Channel: 131   5.08278    Pass
+Slot: 0 Channel: 132   5.08125    Pass
+Slot: 0 Channel: 133   5.07515    Pass
+Slot: 0 Channel: 134   5.06752    Pass
+Slot: 0 Channel: 135   5.07324    Pass
+Slot: 0 Channel: 136   5.07019    Pass
+Slot: 0 Channel: 137   5.07553    Pass
+Slot: 0 Channel: 138   5.07820    Pass
+Slot: 0 Channel: 139   5.07591    Pass
+Slot: 0 Channel: 140   5.07630    Pass
+Slot: 0 Channel: 141   5.06485    Pass
+Slot: 0 Channel: 142   5.06409    Pass
+Slot: 0 Channel: 143   5.06332    Pass
+Slot: 0 Channel: 144   5.06371    Pass
+Slot: 0 Channel: 145   5.06905    Pass
+Slot: 0 Channel: 146   5.06790    Pass
+Slot: 0 Channel: 147   5.06867    Pass
+Slot: 0 Channel: 148   5.07019    Pass
+Slot: 0 Channel: 149   5.06485    Pass
+Slot: 0 Channel: 150   5.06523    Pass
+Slot: 0 Channel: 151   5.06752    Pass
+Slot: 0 Channel: 152   5.06867    Pass
+Slot: 0 Channel: 153   5.06523    Pass
+Slot: 0 Channel: 154   5.06409    Pass
+Slot: 0 Channel: 155   5.06294    Pass
+Slot: 0 Channel: 156   5.06218    Pass
+Slot: 0 Channel: 157   5.06180    Pass
+Slot: 0 Channel: 158   5.06104    Pass
+Slot: 0 Channel: 159   5.05951    Pass
+Slot: 0 Channel: 160   5.06180    Pass
+Slot: 0 Channel: 161   5.07134    Pass
+Slot: 0 Channel: 162   5.07095    Pass
+Slot: 0 Channel: 163   5.07057    Pass
+Slot: 0 Channel: 164   5.07210    Pass
+Slot: 0 Channel: 165   5.06676    Pass
+Slot: 0 Channel: 166   5.06943    Pass
+Slot: 0 Channel: 167   5.06943    Pass
+Slot: 0 Channel: 168   5.06943    Pass
+Slot: 0 Channel: 169   5.06638    Pass
+Slot: 0 Channel: 170   5.06638    Pass
+Slot: 0 Channel: 171   5.06600    Pass
+Slot: 0 Channel: 172   5.06523    Pass
+Slot: 0 Channel: 173   5.06371    Pass
+Slot: 0 Channel: 174   5.06332    Pass
+Slot: 0 Channel: 175   5.06180    Pass
+Slot: 0 Channel: 176   5.06294    Pass
+Slot: 0 Channel: 177   5.07362    Pass
+Slot: 0 Channel: 178   5.07515    Pass
+Slot: 0 Channel: 179   5.07286    Pass
+Slot: 0 Channel: 180   5.07210    Pass
+Slot: 0 Channel: 181   5.06943    Pass
+Slot: 0 Channel: 182   5.06981    Pass
+Slot: 0 Channel: 183   5.06905    Pass
+Slot: 0 Channel: 184   5.07019    Pass
+Slot: 0 Channel: 185   5.06943    Pass
+Slot: 0 Channel: 186   5.06905    Pass
+Slot: 0 Channel: 187   5.06790    Pass
+Slot: 0 Channel: 188   5.06790    Pass
+Slot: 0 Channel: 189   5.07515    Pass
+Slot: 0 Channel: 190   5.07630    Pass
+Slot: 0 Channel: 191   5.07668    Pass
+Slot: 0 Channel: 192   5.07820    Pass
+Slot: 0 Channel: 193   5.03395    Pass
+Slot: 0 Channel: 194   5.03395    Pass
+Slot: 0 Channel: 195   5.03471    Pass
+Slot: 0 Channel: 196   5.03624    Pass
+Slot: 0 Channel: 197   5.02022    Pass
+Slot: 0 Channel: 198   5.02251    Pass
+Slot: 0 Channel: 199   5.01946    Pass
+Slot: 0 Channel: 200   5.02251    Pass
+Slot: 0 Channel: 201   5.02632    Pass
+Slot: 0 Channel: 202   5.02632    Pass
+Slot: 0 Channel: 203   5.02747    Pass
+Slot: 0 Channel: 204   5.02861    Pass
+Slot: 0 Channel: 205   5.02556    Pass
+Slot: 0 Channel: 206   5.02289    Pass
+Slot: 0 Channel: 207   5.02365    Pass
+Slot: 0 Channel: 208   5.02327    Pass
+Slot: 0 Channel: 209   5.03586    Pass
+Slot: 0 Channel: 210   5.03471    Pass
+Slot: 0 Channel: 211   5.03700    Pass
+Slot: 0 Channel: 212   5.03662    Pass
+Slot: 0 Channel: 213   5.02785    Pass
+Slot: 0 Channel: 214   5.02403    Pass
+Slot: 0 Channel: 215   5.02556    Pass
+Slot: 0 Channel: 216   5.02174    Pass
+Slot: 0 Channel: 217   5.01259    Pass
+Slot: 0 Channel: 218   5.01183    Pass
+Slot: 0 Channel: 219   5.01602    Pass
+Slot: 0 Channel: 220   5.01183    Pass
+Slot: 0 Channel: 221   5.02747    Pass
+Slot: 0 Channel: 222   5.02670    Pass
+Slot: 0 Channel: 223   5.03090    Pass
+Slot: 0 Channel: 224   5.02861    Pass
+Slot: 0 Channel: 225   5.01984    Pass
+Slot: 0 Channel: 226   5.01869    Pass
+Slot: 0 Channel: 227   5.02022    Pass
+Slot: 0 Channel: 228   5.02060    Pass
+Slot: 0 Channel: 229   5.02403    Pass
+Slot: 0 Channel: 230   5.02174    Pass
+Slot: 0 Channel: 231   5.02365    Pass
+Slot: 0 Channel: 232   5.02213    Pass
+Slot: 0 Channel: 233   5.01946    Pass
+Slot: 0 Channel: 234   5.01907    Pass
+Slot: 0 Channel: 235   5.02174    Pass
+Slot: 0 Channel: 236   5.02098    Pass
+Slot: 0 Channel: 237   5.02556    Pass
+Slot: 0 Channel: 238   5.02136    Pass
+Slot: 0 Channel: 239   5.02480    Pass
+Slot: 0 Channel: 240   5.02556    Pass
+Slot: 0 Channel: 241   5.02823    Pass
+Slot: 0 Channel: 242   5.02823    Pass
+Slot: 0 Channel: 243   5.02861    Pass
+Slot: 0 Channel: 244   5.02899    Pass
+Slot: 0 Channel: 245   5.02403    Pass
+Slot: 0 Channel: 246   5.02365    Pass
+Slot: 0 Channel: 247   5.02251    Pass
+Slot: 0 Channel: 248   5.02213    Pass
+Slot: 0 Channel: 249   5.02937    Pass
+Slot: 0 Channel: 250   5.02861    Pass
+Slot: 0 Channel: 251   5.03014    Pass
+Slot: 0 Channel: 252   5.02899    Pass
+Slot: 0 Channel: 253   5.02289    Pass
+Slot: 0 Channel: 254   5.02365    Pass
+Slot: 0 Channel: 255   5.02098    Pass
+Slot: 0 Channel: 256   5.02327    Pass
+Slot: 0 Channel: 1   3.00450    Pass
+Slot: 0 Channel: 2   3.00565    Pass
+Slot: 0 Channel: 3   3.00603    Pass
+Slot: 0 Channel: 4   3.00755    Pass
+Slot: 0 Channel: 5   3.00221    Pass
+Slot: 0 Channel: 6   3.00259    Pass
+Slot: 0 Channel: 7   3.00221    Pass
+Slot: 0 Channel: 8   3.00488    Pass
+Slot: 0 Channel: 9   3.00793    Pass
+Slot: 0 Channel: 10   3.00870    Pass
+Slot: 0 Channel: 11   3.01213    Pass
+Slot: 0 Channel: 12   3.01061    Pass
+Slot: 0 Channel: 13   2.99420    Pass
+Slot: 0 Channel: 14   2.99458    Pass
+Slot: 0 Channel: 15   2.99268    Pass
+Slot: 0 Channel: 16   2.99535    Pass
+Slot: 0 Channel: 17   2.99649    Pass
+Slot: 0 Channel: 18   2.99649    Pass
+Slot: 0 Channel: 19   2.99611    Pass
+Slot: 0 Channel: 20   2.99496    Pass
+Slot: 0 Channel: 21   3.01404    Pass
+Slot: 0 Channel: 22   3.01137    Pass
+Slot: 0 Channel: 23   3.01289    Pass
+Slot: 0 Channel: 24   3.01137    Pass
+Slot: 0 Channel: 25   2.99611    Pass
+Slot: 0 Channel: 26   2.99573    Pass
+Slot: 0 Channel: 27   2.99382    Pass
+Slot: 0 Channel: 28   2.99535    Pass
+Slot: 0 Channel: 29   2.99725    Pass
+Slot: 0 Channel: 30   2.99763    Pass
+Slot: 0 Channel: 31   2.99535    Pass
+Slot: 0 Channel: 32   2.99802    Pass
+Slot: 0 Channel: 33   3.00412    Pass
+Slot: 0 Channel: 34   3.00221    Pass
+Slot: 0 Channel: 35   3.00107    Pass
+Slot: 0 Channel: 36   3.00259    Pass
+Slot: 0 Channel: 37   3.00183    Pass
+Slot: 0 Channel: 38   3.00107    Pass
+Slot: 0 Channel: 39   2.99992    Pass
+Slot: 0 Channel: 40   3.00183    Pass
+Slot: 0 Channel: 41   2.99954    Pass
+Slot: 0 Channel: 42   3.00031    Pass
+Slot: 0 Channel: 43   3.00107    Pass
+Slot: 0 Channel: 44   2.99840    Pass
+Slot: 0 Channel: 45   2.99954    Pass
+Slot: 0 Channel: 46   2.99725    Pass
+Slot: 0 Channel: 47   2.99649    Pass
+Slot: 0 Channel: 48   2.99725    Pass
+Slot: 0 Channel: 49   2.99306    Pass
+Slot: 0 Channel: 50   2.99382    Pass
+Slot: 0 Channel: 51   2.99268    Pass
+Slot: 0 Channel: 52   2.99344    Pass
+Slot: 0 Channel: 53   2.99306    Pass
+Slot: 0 Channel: 54   2.99191    Pass
+Slot: 0 Channel: 55   2.99077    Pass
+Slot: 0 Channel: 56   2.99153    Pass
+Slot: 0 Channel: 57   2.98848    Pass
+Slot: 0 Channel: 58   2.98924    Pass
+Slot: 0 Channel: 59   2.98734    Pass
+Slot: 0 Channel: 60   2.98810    Pass
+Slot: 0 Channel: 61   2.99191    Pass
+Slot: 0 Channel: 62   2.99191    Pass
+Slot: 0 Channel: 63   2.99268    Pass
+Slot: 0 Channel: 64   2.99077    Pass
+Slot: 0 Channel: 65   3.03616    Pass
+Slot: 0 Channel: 66   3.03464    Pass
+Slot: 0 Channel: 67   3.03769    Pass
+Slot: 0 Channel: 68   3.03693    Pass
+Slot: 0 Channel: 69   3.03388    Pass
+Slot: 0 Channel: 70   3.03578    Pass
+Slot: 0 Channel: 71   3.03616    Pass
+Slot: 0 Channel: 72   3.03616    Pass
+Slot: 0 Channel: 73   3.03616    Pass
+Slot: 0 Channel: 74   3.03578    Pass
+Slot: 0 Channel: 75   3.03502    Pass
+Slot: 0 Channel: 76   3.03616    Pass
+Slot: 0 Channel: 77   3.02663    Pass
+Slot: 0 Channel: 78   3.02663    Pass
+Slot: 0 Channel: 79   3.02777    Pass
+Slot: 0 Channel: 80   3.02586    Pass
+Slot: 0 Channel: 81   3.02701    Pass
+Slot: 0 Channel: 82   3.02739    Pass
+Slot: 0 Channel: 83   3.02853    Pass
+Slot: 0 Channel: 84   3.02777    Pass
+Slot: 0 Channel: 85   3.02853    Pass
+Slot: 0 Channel: 86   3.02968    Pass
+Slot: 0 Channel: 87   3.02968    Pass
+Slot: 0 Channel: 88   3.03082    Pass
+Slot: 0 Channel: 89   3.03044    Pass
+Slot: 0 Channel: 90   3.03044    Pass
+Slot: 0 Channel: 91   3.03311    Pass
+Slot: 0 Channel: 92   3.03082    Pass
+Slot: 0 Channel: 93   3.02853    Pass
+Slot: 0 Channel: 94   3.02663    Pass
+Slot: 0 Channel: 95   3.02930    Pass
+Slot: 0 Channel: 96   3.02968    Pass
+Slot: 0 Channel: 97   3.03082    Pass
+Slot: 0 Channel: 98   3.03006    Pass
+Slot: 0 Channel: 99   3.03120    Pass
+Slot: 0 Channel: 100   3.03082    Pass
+Slot: 0 Channel: 101   3.02701    Pass
+Slot: 0 Channel: 102   3.02701    Pass
+Slot: 0 Channel: 103   3.02701    Pass
+Slot: 0 Channel: 104   3.02777    Pass
+Slot: 0 Channel: 105   3.03159    Pass
+Slot: 0 Channel: 106   3.03235    Pass
+Slot: 0 Channel: 107   3.03159    Pass
+Slot: 0 Channel: 108   3.03120    Pass
+Slot: 0 Channel: 109   3.03540    Pass
+Slot: 0 Channel: 110   3.03578    Pass
+Slot: 0 Channel: 111   3.03540    Pass
+Slot: 0 Channel: 112   3.03426    Pass
+Slot: 0 Channel: 113   3.03006    Pass
+Slot: 0 Channel: 114   3.03006    Pass
+Slot: 0 Channel: 115   3.02930    Pass
+Slot: 0 Channel: 116   3.02968    Pass
+Slot: 0 Channel: 117   3.03349    Pass
+Slot: 0 Channel: 118   3.03044    Pass
+Slot: 0 Channel: 119   3.03006    Pass
+Slot: 0 Channel: 120   3.03006    Pass
+Slot: 0 Channel: 121   3.02052    Pass
+Slot: 0 Channel: 122   3.01900    Pass
+Slot: 0 Channel: 123   3.01862    Pass
+Slot: 0 Channel: 124   3.01976    Pass
+Slot: 0 Channel: 125   3.02701    Pass
+Slot: 0 Channel: 126   3.02815    Pass
+Slot: 0 Channel: 127   3.02853    Pass
+Slot: 0 Channel: 128   3.02892    Pass
+Slot: 0 Channel: 129   3.05142    Pass
+Slot: 0 Channel: 130   3.05142    Pass
+Slot: 0 Channel: 131   3.05333    Pass
+Slot: 0 Channel: 132   3.05371    Pass
+Slot: 0 Channel: 133   3.04570    Pass
+Slot: 0 Channel: 134   3.04074    Pass
+Slot: 0 Channel: 135   3.04456    Pass
+Slot: 0 Channel: 136   3.04227    Pass
+Slot: 0 Channel: 137   3.04913    Pass
+Slot: 0 Channel: 138   3.05066    Pass
+Slot: 0 Channel: 139   3.04952    Pass
+Slot: 0 Channel: 140   3.04799    Pass
+Slot: 0 Channel: 141   3.03845    Pass
+Slot: 0 Channel: 142   3.03616    Pass
+Slot: 0 Channel: 143   3.03540    Pass
+Slot: 0 Channel: 144   3.03693    Pass
+Slot: 0 Channel: 145   3.03960    Pass
+Slot: 0 Channel: 146   3.04036    Pass
+Slot: 0 Channel: 147   3.04036    Pass
+Slot: 0 Channel: 148   3.03922    Pass
+Slot: 0 Channel: 149   3.03845    Pass
+Slot: 0 Channel: 150   3.03883    Pass
+Slot: 0 Channel: 151   3.03998    Pass
+Slot: 0 Channel: 152   3.03960    Pass
+Slot: 0 Channel: 153   3.03922    Pass
+Slot: 0 Channel: 154   3.03883    Pass
+Slot: 0 Channel: 155   3.03807    Pass
+Slot: 0 Channel: 156   3.03769    Pass
+Slot: 0 Channel: 157   3.03502    Pass
+Slot: 0 Channel: 158   3.03578    Pass
+Slot: 0 Channel: 159   3.03273    Pass
+Slot: 0 Channel: 160   3.03388    Pass
+Slot: 0 Channel: 161   3.03998    Pass
+Slot: 0 Channel: 162   3.04112    Pass
+Slot: 0 Channel: 163   3.03960    Pass
+Slot: 0 Channel: 164   3.04112    Pass
+Slot: 0 Channel: 165   3.03845    Pass
+Slot: 0 Channel: 166   3.03998    Pass
+Slot: 0 Channel: 167   3.03845    Pass
+Slot: 0 Channel: 168   3.03998    Pass
+Slot: 0 Channel: 169   3.03731    Pass
+Slot: 0 Channel: 170   3.03540    Pass
+Slot: 0 Channel: 171   3.03693    Pass
+Slot: 0 Channel: 172   3.03693    Pass
+Slot: 0 Channel: 173   3.03349    Pass
+Slot: 0 Channel: 174   3.03540    Pass
+Slot: 0 Channel: 175   3.03388    Pass
+Slot: 0 Channel: 176   3.03464    Pass
+Slot: 0 Channel: 177   3.04456    Pass
+Slot: 0 Channel: 178   3.04532    Pass
+Slot: 0 Channel: 179   3.04189    Pass
+Slot: 0 Channel: 180   3.04379    Pass
+Slot: 0 Channel: 181   3.04189    Pass
+Slot: 0 Channel: 182   3.04341    Pass
+Slot: 0 Channel: 183   3.04189    Pass
+Slot: 0 Channel: 184   3.04189    Pass
+Slot: 0 Channel: 185   3.04227    Pass
+Slot: 0 Channel: 186   3.04189    Pass
+Slot: 0 Channel: 187   3.04150    Pass
+Slot: 0 Channel: 188   3.04379    Pass
+Slot: 0 Channel: 189   3.04646    Pass
+Slot: 0 Channel: 190   3.04799    Pass
+Slot: 0 Channel: 191   3.04837    Pass
+Slot: 0 Channel: 192   3.05066    Pass
+Slot: 0 Channel: 193   3.02281    Pass
+Slot: 0 Channel: 194   3.02281    Pass
+Slot: 0 Channel: 195   3.02319    Pass
+Slot: 0 Channel: 196   3.02358    Pass
+Slot: 0 Channel: 197   3.01061    Pass
+Slot: 0 Channel: 198   3.01061    Pass
+Slot: 0 Channel: 199   3.01099    Pass
+Slot: 0 Channel: 200   3.01213    Pass
+Slot: 0 Channel: 201   3.01709    Pass
+Slot: 0 Channel: 202   3.01709    Pass
+Slot: 0 Channel: 203   3.01862    Pass
+Slot: 0 Channel: 204   3.01595    Pass
+Slot: 0 Channel: 205   3.01442    Pass
+Slot: 0 Channel: 206   3.01213    Pass
+Slot: 0 Channel: 207   3.01442    Pass
+Slot: 0 Channel: 208   3.01328    Pass
+Slot: 0 Channel: 209   3.02358    Pass
+Slot: 0 Channel: 210   3.02548    Pass
+Slot: 0 Channel: 211   3.02701    Pass
+Slot: 0 Channel: 212   3.02510    Pass
+Slot: 0 Channel: 213   3.01709    Pass
+Slot: 0 Channel: 214   3.01175    Pass
+Slot: 0 Channel: 215   3.01442    Pass
+Slot: 0 Channel: 216   3.01213    Pass
+Slot: 0 Channel: 217   3.00488    Pass
+Slot: 0 Channel: 218   3.00412    Pass
+Slot: 0 Channel: 219   3.00755    Pass
+Slot: 0 Channel: 220   3.00412    Pass
+Slot: 0 Channel: 221   3.01823    Pass
+Slot: 0 Channel: 222   3.01747    Pass
+Slot: 0 Channel: 223   3.02052    Pass
+Slot: 0 Channel: 224   3.01709    Pass
+Slot: 0 Channel: 225   3.00793    Pass
+Slot: 0 Channel: 226   3.00870    Pass
+Slot: 0 Channel: 227   3.00946    Pass
+Slot: 0 Channel: 228   3.00946    Pass
+Slot: 0 Channel: 229   3.01328    Pass
+Slot: 0 Channel: 230   3.01213    Pass
+Slot: 0 Channel: 231   3.01061    Pass
+Slot: 0 Channel: 232   3.01213    Pass
+Slot: 0 Channel: 233   3.01099    Pass
+Slot: 0 Channel: 234   3.01061    Pass
+Slot: 0 Channel: 235   3.01137    Pass
+Slot: 0 Channel: 236   3.00908    Pass
+Slot: 0 Channel: 237   3.01709    Pass
+Slot: 0 Channel: 238   3.01328    Pass
+Slot: 0 Channel: 239   3.01518    Pass
+Slot: 0 Channel: 240   3.01404    Pass
+Slot: 0 Channel: 241   3.01709    Pass
+Slot: 0 Channel: 242   3.01556    Pass
+Slot: 0 Channel: 243   3.01633    Pass
+Slot: 0 Channel: 244   3.01671    Pass
+Slot: 0 Channel: 245   3.01022    Pass
+Slot: 0 Channel: 246   3.01099    Pass
+Slot: 0 Channel: 247   3.01061    Pass
+Slot: 0 Channel: 248   3.01251    Pass
+Slot: 0 Channel: 249   3.01862    Pass
+Slot: 0 Channel: 250   3.01823    Pass
+Slot: 0 Channel: 251   3.01976    Pass
+Slot: 0 Channel: 252   3.01747    Pass
+Slot: 0 Channel: 253   3.01480    Pass
+Slot: 0 Channel: 254   3.01289    Pass
+Slot: 0 Channel: 255   3.01251    Pass
+Slot: 0 Channel: 256   3.01328    Pass
+
+HardBin Result:
+Site:000  Bin:1
+Site:001  Bin:1
+Site:002  Bin:1
+Site:003  Bin:1
+Site:004  Bin:0
+Site:005  Bin:0
+Site:006  Bin:0
+Site:007  Bin:0
+Site:008  Bin:0
+Site:009  Bin:0
+Site:010  Bin:0
+Site:011  Bin:0
+Site:012  Bin:0
+Site:013  Bin:0
+Site:014  Bin:0
+Site:015  Bin:0
+
+SoftBin Result:
+Site:000  Bin:1
+Site:001  Bin:1
+Site:002  Bin:1
+Site:003  Bin:1
+Site:004  Bin:0
+Site:005  Bin:0
+Site:006  Bin:0
+Site:007  Bin:0
+Site:008  Bin:0
+Site:009  Bin:0
+Site:010  Bin:0
+Site:011  Bin:0
+Site:012  Bin:0
+Site:013  Bin:0
+Site:014  Bin:0
+Site:015  Bin:0
+
