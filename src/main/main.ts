@@ -390,6 +390,8 @@ ipcMain.on('linear-regression', async (e, msg) => {
   // 执行的python程序，正常情况下不会有输出
   if (code !== '') {
     e.sender.send('linear-regression-reply', { ret: -1 });
+    // 对python脚本的输出
+    e.sender.send("linear-regression-reply",{ret:code === ''? 0 : -1,output:code,config})
   } else {
     e.sender.send('linear-regression-reply', { ret: 0, config });
   }

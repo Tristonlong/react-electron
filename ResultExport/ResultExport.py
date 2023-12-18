@@ -33,21 +33,16 @@ def compare_column(
 ) -> bool:
     return all(a[col] == b[col] for col in columns[:range])
 
+#  calibration 的 x2，y 取mes_range
 
-def get_measure_from_file(file_path, limit=0.001):
-  data = pd.read_csv(file_path, header=9)
-  # for f in findAllFile(os.path.dirname(os.path.join(path, row[-1]))):
-  #     data = (
-  #         pd.read_csv(f, header=10)
-  #         if data is None
-  #         else pd.concat([data, pd.read_csv(f, header=10)])
-  #     )
-
+def get_measure_from_file(file_path, limit=0.0012):
+  data = pd.read_csv(file_path, header=10)
   x1 = data["ATE Measure"]
   x2 = data["Force Value"]
   y = data["DMM Measure"]
-  deltas_measure = abs((x1 - y) / y)
-  deltas_force = abs((x2 - y) / x2)
+  meas_range = data["Meas_Range"].astype(float)
+  deltas_measure = abs((x1 - y) / meas_range)
+  deltas_force = abs((x2 - y) / meas_range)
   for i in range(len(x2)):
     if x2[i] == 0:
       deltas_measure[i] = 0
@@ -77,7 +72,6 @@ def result_export(path: str, meta: pd.DataFrame, result_path: str = ""):
     # summary
     slots = get_slots(path)
     slots = slots[slots["Foo"].isna() == False]
-
     summary = pd.DataFrame(
         columns=[
             "Slot_No",
@@ -88,8 +82,7 @@ def result_export(path: str, meta: pd.DataFrame, result_path: str = ""):
     )
     for temp_str in slots[slots["Tester_Name"].str.contains("Dna")]["Tester_Name"].values:
         slots = slots.replace(temp_str, temp_str[4])
-   # temp_str = slots[slots["Tester_Name"].str.contains("Dna")]["Tester_Name"][0]
-   # slots = slots.replace(temp_str, temp_str[4])
+
     summary["Slot_No"] = slots[~(slots["Foo"].str.contains(".", regex=False))]["Tester_Name"]
     summary["Slot_Name"] = slots[~(slots["Foo"].str.contains(".", regex=False))][
         "Foo"
@@ -129,7 +122,9 @@ def result_export(path: str, meta: pd.DataFrame, result_path: str = ""):
             slot_table.append([line[line.index(",") + 1:-1], 3])
         elif line.find("Slot4_Dna") >= 0:
             slot_table.append([line[line.index(",") + 1:-1], 4])
+
     for _, row in meta.iterrows():
+        print(row)
         file = os.path.join(path, row[-1])
         file_bak = os.path.join(path + '_bak', row[-1])
         deltas_measure_values, validation_force_values, validation_measure, validation_force = get_measure_from_file(file)
@@ -179,12 +174,91 @@ def result_export(path: str, meta: pd.DataFrame, result_path: str = ""):
             summary.loc[summary["Slot_No"] == slot, "validation"] = "N/A"
     summary.to_csv(os.path.join(result_path, "summary.csv"), index=False)
 
+    print("end 123123")
 
-settings = None
-with open("./config.json", "r+") as config:
-    settings = json.load(config)
-result_export(
-    settings["meta_path"],
-    read_meta_data(settings["meta_path"]),
-    settings["result_path"],
-)
+
+def save_slot_data_to_txt(csv_path, result_path):
+    # 读取 calibration_state.csv 文件
+    calibration_state_df = pd.read_csv(csv_path)
+
+    # 根据 Slot_No 分组
+    grouped = calibration_state_df.groupby('Slot_No')
+
+
+    # 创建一个空的集合，用于跟踪已经写入文件的组合
+    written_combinations = set()
+
+    # 根据 Slot_No 分组
+    grouped = calibration_state_df.groupby('Slot_No')
+    # 为每个 Slot_No 创建一个文本文件
+    for slot_no, group in grouped:
+        # 文件名格式：summary_slot(NUMBER).txt
+        txt_file_name = f"summary_slot({slot_no}).txt"
+        txt_path = os.path.join(result_path, "summary", txt_file_name)
+# 获取脚本开始执行的当前时间
+        # start_time = datetime.now().strftime("%H:%M:%S %m/%d/%Y")
+        with open(txt_path, 'w') as file:
+            # 添加头部信息
+            file.write("%JOB_START - Beginning Channel_Board_DIB Calibration test on slot {}\n".format(slot_no))
+            # file.write("at {}\n".format(start_time))
+            file.write("Stil Rev V1.0.0    ATE_Tester Version: 1.2.0\n")
+            # 获取对应的 Slot_Name
+            
+            file.write("DIB # 234124")
+            file.write("\n")  # 空行
+            file.write("- Starting dib_test\n")
+            file.write("- Temperature at PMU is 38.5 deg C\n")
+            file.write("- Temperature at DPS is 38.5 deg C\n")
+            # 已经写入文件的组合集合
+            written_combinations = set()
+
+            # 遍历每一行
+            for _, row in group.iterrows():
+                combination_key = (row['Channel_Type'], row['I_Range'])
+                # 如果这个组合还没写入文件，就写入文件
+                if combination_key not in written_combinations:
+                    file.write(f"    - Starting {row['Channel_Type']} Measure, {row['I_Range']} Range\n")
+                    file.write(f"    - Starting {row['Channel_Type']} Force, {row['I_Range']} Range\n")
+                    # 标记此组合为已写入
+                    written_combinations.add(combination_key)
+
+            file.write("\n")  # 空行
+            # 收集失败的 Channel_No
+            failed_measure_nos = group[group['validation_measure'] == False]['Channel_No'].tolist()
+            failed_force_nos = group[group['validation_force'] == False]['Channel_No'].tolist()
+
+            # 如果有失败的 Channel_No，将它们合并成一个字符串，并写入文件
+            if failed_measure_nos:
+                failed_measure_str = ','.join(map(str, failed_measure_nos))
+                file.write("%FAIL - Slot{} {} channel {} test at Measure Voltage\n".format(
+                    slot_no, group.iloc[0]['Channel_Type'], failed_measure_str))
+            file.write("\n")  # 空行
+            # 如果有失败的 Force Channel_No，将它们合并成一个字符串，并写入文件
+            if failed_force_nos:
+                failed_force_str = ','.join(map(str, failed_force_nos))
+                file.write("%FAIL - Slot{} {} channel {} test at Force Voltage\n".format(
+                    slot_no, group.iloc[0]['Channel_Type'], failed_force_str))
+             # 在文件最后添加结束时间
+            # end_time = datetime.now().strftime("%H:%M:%S %m/%d/%Y") 
+            # file.wirte("%JOB_END - ****FAILED**** \n at {} ".format(end_time))
+            # 添加结束的行
+            file.write("\n")  # 空行
+            file.write("- Writing to System Calibration file - Begin (up to 5 minutes) \n - Writing to System Calibration file - End\n")
+
+if __name__ == '__main__':            
+    settings = None
+    with open("./config.json", "r+") as config:
+        settings = json.load(config)
+    result_export(
+        settings["meta_path"],
+        read_meta_data(settings["meta_path"]),
+        settings["result_path"],
+    )
+    # 确保 summary 文件夹存在
+    summary_path = os.path.join(settings["result_path"], "summary")
+    if not os.path.exists(summary_path):
+        os.makedirs(summary_path)
+
+    # 保存 Slot 数据到文本文件
+    calibration_state_csv_path = os.path.join(settings["result_path"], "results", "calibration_state.csv")
+    save_slot_data_to_txt(calibration_state_csv_path, settings["result_path"])

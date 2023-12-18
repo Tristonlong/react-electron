@@ -101,6 +101,8 @@ const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [parseResult, setParseResult] = useState(false);
   const [runPostCheck, setRunPostCheck] = useState(false);
+  // 增加python打印判断
+  const [pythonError, setPythonError] = useState(false);
   const [startLinearRegression, setStartLinearRegression] = useState(false);
 
   const [loadStatus, setLoadStatus] = useState(false);
@@ -135,8 +137,17 @@ const Index = () => {
   // linear regression
   window.electron.ipcRenderer.on('linear-regression-reply', (arg: any) => {
     // eslint-disable-next-line no-console
+    // 如果Python脚本有输出（意味着出错）,直接终止程序
+    if (arg['output']) {
+      dispatch(setLog(log + '\nPython输出: ' + arg['output']));
+      setPythonError(true);
+      window.alert('python错误' + arg['output']);
+      // 通过return中止后续代码执行
+      return;
+    }
     // 执行第二次，带有offset的calibration
     if (arg['ret'] === 0) {
+      console.log(66667);
       setStartLinearRegression(false);
       setRunPostCheck(true);
     }
@@ -373,10 +384,12 @@ const Index = () => {
       setShowMsg(showMsg);
     } else if (!result) {
       setShowMsg('Waiting for running');
+    } else if (pythonError) {
+      setShowMsg('Python file failed');
     } else {
       setShowMsg('');
     }
-  }, [result, loadStatus]);
+  }, [result, loadStatus, pythonError]);
 
   const showModal = () => {
     setIsModalOpen(true);

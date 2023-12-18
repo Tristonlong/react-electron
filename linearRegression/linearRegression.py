@@ -36,17 +36,28 @@ def get_same_type_files(file_name: str):
 
 
 def get_ip(path: str):
-    path = os.path.join(path, "metadata.csv")
+    full_path  = os.path.join(path, "metadata.csv")
     # 使用wps打开过后的csv文件header可能需要从9开始读取
-    header = pd.read_csv(path, nrows=8, dtype=str)
-
+    header = pd.read_csv(full_path, header=7, error_bad_lines=False, dtype=str)
     header = header[header["Foo"].isna() == False]
     return header[~header["Tester_Name"].str.contains("Dna")]
 
+def get_slot_ips(path:str):
+    full_path = os.path.join(path,"metadata.csv")
+
+    data = pd.read_csv(full_path)
+
+    slot_ips = {}
+    for i in range(1,5):
+        slot_name = "Slot" + str(i)
+        slot_ip = data.loc[i-1,"Slot_Ip"]
+        slot_ips[slot_name] = slot_ip
+    return slot_ips
+ 
 
 def read_meta_data(path: str):
     path = os.path.join(path, "metadata.csv")
-    return pd.read_csv(path, header=9, dtype=str)
+    return pd.read_csv(path, header=7, dtype=str)
 
 
 def compare_column(
@@ -66,7 +77,8 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
     os.mkdir(result_path)
 
     ips = get_ip(path)
-
+# 获取所有slot的IP地址
+    slot_ips = get_slot_ips(path)
     result_pd = pd.DataFrame(
         columns=[
             "test",
@@ -86,13 +98,11 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
     )
     for index, row in meta.iterrows():
         file = os.path.join(path, row[-1])
-        # 使用wps打开过后的csv文件header可能需要从10开始读取
-        data = pd.read_csv(file, header=9)
-
+        # 使用wps打开过后的csv文件header可能需要从6开始读取
+        data = pd.read_csv(file, header=7)
         x1 = data["ATE Measure"]
         x2 = data["Force Value"]
         y = data["DMM Measure"]
-
         try:
             # ATE measure - DMM measure
             slope1, intercept1, r_value, p_value, std_err = st.linregress(x1, y)
@@ -119,19 +129,6 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         }
         result_pd.loc[len(result_pd) + 1] = res_row
 
-        # draw the figure
-        # x_hat = sm.add_constant(x)
-        # model = sm.OLS(y, x_hat).fit()
-
-        # plt.rcParams["font.sans-serif"] = ["SimHei"]
-        # plt.rcParams["axes.unicode_minus"] = False
-
-        # predicts = model.predict()
-        # plt.scatter(x, y)
-        # plt.plot(x, predicts, color="red")
-        # plt.legend(["real value", "inference"])
-        # figure_file = same_type + ".png"
-        # plt.savefig(figure_file)
 
     result_pd.to_csv(os.path.join(result_path, "res.csv"))
     slots = result_pd["Slot_No"].unique()
@@ -162,10 +159,18 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         ]
         Force_table["mode"] = force_table_form_total["Mode"].apply(lambda x: x[:2])
         # Force_table["range(5V,20V)"] = force_table_form_total["Meas_Range"]
+
+      # 获取当前Slot_No对应的IP地址，如果不存在则使用"unknown"
+        slot_no = row["Slot_No"]  # 例如 "1", "2", "3", "4"
+        slot_name = f"Slot{slot_no}"  # 转换成 "Slot1", "Slot2", "Slot3", "Slot4"
+        slot_ip = slot_ips.get(slot_name, "unknown")  # 使用get_slot_ips函数获取IP地址
+
+        # 使用IP地址来构建输出文件名
         Force_table_csv_name = os.path.join(
             result_path,
-            f"Dna_{slot}.csv",
+            f"Dna_{slot_ip}.csv"  # 文件名现在包含IP地址
         )
+
 
         with open(Force_table_csv_name, "w+") as csv_file:
             theIp = ips[ips["Tester_Name"] == slot]["Foo"].values[0]
@@ -202,6 +207,12 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
             index=False,
         )
 
+        # 保存其他表格的数据
+        MV_table_csv_name = os.path.join(
+            result_path,
+            f"Dna_{slot_ip}_MV.csv"  # 文件名现在包含IP地址
+        )
+        MV_table.to_csv(MV_table_csv_name, index=False)
         # MI
         MI_table = pd.DataFrame(
             columns=[
@@ -209,8 +220,6 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
                 "gain",
                 "offset",
                 "range",
-                # "range(5V,20V)",
-                # "I_Range",
             ]
         )
         Mi_table_form_total = result_pd[result_pd["Mode"] == "FVMI"][
@@ -219,9 +228,15 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         MI_table["channel"] = Mi_table_form_total["Channel_No"]
         MI_table["gain"] = Mi_table_form_total["ATE_gain"]
         MI_table["offset"] = Mi_table_form_total["ATE_offset"]
-        # MI_table["range(5V,20V)"] = Mi_table_form_total["Meas_Range"]
-        # MI_table["I_Range"] = Mi_table_form_total["I_Range"]
         MI_table["range"] = Mi_table_form_total["Meas_Range"] + "_" + Mi_table_form_total["I_Range"]
+        
+        MI_table_csv_name = os.path.join(
+            result_path,
+            f"Dna_{slot_ip}_MI.csv"  # 文件名现在包含IP地址
+        )
+        MI_table.to_csv(MI_table_csv_name, index=False)
+
+        
         MI_table.to_csv(
             os.path.join(
                 result_path,
@@ -234,6 +249,7 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
 def copy_csv_to_programdata(path: str):
     # 删除C:\ProgramData\Testrong\ATE_Tester\SelfCalibration中含有的csv
     for root, ds, fs in os.walk(
+        # 看这里
         os.path.join("C:\ProgramData\Testrong\ATE_Tester\SelfCalibration")
     ):
         for f in fs:
