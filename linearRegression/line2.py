@@ -44,25 +44,9 @@ def get_ip(path: str):
     return header[~header["Tester_Name"].str.contains("Dna")]
 
 
-def get_slot_ips(path: str):
-    full_path = os.path.join(path, "metadata.csv")
-    print(full_path + '--------------')
-    # 读取前5行，第一行是标题，接下来是4行槽信息
-    header = pd.read_csv(full_path, nrows=5, dtype=str)
-    slot_ips = {}
-    # 从第2行开始遍历，因为第1行是标题
-    for i in range(1, min(len(header), 5)):  # 确保不会超出范围
-        slot_name = header.iloc[i, 0]  # 第一列是Slot名称
-        ip_address = header.iloc[i, 2]  # 第三列是IP地址
-        if pd.notnull(slot_name) and pd.notnull(ip_address):
-            slot_ips[slot_name] = ip_address
-    return slot_ips
-
-
-
 def read_meta_data(path: str):
     path = os.path.join(path, "metadata.csv")
-    return pd.read_csv(path, header=5, dtype=str)
+    return pd.read_csv(path, header=9, dtype=str)
 
 
 def compare_column(
@@ -72,6 +56,7 @@ def compare_column(
 
 
 def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
+    # check the results path
     if not result_path:
         result_path = os.path.join(path, "results")
     else:
@@ -79,8 +64,8 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
     if os.path.exists(result_path):
         shutil.rmtree(result_path)
     os.mkdir(result_path)
-    # slot_ips = get_slot_ips(path)
-   
+
+    ips = get_ip(path)
 
     result_pd = pd.DataFrame(
         columns=[
@@ -100,18 +85,14 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         ]
     )
     for index, row in meta.iterrows():
-        file = os.path.join(path, row.iloc[-2])
-        print("当前文件路径:", file)  # 打印文件路径
+        file = os.path.join(path, row[-1])
         # 使用wps打开过后的csv文件header可能需要从10开始读取
-        data = pd.read_csv(file, header=12)
-        print("读取的数据:\n", data)  # 打印读取的数据
+        data = pd.read_csv(file, header=9)
+
         x1 = data["ATE Measure"]
         x2 = data["Force Value"]
         y = data["DMM Measure"]
-        print('--------------------------------')
-        print(row)
-        print('--------------------------------')
-   
+
         try:
             # ATE measure - DMM measure
             slope1, intercept1, r_value, p_value, std_err = st.linregress(x1, y)
@@ -124,7 +105,7 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         res_row = {
             "test": os.path.basename(file).split(".")[0],
             "Slot_No": row["Slot_Dna"],
-            # "IP": ips[ips["Tester_Name"] == row["Slot_Dna"]]["Foo"].values[0],
+            "IP": ips[ips["Tester_Name"] == row["Slot_Dna"]]["Foo"].values[0],
             "Channel_No": row["Channel_No"],
             "Channel_Type": row["Channel_Type"],
             "Mode": row["Mode"],
@@ -138,6 +119,19 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         }
         result_pd.loc[len(result_pd) + 1] = res_row
 
+        # draw the figure
+        # x_hat = sm.add_constant(x)
+        # model = sm.OLS(y, x_hat).fit()
+
+        # plt.rcParams["font.sans-serif"] = ["SimHei"]
+        # plt.rcParams["axes.unicode_minus"] = False
+
+        # predicts = model.predict()
+        # plt.scatter(x, y)
+        # plt.plot(x, predicts, color="red")
+        # plt.legend(["real value", "inference"])
+        # figure_file = same_type + ".png"
+        # plt.savefig(figure_file)
 
     result_pd.to_csv(os.path.join(result_path, "res.csv"))
     slots = result_pd["Slot_No"].unique()
@@ -145,7 +139,6 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
     # split table
     for slot in slots:
         # Force
-        ip = slot_ips.get(slot, "Unknown")
         Force_table = pd.DataFrame(
             columns=[
                 "channel",
@@ -171,12 +164,12 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         # Force_table["range(5V,20V)"] = force_table_form_total["Meas_Range"]
         Force_table_csv_name = os.path.join(
             result_path,
-            f"Dna_{ip}.csv",
+            f"Dna_{slot}.csv",
         )
 
         with open(Force_table_csv_name, "w+") as csv_file:
-            # theIp = ips[ips["Tester_Name"] == slot]["Foo"].values[0]
-            header = f"dna,{slot}\nsnid,1,\nip,{ip}\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n"
+            theIp = ips[ips["Tester_Name"] == slot]["Foo"].values[0]
+            header = f"dna,{slot}\nsnid,1,\nip,{theIp}\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n"
 
             csv_file.write(header)
         Force_table.to_csv(Force_table_csv_name, index=False, mode="a+")
@@ -204,7 +197,7 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         MV_table.to_csv(
             os.path.join(
                 result_path,
-                # ips[ips["Tester_Name"] == slot]["Foo"].values[0] + "_MV.csv",
+                ips[ips["Tester_Name"] == slot]["Foo"].values[0] + "_MV.csv",
             ),
             index=False,
         )
@@ -232,7 +225,7 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         MI_table.to_csv(
             os.path.join(
                 result_path,
-                # ips[ips["Tester_Name"] == slot]["Foo"].values[0] + "_MI.csv",
+                ips[ips["Tester_Name"] == slot]["Foo"].values[0] + "_MI.csv",
             ),
             index=False,
         )
