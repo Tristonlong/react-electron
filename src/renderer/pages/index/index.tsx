@@ -42,6 +42,7 @@ import {
 import { AppDispatch } from '../../redux/store';
 import InternalCalibration from '../internalCalibration';
 import ExternalCalibration from '../externalCalibration';
+import NewCalibration from '../newCalibration';
 import './index.css';
 
 const { TextArea } = Input;
@@ -79,13 +80,18 @@ const Index = () => {
         >
           External Calibration
         </Button>
+        <Button
+          className="navigationBarBtn"
+          onClick={() => setCalibrationType(3)}
+          type={calibrationType === 3 ? 'primary' : 'text'}
+        >
+          New Calibration
+        </Button>
       </div>
       <div>
-        {calibrationType === 1 ? (
-          <InternalCalibration />
-        ) : (
-          <ExternalCalibration />
-        )}
+        {calibrationType === 1 && <InternalCalibration />}
+        {calibrationType === 2 && <ExternalCalibration />}
+        {calibrationType === 3 && <NewCalibration />}
       </div>
     </div>
   );

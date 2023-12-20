@@ -83,21 +83,18 @@ const externalSettingCard = ({
       <div className="externalSetting">
         <span style={{ margin: 8 }}>Pre STIL files : </span>
         <Select
-          value={prePath}
+          value="Calibration_DC_Pre"
           size="small"
           style={{ width: 400, margin: 8 }}
-          onChange={onChangePrePath}
-          options={options}
+          
         />
       </div>
       <div className="externalSetting">
         <span style={{ margin: 8 }}>Post STIL files : </span>
         <Select
-          value={postPath}
+          value="Calibration_DC_Post"
           size="small"
           style={{ width: 400, margin: 8 }}
-          onChange={onChangePostPath}
-          options={options}
         />
       </div>
     </Card>

@@ -4,7 +4,7 @@
       "Name": "Calibration",
       "Mode": "Engineer",
       "LoopCount": 1,
-      "STILPath": ".\\SW1.2_55_calibration_RZ\\selfCalibration\\Calibration_insite_2slot_DC.stil",
+      "STILPath": ".\\SW1.2_55_calibration_RZ\\selfCalibration\\Calibration_DC_Pre.stil",
       "ForceCompilePattern": false,
       "CompilePattern": false,
       "LoadPattern": false,

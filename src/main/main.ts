@@ -285,8 +285,14 @@ ipcMain.on('pre-test', async (e, msg) => {
   if (mySpawn.length > 0) {
     return;
   }
-
+ 
   var fs = require('fs');
+  const stilFilePath1 = 'D:\\project\\calibrationtool-dev_0.9.1\\SW1.2_55_calibration_RZ\\selfCalibration\\Calibration_DC_Reset.stil';
+  const stilFilePath2 = 'D:\\project\\calibrationtool-dev_0.9.1\\SW1.2_55_calibration_RZ\\selfCalibration\\Calibration_DC_MeasRload.stil';
+   // 读取第一个STIL文件
+   var stilData1 = fs.readFileSync(stilFilePath1);
+    // 读取第二个STIL文件
+  var stilData2 = fs.readFileSync(stilFilePath2);
   // 修改tcp
   let newTCPData = msg['tcps']
     .map((value: any, index: number) => {
@@ -404,6 +410,8 @@ ipcMain.on('post-test', async (e, msg) => {
   }
 
   var fs = require('fs');
+  const newStilFilePath = 'D:\\project\\calibrationtool-dev_0.9.1\\SW1.2_55_calibration_RZ\\selfCalibration\\Calibration_DC_DataUpload.stil'
+  var newStilData = fs.readFileSync(newStilFilePath);
   // 修改tcp
   let newTCPData = msg['tcps']
     .map((value: any, index: number) => {
