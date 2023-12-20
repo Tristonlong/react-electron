@@ -41,34 +41,48 @@ def get_ip(path: str):
     header = pd.read_csv(path, nrows=8, dtype=str)
 
     header = header[header["Foo"].isna() == False]
-    return header[~header["Tester_Name"].str.contains("Dna")]
+    return header[~header["Tester_Name"]]
 
 
-def get_slot_ips(path: str):
-    full_path = os.path.join(path, "metadata.csv")
-    print(full_path + '--------------')
-    # 读取前5行，第一行是标题，接下来是4行槽信息
-    header = pd.read_csv(full_path, nrows=5, dtype=str)
-    slot_ips = {}
-    # 从第2行开始遍历，因为第1行是标题
-    for i in range(1, min(len(header), 5)):  # 确保不会超出范围
-        slot_name = header.iloc[i, 0]  # 第一列是Slot名称
-        ip_address = header.iloc[i, 2]  # 第三列是IP地址
-        if pd.notnull(slot_name) and pd.notnull(ip_address):
-            slot_ips[slot_name] = ip_address
-    return slot_ips
 
+def get_ip_new_format(path: str):
+    path = os.path.join(path, "metadata.csv")
+    header = pd.read_csv(path, nrows=4, dtype=str)
+    # 创建一个字典，将'Slot_No'映射到'Slot_Ip'
+    ip_dict = {row['Board_Id']: row['Slot_Ip'] for _, row in header.iterrows() if pd.notna(row['Slot_Ip'])}
+    return ip_dict
 
 
 def read_meta_data(path: str):
     path = os.path.join(path, "metadata.csv")
-    return pd.read_csv(path, header=5, dtype=str)
+    return pd.read_csv(path, header=6, dtype=str)
 
 
 def compare_column(
     a: pd.DataFrame, b: pd.DataFrame, columns: list[str], range: int
 ) -> bool:
     return all(a[col] == b[col] for col in columns[:range])
+
+def fill_missing_rows(df, max_channel=256):
+        # 如果DataFrame为空，则从1开始补齐
+        if df.empty:
+            start_channel = 1
+        else:
+            # 确保Channel_No列是整数
+            df['Channel_No'] = df['Channel_No'].astype(int)
+            # 找到现有的最大channel值
+            start_channel = df['Channel_No'].max() + 1
+
+        # 生成缺失的channels的数据
+        missing_rows = [{'Channel_No': ch, 'gain': 1, 'offset': 0} 
+                        for ch in range(start_channel , max_channel + 1)]
+
+        # 如果有缺失的行，则添加到df中
+        if missing_rows:
+            df = pd.concat([df, pd.DataFrame(missing_rows)], ignore_index=True)
+
+        # 返回按Channel_No排序的DataFrame
+        return df.sort_values(by='Channel_No')
 
 
 def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
@@ -79,8 +93,9 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
     if os.path.exists(result_path):
         shutil.rmtree(result_path)
     os.mkdir(result_path)
-    # slot_ips = get_slot_ips(path)
-   
+    print(path + '--------------')
+    slot_ips = get_ip_new_format(path)
+    print(slot_ips)
 
     result_pd = pd.DataFrame(
         columns=[
@@ -99,18 +114,17 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
             "Force_offset",
         ]
     )
+
+
     for index, row in meta.iterrows():
         file = os.path.join(path, row.iloc[-2])
-        print("当前文件路径:", file)  # 打印文件路径
+
         # 使用wps打开过后的csv文件header可能需要从10开始读取
         data = pd.read_csv(file, header=12)
-        print("读取的数据:\n", data)  # 打印读取的数据
+      
         x1 = data["ATE Measure"]
         x2 = data["Force Value"]
         y = data["DMM Measure"]
-        print('--------------------------------')
-        print(row)
-        print('--------------------------------')
    
         try:
             # ATE measure - DMM measure
@@ -120,11 +134,12 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         except:
             slope1, intercept1 = 1, 0
             slope2, intercept2 = 1, 0
-
+        slot = row["Slot_Dna"]  # 获取当前行的Slot_No
+        ip = slot_ips.get(slot, "Unknown")  # 从slot_ips字典中获取对应的IP地址
         res_row = {
             "test": os.path.basename(file).split(".")[0],
             "Slot_No": row["Slot_Dna"],
-            # "IP": ips[ips["Tester_Name"] == row["Slot_Dna"]]["Foo"].values[0],
+            "IP": ip,
             "Channel_No": row["Channel_No"],
             "Channel_Type": row["Channel_Type"],
             "Mode": row["Mode"],
@@ -142,10 +157,14 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
     result_pd.to_csv(os.path.join(result_path, "res.csv"))
     slots = result_pd["Slot_No"].unique()
 
+
     # split table
     for slot in slots:
         # Force
         ip = slot_ips.get(slot, "Unknown")
+        print(f"Slot: {slot}, IP: {ip}",'-----------------')
+
+
         Force_table = pd.DataFrame(
             columns=[
                 "channel",
@@ -156,10 +175,18 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
                 "mode",
             ]
         )
+            
 
         force_table_form_total = result_pd[result_pd["Slot_No"] == slot][
             result_pd["Mode"].isin(["FVMV", "FIMV"])
         ]
+        Force_table = fill_missing_rows(Force_table)
+        # 将 Channel_No 列的值复制到 channel 列
+        Force_table['channel'] = Force_table['Channel_No']
+        # 检查和调整gain和offset
+        force_table_form_total.loc[(force_table_form_total["Force_gain"] < 0.995) | 
+                           (force_table_form_total["Force_gain"] > 1.005), 
+                           ["Force_gain", "Force_offset"]] = [1, 0]
         Force_table["channel"] = force_table_form_total["Channel_No"]
         Force_table["gain"] = force_table_form_total["Force_gain"]
         Force_table["offset"] = force_table_form_total["Force_offset"]
@@ -173,9 +200,8 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
             result_path,
             f"Dna_{ip}.csv",
         )
-
+        Force_table.drop('Channel_No', axis=1, inplace=True)
         with open(Force_table_csv_name, "w+") as csv_file:
-            # theIp = ips[ips["Tester_Name"] == slot]["Foo"].values[0]
             header = f"dna,{slot}\nsnid,1,\nip,{ip}\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n"
 
             csv_file.write(header)
@@ -195,12 +221,18 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         mv_table_form_total = result_pd[result_pd["Mode"] == "FVMV"][
             result_pd["Slot_No"] == slot
         ]
+        MV_table = fill_missing_rows(MV_table)
+        mv_table_form_total.loc[(mv_table_form_total["ATE_gain"] < 0.995) | 
+                        (mv_table_form_total["ATE_gain"] > 1.005), 
+                        ["ATE_gain", "ATE_offset"]] = [1, 0]
         MV_table["channel"] = mv_table_form_total["Channel_No"]
         MV_table["gain"] = mv_table_form_total["ATE_gain"]
         MV_table["offset"] = mv_table_form_total["ATE_offset"]
         MV_table["range"] = mv_table_form_total["Meas_Range"] + "_" + mv_table_form_total["I_Range"]
         # 硬件部分认为此处需要有I_Range，但是软件部分还不支持此项
         # MV_table["range(5uA/20uA/200uA/2mA/60mA/1A)"] = mv_table_form_total["I_Range"]
+        
+        
         MV_table.to_csv(
             os.path.join(
                 result_path,
@@ -223,12 +255,18 @@ def calculate(path: str, meta: pd.DataFrame, result_path: str = ""):
         Mi_table_form_total = result_pd[result_pd["Mode"] == "FVMI"][
             result_pd["Slot_No"] == slot
         ]
+        MI_table = fill_missing_rows(MI_table)
+        # 检查和调整gain和offset
+        Mi_table_form_total.loc[(Mi_table_form_total["ATE_gain"] < 0.995) | 
+                        (Mi_table_form_total["ATE_gain"] > 1.005), 
+                        ["ATE_gain", "ATE_offset"]] = [1, 0]
         MI_table["channel"] = Mi_table_form_total["Channel_No"]
         MI_table["gain"] = Mi_table_form_total["ATE_gain"]
         MI_table["offset"] = Mi_table_form_total["ATE_offset"]
         # MI_table["range(5V,20V)"] = Mi_table_form_total["Meas_Range"]
         # MI_table["I_Range"] = Mi_table_form_total["I_Range"]
         MI_table["range"] = Mi_table_form_total["Meas_Range"] + "_" + Mi_table_form_total["I_Range"]
+        
         MI_table.to_csv(
             os.path.join(
                 result_path,
