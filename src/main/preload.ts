@@ -6,6 +6,7 @@ export type Channels =
   | 'ipc-example'
   | 'read-version'
   | 'read-version-reply'
+  | 'save-scanned-code'
   | 'kill'
   | 'cp-reply'
   | 'read-config'

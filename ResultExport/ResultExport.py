@@ -19,13 +19,13 @@ def findAllFiles(base: str):
 def read_meta_data(path: str):
     path = os.path.join(path, "metadata.csv")
     # 使用wps打开过后的csv文件header可能需要从10开始读取
-    return pd.read_csv(path, header=9)
+    return pd.read_csv(path, header=4)
 
 
 def get_slots(path: str):
     path = os.path.join(path, "metadata.csv")
     # 使用wps打开过后的csv文件header可能需要从9开始读取
-    return pd.read_csv(path, nrows=8, dtype=str)
+    return pd.read_csv(path, nrows=4, dtype=str)
 
 
 def compare_column(
@@ -71,7 +71,10 @@ def result_export(path: str, meta: pd.DataFrame, result_path: str = ""):
 
     # summary
     slots = get_slots(path)
-    slots = slots[slots["Foo"].isna() == False]
+    print("----------------------------------------------------")
+    print(slots)
+    print("----------------------------------------------------")
+    # slots = slots[slots["Foo"].isna() == False]
     summary = pd.DataFrame(
         columns=[
             "Slot_No",
@@ -83,11 +86,9 @@ def result_export(path: str, meta: pd.DataFrame, result_path: str = ""):
     for temp_str in slots[slots["Tester_Name"].str.contains("Dna")]["Tester_Name"].values:
         slots = slots.replace(temp_str, temp_str[4])
 
-    summary["Slot_No"] = slots[~(slots["Foo"].str.contains(".", regex=False))]["Tester_Name"]
-    summary["Slot_Name"] = slots[~(slots["Foo"].str.contains(".", regex=False))][
-        "Foo"
-    ]
-
+    # 将 'Tester_Name' 列的值直接用作 'Slot_No' 和 'Slot_Name'
+    summary["Slot_No"] = slots["Tester_Name"].str.extract(r'Slot(\d+)')  # 假设名字是 'Slot1', 'Slot2' 等
+    summary["Slot_Name"] = slots["Tester_Name"]
     # calibration_state
     calibration_state = pd.DataFrame(
         columns=[
@@ -125,8 +126,9 @@ def result_export(path: str, meta: pd.DataFrame, result_path: str = ""):
 
     for _, row in meta.iterrows():
         print(row)
-        file = os.path.join(path, row[-1])
-        file_bak = os.path.join(path + '_bak', row[-1])
+        file = os.path.join(path, row[-2])
+        
+        file_bak = os.path.join(path + '_bak', row[-2])
         deltas_measure_values, validation_force_values, validation_measure, validation_force = get_measure_from_file(file)
         deltas_measure_bak, validation_force_bak, measure_bak, force_bak = get_measure_from_file(file_bak, limit=0.005)
         for i in range(len(slot_table)):
@@ -224,21 +226,34 @@ def save_slot_data_to_txt(csv_path, result_path):
 
             file.write("\n")  # 空行
             # 收集失败的 Channel_No
-            failed_measure_nos = group[group['validation_measure'] == False]['Channel_No'].tolist()
-            failed_force_nos = group[group['validation_force'] == False]['Channel_No'].tolist()
-
+            # failed_measure_nos = group[group['validation_measure'] == False]['Channel_No'].tolist()
+            # failed_force_nos = group[group['validation_force'] == False]['Channel_No'].tolist()
+            failed_measure_rows = group[group['validation_measure'] == False]
+            failed_force_rows = group[group['validation_force'] == False]   
             # 如果有失败的 Channel_No，将它们合并成一个字符串，并写入文件
-            if failed_measure_nos:
-                failed_measure_str = ','.join(map(str, failed_measure_nos))
+            # if failed_measure_nos:
+            #     failed_measure_str = ','.join(map(str, failed_measure_nos))
+            #     file.write("%FAIL - Slot{} {} channel {} test at Measure Voltage\n".format(
+            #         slot_no, group.iloc[0]['Channel_Type'], failed_measure_str))
+           # 处理失败的 Measure
+            for _, row in failed_measure_rows.iterrows():
                 file.write("%FAIL - Slot{} {} channel {} test at Measure Voltage\n".format(
-                    slot_no, group.iloc[0]['Channel_Type'], failed_measure_str))
+                    slot_no, row['Channel_Type'], row['Channel_No']))
+           
+           
             file.write("\n")  # 空行
             # 如果有失败的 Force Channel_No，将它们合并成一个字符串，并写入文件
-            if failed_force_nos:
-                failed_force_str = ','.join(map(str, failed_force_nos))
+            # if failed_force_nos:
+            #     failed_force_str = ','.join(map(str, failed_force_nos))
+            #     file.write("%FAIL - Slot{} {} channel {} test at Force Voltage\n".format(
+            #         slot_no, group.iloc[0]['Channel_Type'], failed_force_str))
+            
+# 处理失败的 Force
+            for _, row in failed_force_rows.iterrows():
                 file.write("%FAIL - Slot{} {} channel {} test at Force Voltage\n".format(
-                    slot_no, group.iloc[0]['Channel_Type'], failed_force_str))
-             # 在文件最后添加结束时间
+                    slot_no, row['Channel_Type'], row['Channel_No']))           
+            
+            # 在文件最后添加结束时间
             # end_time = datetime.now().strftime("%H:%M:%S %m/%d/%Y") 
             # file.wirte("%JOB_END - ****FAILED**** \n at {} ".format(end_time))
             # 添加结束的行

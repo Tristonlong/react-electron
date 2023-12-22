@@ -526,6 +526,18 @@ ipcMain.on('parse-post-test', async (e, msg) => {
     e.sender.send('parse-post-test-reply', { ret: 0, res: resizedRes });
   }
 });
+// 扫码枪结果
+ipcMain.on('save-scanned-code',async (e, scannedCode) =>{
+  var fs = require('fs');
+  const filePath = path.join("C:\\","ProgramData\\Testrong\\ATE_Tester\\TestResult","BoardInfo.txt")
+  fs.appendFile(filePath,scannedCode + '\n', (err:any) =>{
+    if(err){
+      console.log('Error writing file', err);
+    }else {
+      console.log('Successfully wrote scanned code to file');
+    }
+  })
+})
 
 // 通信例子
 ipcMain.on('ipc-example', async (event, arg) => {

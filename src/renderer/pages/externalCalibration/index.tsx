@@ -452,6 +452,7 @@ const Index = () => {
       </Modal>
       <div>
         <div className="controlPannel">
+         
           <ExternalSettingCard
             title={'External setting'}
             prePath={selectedStilFile}

@@ -28,7 +28,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import {
   Button,
   Input,
@@ -67,6 +67,7 @@ import {
   setTcps,
 } from './redux';
 import Settings from '../settings';
+import { current } from '@reduxjs/toolkit';
 
 const { TextArea } = Input;
 
@@ -94,6 +95,9 @@ const Index = () => {
   const [loadStatus, setLoadStatus] = useState(false);
   const [showMsg, setShowMsg] = useState('');
   const [version, setVersion] = useState('');
+  const [scannedCode, setScannedCode] = useState('');
+  const scanBuffer = useRef('');
+
 
   window.electron.ipcRenderer.on('cp-reply', (arg) => {
     // eslint-disable-next-line no-console
@@ -268,6 +272,21 @@ const Index = () => {
     console.log('asdfasdf');
   }, [result, loadStatus]);
 
+  useEffect(() => {
+    const handleScan = (e: KeyboardEvent) => {
+      console.log(e.key);
+      setScannedCode((prevScannedCode) => prevScannedCode + e.key);
+    };
+    window.addEventListener('keydown', handleScan);
+    return () => {
+      window.removeEventListener('keydown', handleScan);
+    };
+  }, []);
+  useEffect(() => {
+    if (scannedCode) {
+      window.electron.ipcRenderer.sendMessage('save-scanned-code', scannedCode)
+    }
+  }, [scannedCode]);
   const openCP = () => {
     dispatch(setResult(null));
     showModal();
@@ -313,6 +332,12 @@ const Index = () => {
           >
             Stop The Self Calibration
           </Button>
+          <div>
+            <div>扫描结果：{scannedCode}</div>
+          </div>
+          <div>
+            <div>进度条：</div>
+          </div>
         </div>
 
         <Details

@@ -86,6 +86,13 @@ const JsonSettingCard = ({
           options={options}
         />
       </div>
+      <div className="internalSetting">
+        {/* <span style={{ margin: 8 }}>Pattern files :</span>
+        <Select
+          size="small"
+          style={{ width: 400, margin: 8 }}
+        /> */}
+      </div>
     </Card>
   );
 };
