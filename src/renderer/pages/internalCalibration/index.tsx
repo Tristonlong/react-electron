@@ -33,6 +33,7 @@ import {
   Button,
   Input,
   Modal,
+  Progress,
   Select,
   Space,
   Upload,
@@ -337,6 +338,7 @@ const Index = () => {
           </div>
           <div>
             <div>进度条：</div>
+            <Progress percent={50} status="active" />
           </div>
         </div>
 
